@@ -1,3 +1,4 @@
+
 /**
  * dat.globe Javascript WebGL Globe Toolkit
  * https://github.com/dataarts/webgl-globe
@@ -18,7 +19,9 @@ DAT.Globe = function(container, opts) {
   
   var colorFn = opts.colorFn || function(x) {
     var c = new THREE.Color();
-    c.setHSL( ( 0.6 - ( x * 0.5 ) ), 1.0, 0.5 );
+    // Ensure color is always visible by setting a minimum lightness value
+    // and using a broader hue range for better color differentiation
+    c.setHSL( ( 0.6 - ( x * 0.6 ) ), 0.8, 0.5 + (x * 0.2) );
     return c;
   };
   var imgDir = opts.imgDir || '/globe/';
@@ -407,10 +410,4 @@ DAT.Globe = function(container, opts) {
   this.scene = scene;
 
   return this;
-
-
-
-  
-
 };
-
