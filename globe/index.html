@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>WebGL Globe</title>
+    <title>WebGL Globe - Audience Data</title>
     <meta charset="utf-8">
     <style type="text/css">
       html {
@@ -19,7 +19,6 @@
       }
 
       #info {
-
         font-size: 11px;
         position: absolute;
         bottom: 5px;
@@ -27,7 +26,6 @@
         border-radius: 3px;
         right: 10px;
         padding: 10px;
-
       }
 
       #currentInfo {
@@ -35,11 +33,50 @@
         position: absolute;
         left: 20px;
         top: 63px;
-
         background-color: rgba(0,0,0,0.2);
-
         border-top: 1px solid rgba(255,255,255,0.4);
         padding: 10px;
+        display: none; /* Hide year selector */
+      }
+
+      /* Add new company list styles */
+      #companiesInfo {
+        width: 400px;
+        position: absolute;
+        left: 20px;
+        bottom: 100px;
+        background-color: rgba(0,0,0,0.2);
+        border-top: 1px solid rgba(255,255,255,0.4);
+        padding: 10px;
+        max-height: 40vh;
+        overflow-y: auto;
+      }
+
+      .companies-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .company {
+        font: 12px Georgia;
+        line-height: 20px;
+        height: 24px;
+        text-align: left;
+        float: left;
+        width: 90px;
+        padding-left: 5px;
+        margin-right: 5px;
+        color: rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        -webkit-transition: all 0.1s ease-out;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .company:hover, .company.active {
+        font-size: 14px;
+        color: #fff;
       }
 
       a {
@@ -74,7 +111,6 @@
         float: left;
         width: 90px;
         color: rgba(255, 255, 255, 0.4);
-
         cursor: pointer;
         -webkit-transition: all 0.1s ease-out;
       }
@@ -97,8 +133,6 @@
         left: 20px;
         background: url(/globe/ce.png);
       }
-
-
     </style>
   </head>
   <body>
@@ -106,7 +140,7 @@
   <div id="container"></div>
 
   <div id="info">
-    <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by the Google Data Arts Team <span class="bull">&bull;</span> Data acquired from <a href="http://sedac.ciesin.columbia.edu/gpw/">SEDAC</a>
+    <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by the Google Data Arts Team <span class="bull">&bull;</span> Adapted for audience data visualization
   </div>
 
   <div id="currentInfo">
@@ -115,11 +149,16 @@
     <span id="year2000" class="year">2025</span>
   </div>
 
-  <div id="title">
-    World Population
+  <!-- Add new company list container -->
+  <div id="companiesInfo">
+    <div class="companies-container">
+      <!-- Company spans will be generated dynamically -->
+    </div>
   </div>
 
- 
+  <div id="title">
+    Audience Geo Data
+  </div>
 
   <script type="text/javascript" src="/globe/third-party/Detector.js"></script>
   <script type="text/javascript" src="/globe/third-party/three.min.js"></script>
@@ -134,6 +173,19 @@
       var years = ['1990','1995','2000'];
       var container = document.getElementById('container');
       var globe = new DAT.Globe(container);
+
+      // Add companies list
+      var companies = ['Brainly', 'Codecademy', 'Delivery Hero', 'Despegar', 'Despegar AR', 'Despegar CL', 'Despegar CO', 'Despegar MX', 'Despegar PE', 'Edume', 'Emeritus', 'Eruditus', 'Flink', 'Foodics', 'GoStudent', 'GoodHabitz', 'JE Takeaway', 'Media24', 'OLX', 'OLX ', 'OLX Real Estate', 'Oda', 'Otodom (OLX)', 'Otomoto (OLX)', 'Platzi', 'Sharebite', 'SkillSoft', 'SoloLearn', 'Stack Overflow', 'Standvirtual', 'Swiggy', 'TakeAlot Group', 'Takealot', 'Udemy', 'eMAG', 'iFood'];
+      var companiesContainer = document.querySelector('.companies-container');
+      
+      // Generate elements for each company
+      companies.forEach(function(company, index) {
+        var companyElem = document.createElement('span');
+        companyElem.id = 'company' + index;
+        companyElem.className = 'company';
+        companyElem.textContent = company;
+        companiesContainer.appendChild(companyElem);
+      });
 
       console.log(globe);
       var i, tweens = [];
@@ -153,27 +205,87 @@
         };
       };
       
+      // Add function to handle company clicks
+      var setcompany = function(globe, t) {
+        return function() {
+          // Clear existing points
+          if (globe.points) {
+            globe.scene.remove(globe.points);
+            globe._baseGeometry = undefined;
+          }
+          
+          // Add the selected company's data
+          globe.addData(window.data[t][1], {format: 'magnitude', name: window.data[t][0], animated: true});
+          globe.createPoints();
+          
+          new TWEEN.Tween(globe).to({time: 0},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
+          
+          // Update the title to show selected company
+          document.getElementById('title').textContent = 'Audience Data: ' + window.data[t][0];
+          
+          var c = document.getElementById('company'+t);
+          if (c.getAttribute('class') === 'company active') {
+            return;
+          }
+          var cc = document.getElementsByClassName('company');
+          for(i=0; i<cc.length; i++) {
+            cc[i].setAttribute('class','company');
+          }
+          c.setAttribute('class', 'company active');
+        };
+      };
+      
       for(var i = 0; i<years.length; i++) {
         var y = document.getElementById('year'+years[i]);
         y.addEventListener('mouseover', settime(globe,i), false);
       }
       
-      var xhr;
+      // Add event listeners for companies
+      for(var i = 0; i<companies.length; i++) {
+        var c = document.getElementById('company'+i);
+        c.addEventListener('mouseover', setcompany(globe,i), false);
+      }
+      
+     // Replace the XHR section around line 251-272 with this code
+     var xhr;
       TWEEN.start();
       
-      
       xhr = new XMLHttpRequest();
-      xhr.open('GET', '/globe/population909500.json', true);
+      xhr.open('GET', '/globe/audience_geo_data_compact.json', true);
       xhr.onreadystatechange = function(e) {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText);
-            window.data = data;
-            for (i=0;i<data.length;i++) {
-              globe.addData(data[i][1], {format: 'magnitude', name: data[i][0], animated: true});
-            }
+            
+            // Add jitter to coordinates to prevent overlaps
+            var jitteredData = data.map(function(companyEntry) {
+              var companyName = companyEntry[0];
+              var values = [...companyEntry[1]]; // Create a copy of the values array
+              
+              // Add small random variations to latitude and longitude values
+              for (var i = 0; i < values.length; i += 3) {
+                // Small random offset between -0.5 and 0.5
+                var latJitter = (Math.random() - 0.5) * 0.5;
+                var lngJitter = (Math.random() - 0.5) * 0.5;
+                
+                values[i] = values[i] + latJitter;
+                values[i + 1] = values[i + 1] + lngJitter;
+                // Magnitude (values[i + 2]) stays the same
+              }
+              
+              return [companyName, values];
+            });
+            
+            window.data = jitteredData;
+            
+            // Only load the first company initially
+            globe.addData(jitteredData[0][1], {format: 'magnitude', name: jitteredData[0][0], animated: true});
+            
             globe.createPoints();
-            settime(globe,0)();
+            
+            // Set the first company as active
+            setcompany(globe,0)();
+            
             globe.animate();
             document.body.style.backgroundImage = 'none'; // remove loading
           }
@@ -181,9 +293,6 @@
       };
       xhr.send(null);
     }
-
   </script>
-
   </body>
-
 </html>
