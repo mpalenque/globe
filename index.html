@@ -246,7 +246,8 @@
         c.addEventListener('mouseover', setcompany(globe,i), false);
       }
       
-      var xhr;
+     // Replace the XHR section around line 251-272 with this code
+     var xhr;
       TWEEN.start();
       
       xhr = new XMLHttpRequest();
@@ -255,10 +256,30 @@
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText);
-            window.data = data;
+            
+            // Add jitter to coordinates to prevent overlaps
+            var jitteredData = data.map(function(companyEntry) {
+              var companyName = companyEntry[0];
+              var values = [...companyEntry[1]]; // Create a copy of the values array
+              
+              // Add small random variations to latitude and longitude values
+              for (var i = 0; i < values.length; i += 3) {
+                // Small random offset between -0.5 and 0.5
+                var latJitter = (Math.random() - 0.5) * 0.5;
+                var lngJitter = (Math.random() - 0.5) * 0.5;
+                
+                values[i] = values[i] + latJitter;
+                values[i + 1] = values[i + 1] + lngJitter;
+                // Magnitude (values[i + 2]) stays the same
+              }
+              
+              return [companyName, values];
+            });
+            
+            window.data = jitteredData;
             
             // Only load the first company initially
-            globe.addData(data[0][1], {format: 'magnitude', name: data[0][0], animated: true});
+            globe.addData(jitteredData[0][1], {format: 'magnitude', name: jitteredData[0][0], animated: true});
             
             globe.createPoints();
             
