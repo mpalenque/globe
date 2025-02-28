@@ -10,7 +10,7 @@
       body {
         margin: 0;
         padding: 0;
-        background: #000000 url(/globe/loading.gif) center center no-repeat;
+        background: #000000 url(loading.gif) center center no-repeat;
         color: #ffffff;
         font-family: sans-serif;
         font-size: 13px;
@@ -131,7 +131,7 @@
         position: absolute;
         bottom: 15px;
         left: 20px;
-        background: url(/globe/ce.png);
+        background: url(ce.png);
       }
     </style>
   </head>
@@ -160,10 +160,10 @@
     Audience Geo Data
   </div>
 
-  <script type="text/javascript" src="/globe/third-party/Detector.js"></script>
-  <script type="text/javascript" src="/globe/third-party/three.min.js"></script>
-  <script type="text/javascript" src="/globe/third-party/Tween.js"></script>
-  <script type="text/javascript" src="/globe/globe.js"></script>
+  <script type="text/javascript" src="third-party/Detector.js"></script>
+  <script type="text/javascript" src="third-party/three.min.js"></script>
+  <script type="text/javascript" src="third-party/Tween.js"></script>
+  <script type="text/javascript" src="globe.js"></script>
   <script type="text/javascript">
 
     if(!Detector.webgl){
@@ -246,40 +246,109 @@
         c.addEventListener('mouseover', setcompany(globe,i), false);
       }
       
-     // Replace the XHR section around line 251-272 with this code
-     var xhr;
+      var xhr;
       TWEEN.start();
       
       xhr = new XMLHttpRequest();
-      xhr.open('GET', '/globe/audience_geo_data_compact.json', true);
+      xhr.open('GET', 'audience_geo_data_compact.json', true);
       xhr.onreadystatechange = function(e) {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText);
             
-            // Add jitter to coordinates to prevent overlaps
-            var jitteredData = data.map(function(companyEntry) {
+            // Transform data to create country-shaped distributions
+            var transformedData = data.map(function(companyEntry) {
               var companyName = companyEntry[0];
-              var values = [...companyEntry[1]]; // Create a copy of the values array
+              var originalValues = [...companyEntry[1]]; // Original data points
+              var newValues = []; // Will hold the expanded set of points
               
-              // Add small random variations to latitude and longitude values
-              for (var i = 0; i < values.length; i += 3) {
-                // Small random offset between -0.5 and 0.5
-                var latJitter = (Math.random() - 0.5) * 0.5;
-                var lngJitter = (Math.random() - 0.5) * 0.5;
+              // Process each country data point (lat, lng, magnitude triplets)
+              for (var i = 0; i < originalValues.length; i += 3) {
+                var lat = originalValues[i];
+                var lng = originalValues[i + 1];
+                var magnitude = originalValues[i + 2];
                 
-                values[i] = values[i] + latJitter;
-                values[i + 1] = values[i + 1] + lngJitter;
-                // Magnitude (values[i + 2]) stays the same
+                // Calculate a country-specific size based on magnitude
+                // Larger magnitudes create larger coverage areas
+                var countrySize = Math.max(2, Math.min(8, magnitude / 3));
+                
+                // Add the centroid point with full magnitude (highest point)
+                newValues.push(lat, lng, magnitude * 1.2); // Make center even higher
+                
+                // Simulate country shape using noise and distorted ellipses
+                // First, create several "growth axes" for the country
+                var numAxes = 3 + Math.floor(Math.random() * 3); // 3-5 axes
+                var axes = [];
+                
+                for (var a = 0; a < numAxes; a++) {
+                  // Random angle for axis direction
+                  var axisAngle = Math.random() * Math.PI * 2;
+                  // Random length (longer = more elongated country)
+                  var axisLength = 0.6 + Math.random() * 0.8; // 0.6-1.4
+                  axes.push({
+                    angle: axisAngle,
+                    length: axisLength
+                  });
+                }
+                
+                // Create densely packed points throughout the simulated country shape
+                // Use more points for countries with higher magnitude
+                var numPoints = Math.floor(100 + magnitude * 20);
+                
+                for (var p = 0; p < numPoints; p++) {
+                  // Random angle from center
+                  var angle = Math.random() * Math.PI * 2;
+                  
+                  // Find the "country border" in this direction using the axes
+                  var maxRadius = 0;
+                  for (var a = 0; a < axes.length; a++) {
+                    var axis = axes[a];
+                    // Calculate influence of this axis on the current angle
+                    // Higher when angle is closer to axis angle
+                    var angleDiff = Math.abs(angle - axis.angle);
+                    angleDiff = Math.min(angleDiff, Math.PI * 2 - angleDiff);
+                    var influence = Math.pow(Math.cos(angleDiff), 2);
+                    
+                    // Add to max radius based on influence
+                    maxRadius += axis.length * countrySize * influence;
+                  }
+                  
+                  // Normalize and add some noise to the radius
+                  maxRadius = maxRadius / axes.length;
+                  maxRadius = maxRadius * (0.8 + Math.random() * 0.4);
+                  
+                  // Random distance from center, biased toward border
+                  // Use sqrt to distribute points more evenly across area
+                  var distance = maxRadius * Math.pow(Math.random(), 0.5);
+                  
+                  // Account for map projection (longitude gets compressed near poles)
+                  var latScale = 1.0;
+                  var lngScale = 1.0 / Math.cos(lat * Math.PI / 180 || 0.1);
+                  
+                  var dx = Math.cos(angle) * distance * lngScale;
+                  var dy = Math.sin(angle) * distance * latScale;
+                  
+                  var newLat = lat + dy;
+                  var newLng = lng + dx;
+                  
+                  // Magnitude decreases from center to edge (cone effect)
+                  var distanceRatio = distance / maxRadius;
+                  var heightFactor = 1 - Math.pow(distanceRatio, 0.8); // Less steep falloff
+                  
+                  // Add small random variation to heights
+                  var newMagnitude = magnitude * heightFactor * (0.9 + Math.random() * 0.2);
+                  
+                  newValues.push(newLat, newLng, newMagnitude);
+                }
               }
               
-              return [companyName, values];
+              return [companyName, newValues];
             });
             
-            window.data = jitteredData;
+            window.data = transformedData;
             
             // Only load the first company initially
-            globe.addData(jitteredData[0][1], {format: 'magnitude', name: jitteredData[0][0], animated: true});
+            globe.addData(transformedData[0][1], {format: 'magnitude', name: transformedData[0][0], animated: true});
             
             globe.createPoints();
             
