@@ -408,5 +408,9 @@ DAT.Globe = function(container, opts) {
 
   return this;
 
+
+
+  
+
 };
 

@@ -1,0 +1,4810 @@
+{
+"aggregated_audience_data_by_cou":[
+ {
+  "parent_company": "Brainly",
+  "country_name": "Algeria",
+  "country": "DZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 643.482574,
+  "mobile_unique_visitors": 2379.99502
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Argentina",
+  "country": "AR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 175659.138,
+  "desktop_unique_visitors": 55000.9556,
+  "mobile_unique_visitors": 144530.652
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Australia",
+  "country": "AU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 46754.5933,
+  "desktop_unique_visitors": 42859.8445,
+  "mobile_unique_visitors": 8980.78952
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Azerbaijan",
+  "country": "AZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 7319.98551,
+  "mobile_unique_visitors": 65809.0555
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Bangladesh",
+  "country": "BD",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 15775.2833,
+  "mobile_unique_visitors": 78639.0881
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Belarus",
+  "country": "BY",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 57193.9498,
+  "mobile_unique_visitors": 210837.652
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Belgium",
+  "country": "BE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2481.35483,
+  "desktop_unique_visitors": 1033.3553,
+  "mobile_unique_visitors": 1853.33352
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Bolivia (Plurinational State of)",
+  "country": "BO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 19738.8489,
+  "mobile_unique_visitors": 84282.1437
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2436713.5193,
+  "desktop_unique_visitors": 1438999.0138,
+  "mobile_unique_visitors": 1493916.41803
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 147715.908139999,
+  "desktop_unique_visitors": 123980.964688,
+  "mobile_unique_visitors": 40918.6032999999
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Chile",
+  "country": "CL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 75418.9295,
+  "desktop_unique_visitors": 28000.274,
+  "mobile_unique_visitors": 57584.4902
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Colombia",
+  "country": "CO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 286670.931,
+  "desktop_unique_visitors": 168575.717,
+  "mobile_unique_visitors": 154115.557
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Costa Rica",
+  "country": "CR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 6406.08604,
+  "mobile_unique_visitors": 22985.7447
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "C‚àö¬•te d‚Äö√Ñ√¥Ivoire",
+  "country": "CI",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 585.184801,
+  "mobile_unique_visitors": 1838.96367
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Dominican Republic",
+  "country": "DO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 78290.492,
+  "desktop_unique_visitors": 26689.5538,
+  "mobile_unique_visitors": 62306.9795
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Ecuador",
+  "country": "EC",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 767987.4382,
+  "desktop_unique_visitors": 486057.4981,
+  "mobile_unique_visitors": 467359.934299999
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "El Salvador",
+  "country": "SV",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 10588.1932,
+  "mobile_unique_visitors": 30612.2266
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 309964.966,
+  "desktop_unique_visitors": 136170.863,
+  "mobile_unique_visitors": 212521.992
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 122967.699339999,
+  "desktop_unique_visitors": 41736.016697,
+  "mobile_unique_visitors": 96553.61586
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Guatemala",
+  "country": "GT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 15118.606,
+  "mobile_unique_visitors": 54662.2958
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Honduras",
+  "country": "HN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 8623.43627,
+  "mobile_unique_visitors": 32589.7255
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 12412037.3715,
+  "desktop_unique_visitors": 1283183.36168,
+  "mobile_unique_visitors": 11909625.9247
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Indonesia",
+  "country": "ID",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4819531.96497,
+  "desktop_unique_visitors": 727357.990889999,
+  "mobile_unique_visitors": 4748694.43748
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4996.99988,
+  "desktop_unique_visitors": 684.06311,
+  "mobile_unique_visitors": 4722.30973
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Japan",
+  "country": "JP",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 8861.25993,
+  "desktop_unique_visitors": 865.463043,
+  "mobile_unique_visitors": 8703.02038
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Kazakhstan",
+  "country": "KZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 264938.857,
+  "mobile_unique_visitors": 1170793.79
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Kyrgyzstan",
+  "country": "KG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 5933.31695,
+  "mobile_unique_visitors": 82980.1369
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Malaysia",
+  "country": "MY",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 29727.3582,
+  "desktop_unique_visitors": 6081.80302,
+  "mobile_unique_visitors": 26990.5689
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1763785.0416,
+  "desktop_unique_visitors": 543167.5822,
+  "mobile_unique_visitors": 1469794.0442
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Morocco",
+  "country": "MA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 6792.34135,
+  "mobile_unique_visitors": 6159.32092
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Nepal",
+  "country": "NP",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 11941.0389,
+  "mobile_unique_visitors": 55160.5902
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2109.94822,
+  "desktop_unique_visitors": 376.417896,
+  "mobile_unique_visitors": 1972.25551
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Nicaragua",
+  "country": "NI",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 2472.63687,
+  "mobile_unique_visitors": 10914.3546
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Nigeria",
+  "country": "NG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 17686.2848,
+  "mobile_unique_visitors": 182718.1219
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Pakistan",
+  "country": "PK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 44999.3879,
+  "mobile_unique_visitors": 129462.3078
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Panama",
+  "country": "PA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 14100.7206,
+  "mobile_unique_visitors": 19983.6989
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Paraguay",
+  "country": "PY",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 21301.1227,
+  "desktop_unique_visitors": 5405.20087,
+  "mobile_unique_visitors": 18991.1199
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Peru",
+  "country": "PE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 388727.939,
+  "desktop_unique_visitors": 291930.9273,
+  "mobile_unique_visitors": 169957.84913
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Philippines",
+  "country": "PH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2893805.049,
+  "desktop_unique_visitors": 721040.2603,
+  "mobile_unique_visitors": 2487103.3026
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Poland",
+  "country": "PL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1761303.104,
+  "desktop_unique_visitors": 704162.88365,
+  "mobile_unique_visitors": 1477326.9725
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Portugal",
+  "country": "PT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 37755.2562,
+  "desktop_unique_visitors": 18372.4397,
+  "mobile_unique_visitors": 23167.5495
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Republic of Korea",
+  "country": "KR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 7043.93897,
+  "desktop_unique_visitors": 1228.03824,
+  "mobile_unique_visitors": 6582.97256
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Republic of Moldova",
+  "country": "MD",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 13650.7694,
+  "mobile_unique_visitors": 28562.0333
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Romania",
+  "country": "RO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 618880.811,
+  "desktop_unique_visitors": 198365.457,
+  "mobile_unique_visitors": 548123.107
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Russian Federation",
+  "country": "RU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1460348.689082,
+  "desktop_unique_visitors": 425658.388472999,
+  "mobile_unique_visitors": 1227143.829462
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "South Africa",
+  "country": "ZA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 34144.5119,
+  "desktop_unique_visitors": 18530.9148,
+  "mobile_unique_visitors": 18865.7401
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 244763.0314,
+  "desktop_unique_visitors": 136505.532864,
+  "mobile_unique_visitors": 133778.80777
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Sweden",
+  "country": "SE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2936.65728,
+  "desktop_unique_visitors": 350.058887,
+  "mobile_unique_visitors": 2904.11553
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Switzerland",
+  "country": "CH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1876.94812,
+  "desktop_unique_visitors": 668.051634,
+  "mobile_unique_visitors": 1472.53632
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Tunisia",
+  "country": "TN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 2380.17508,
+  "mobile_unique_visitors": 9058.96866
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Turkey",
+  "country": "TR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2781779.4727,
+  "desktop_unique_visitors": 920028.179,
+  "mobile_unique_visitors": 2212831.9763
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Ukraine",
+  "country": "UA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1640173.08599799,
+  "desktop_unique_visitors": 555003.932848,
+  "mobile_unique_visitors": 1313526.618022
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "United Arab Emirates",
+  "country": "AE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 104175.1902,
+  "desktop_unique_visitors": 77827.6224,
+  "mobile_unique_visitors": 47438.0659
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 481100.1409,
+  "desktop_unique_visitors": 292192.21531,
+  "mobile_unique_visitors": 245937.652199999
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4635958.42161,
+  "desktop_unique_visitors": 3138870.647355,
+  "mobile_unique_visitors": 2482557.05437
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Uzbekistan",
+  "country": "UZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 27903.1279,
+  "mobile_unique_visitors": 216664.857
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Venezuela (Bolivarian Republic of)",
+  "country": "VE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 43737.3371,
+  "mobile_unique_visitors": 105963.56
+ },
+ {
+  "parent_company": "Brainly",
+  "country_name": "Viet Nam",
+  "country": "VN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 27208.2583,
+  "desktop_unique_visitors": 16557.3904,
+  "mobile_unique_visitors": 15692.5384
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Australia",
+  "country": "AU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 30153.8859,
+  "desktop_unique_visitors": 28887.2525,
+  "mobile_unique_visitors": 3913.92783
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 30307.957,
+  "desktop_unique_visitors": 22869.3644,
+  "mobile_unique_visitors": 13013.687
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 55459.129,
+  "desktop_unique_visitors": 53290.4913,
+  "mobile_unique_visitors": 9331.17017
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 28268.4946,
+  "desktop_unique_visitors": 25788.733,
+  "mobile_unique_visitors": 6880.76183
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 33547.6335,
+  "desktop_unique_visitors": 27587.5283,
+  "mobile_unique_visitors": 11014.5738
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 165250.283,
+  "desktop_unique_visitors": 118990.973,
+  "mobile_unique_visitors": 70090.8505
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Indonesia",
+  "country": "ID",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 19956.4192,
+  "desktop_unique_visitors": 10306.2973,
+  "mobile_unique_visitors": 13937.8379
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 16098.9407,
+  "desktop_unique_visitors": 11617.3131,
+  "mobile_unique_visitors": 7831.55707
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 26125.5796,
+  "desktop_unique_visitors": 24084.0465,
+  "mobile_unique_visitors": 5090.24415
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Nigeria",
+  "country": "NG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 12988.7079,
+  "mobile_unique_visitors": 7779.13757
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Pakistan",
+  "country": "PK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 13100.0197,
+  "mobile_unique_visitors": 6244.15736
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Russian Federation",
+  "country": "RU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 21794.4487,
+  "desktop_unique_visitors": 12577.5013,
+  "mobile_unique_visitors": 14203.1453
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Singapore",
+  "country": "SG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 12878.8045,
+  "desktop_unique_visitors": 12631.1376,
+  "mobile_unique_visitors": 1355.89471
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "South Africa",
+  "country": "ZA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 24103.2462,
+  "desktop_unique_visitors": 16551.6582,
+  "mobile_unique_visitors": 12708.4048
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 16806.2934,
+  "desktop_unique_visitors": 13812.4274,
+  "mobile_unique_visitors": 5424.97883
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Switzerland",
+  "country": "CH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 14435.3627,
+  "desktop_unique_visitors": 12167.9771,
+  "mobile_unique_visitors": 5211.54978
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Turkey",
+  "country": "TR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 15493.1507,
+  "desktop_unique_visitors": 9286.0425,
+  "mobile_unique_visitors": 8793.21565
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 110733.742,
+  "desktop_unique_visitors": 105741.988,
+  "mobile_unique_visitors": 25533.7066
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 477904.399,
+  "desktop_unique_visitors": 414887.61,
+  "mobile_unique_visitors": 148628.824
+ },
+ {
+  "parent_company": "Codecademy",
+  "country_name": "Viet Nam",
+  "country": "VN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 9488.27055,
+  "desktop_unique_visitors": 5885.55702,
+  "mobile_unique_visitors": 5460.02887
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Argentina",
+  "country": "AR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 420546.98687588,
+  "desktop_unique_visitors": 188332.31489942,
+  "mobile_unique_visitors": 322064.31539323
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Australia",
+  "country": "AU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 18530.330386,
+  "desktop_unique_visitors": 3162.568105,
+  "mobile_unique_visitors": 17159.13451
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Austria",
+  "country": "AT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 167745.91311,
+  "desktop_unique_visitors": 82263.6386,
+  "mobile_unique_visitors": 150000.30171
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Bahrain",
+  "country": "BH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 21415.8242,
+  "mobile_unique_visitors": 41184.6583
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Bangladesh",
+  "country": "BD",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 79754.5805,
+  "mobile_unique_visitors": 489331.625
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Bosnia and Herzegovina",
+  "country": "BA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 5185.14703,
+  "mobile_unique_visitors": 5140.60749
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1841.685396,
+  "desktop_unique_visitors": 465.848843,
+  "mobile_unique_visitors": 1620.929857
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Bulgaria",
+  "country": "BG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 57660.2958,
+  "desktop_unique_visitors": 34419.2297,
+  "mobile_unique_visitors": 34979.8335
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Cambodia",
+  "country": "KH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 429.691653,
+  "mobile_unique_visitors": 279.219398
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 26633.434135,
+  "desktop_unique_visitors": 4735.034779,
+  "mobile_unique_visitors": 24909.740631
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Chile",
+  "country": "CL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 173849.635652,
+  "desktop_unique_visitors": 62700.127685,
+  "mobile_unique_visitors": 141613.346485
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Colombia",
+  "country": "CO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1214.65322,
+  "desktop_unique_visitors": 148.350732,
+  "mobile_unique_visitors": 1191.73491
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Costa Rica",
+  "country": "CR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 2694.66959,
+  "mobile_unique_visitors": 4239.67181
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Croatia",
+  "country": "HR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 32913.8639,
+  "desktop_unique_visitors": 8571.49127,
+  "mobile_unique_visitors": 29303.3983
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Cyprus",
+  "country": "CY",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 20352.4303,
+  "mobile_unique_visitors": 28934.382917
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Czechia",
+  "country": "CZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 301969.772232999,
+  "desktop_unique_visitors": 126087.448748999,
+  "mobile_unique_visitors": 250214.4624876
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Denmark",
+  "country": "DK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 34706.84225,
+  "desktop_unique_visitors": 2192.361366,
+  "mobile_unique_visitors": 34133.75448
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Dominican Republic",
+  "country": "DO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 26499.0701,
+  "desktop_unique_visitors": 9244.51195,
+  "mobile_unique_visitors": 23999.3139
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Ecuador",
+  "country": "EC",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 83416.986411,
+  "desktop_unique_visitors": 9080.933791,
+  "mobile_unique_visitors": 82386.5231173
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Egypt",
+  "country": "EG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 314746.8124,
+  "desktop_unique_visitors": 56405.48177,
+  "mobile_unique_visitors": 309636.24835591
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "El Salvador",
+  "country": "SV",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 0,
+  "mobile_unique_visitors": 992.608187
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Estonia",
+  "country": "EE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 253.377152,
+  "desktop_unique_visitors": 194.277499,
+  "mobile_unique_visitors": 91.0443549
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Finland",
+  "country": "FI",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 148448.92824,
+  "desktop_unique_visitors": 70479.587705,
+  "mobile_unique_visitors": 116745.026769
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4031.808052,
+  "desktop_unique_visitors": 1276.154004,
+  "mobile_unique_visitors": 3183.963027
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Georgia",
+  "country": "GE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 20695.6121,
+  "mobile_unique_visitors": 38378.1938
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 42759.5673419999,
+  "desktop_unique_visitors": 19901.903039,
+  "mobile_unique_visitors": 28658.6324507
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Greece",
+  "country": "GR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 554565.57281,
+  "desktop_unique_visitors": 226873.593593,
+  "mobile_unique_visitors": 467768.84372
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Hungary",
+  "country": "HU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 223757.27138,
+  "desktop_unique_visitors": 126553.77296,
+  "mobile_unique_visitors": 156022.07651
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 18575.654922,
+  "desktop_unique_visitors": 6909.79116999999,
+  "mobile_unique_visitors": 14173.742574
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Indonesia",
+  "country": "ID",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 12050.82916,
+  "desktop_unique_visitors": 2268.906964,
+  "mobile_unique_visitors": 10776.720506
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Iraq",
+  "country": "IQ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 1468.61062,
+  "mobile_unique_visitors": 75673.9119
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 544044.493658,
+  "desktop_unique_visitors": 117918.9802214,
+  "mobile_unique_visitors": 486678.004268
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Japan",
+  "country": "JP",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 16584.5913,
+  "desktop_unique_visitors": 3130.532869,
+  "mobile_unique_visitors": 15380.68037
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Jordan",
+  "country": "JO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 10836.1547,
+  "mobile_unique_visitors": 99194.1734
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Kazakhstan",
+  "country": "KZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 21281.8417,
+  "mobile_unique_visitors": 43229.6599
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Kenya",
+  "country": "KE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 20482.0076,
+  "desktop_unique_visitors": 9691.8273,
+  "mobile_unique_visitors": 14179.1218
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Kuwait",
+  "country": "KW",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 33967.1082,
+  "mobile_unique_visitors": 172315.703
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Malaysia",
+  "country": "MY",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 590900.328734,
+  "desktop_unique_visitors": 113863.229119,
+  "mobile_unique_visitors": 574546.791255
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1743.94519,
+  "desktop_unique_visitors": 396.351218,
+  "mobile_unique_visitors": 1540.51105
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Morocco",
+  "country": "MA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 27299.9362,
+  "mobile_unique_visitors": 74246.4449
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 11422.109222,
+  "desktop_unique_visitors": 4141.441748,
+  "mobile_unique_visitors": 9325.201937
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "New Zealand",
+  "country": "NZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5249.90057,
+  "desktop_unique_visitors": 782.176148,
+  "mobile_unique_visitors": 5190.17703
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Nigeria",
+  "country": "NG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 9709.28757,
+  "mobile_unique_visitors": 19559.3229
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Norway",
+  "country": "NO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 253799.552046,
+  "desktop_unique_visitors": 59046.4941799999,
+  "mobile_unique_visitors": 226593.78858
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Oman",
+  "country": "OM",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 19450.5049,
+  "mobile_unique_visitors": 73707.1586
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Pakistan",
+  "country": "PK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 129705.787112,
+  "mobile_unique_visitors": 920492.495303
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Panama",
+  "country": "PA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 16708.9806317,
+  "mobile_unique_visitors": 317.0704354
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Peru",
+  "country": "PE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 109765.3987,
+  "desktop_unique_visitors": 45679.7463,
+  "mobile_unique_visitors": 85788.74213
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Philippines",
+  "country": "PH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 953746.799279999,
+  "desktop_unique_visitors": 143022.878611,
+  "mobile_unique_visitors": 897375.18239
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Poland",
+  "country": "PL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 290701.892689,
+  "desktop_unique_visitors": 120193.911926,
+  "mobile_unique_visitors": 226186.0225431
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Portugal",
+  "country": "PT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 92668.7053,
+  "desktop_unique_visitors": 36132.8289,
+  "mobile_unique_visitors": 73881.731
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Qatar",
+  "country": "QA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 68536.7382,
+  "mobile_unique_visitors": 123537.312
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Republic of Korea",
+  "country": "KR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 840263.310557,
+  "desktop_unique_visitors": 311650.274181999,
+  "mobile_unique_visitors": 790926.988641
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Romania",
+  "country": "RO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 212776.699348,
+  "desktop_unique_visitors": 60062.11427,
+  "mobile_unique_visitors": 187120.396377
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Russian Federation",
+  "country": "RU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1394.68621,
+  "desktop_unique_visitors": 595.110161,
+  "mobile_unique_visitors": 1091.35907
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Saudi Arabia",
+  "country": "SA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2286555.01981,
+  "desktop_unique_visitors": 53914.5489029999,
+  "mobile_unique_visitors": 2241695.56563999
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Serbia",
+  "country": "RS",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 21780.7156,
+  "mobile_unique_visitors": 43832.9646
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Singapore",
+  "country": "SG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 298184.720691,
+  "desktop_unique_visitors": 79101.222604,
+  "mobile_unique_visitors": 281992.3454533
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Slovakia",
+  "country": "SK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1796.40624,
+  "desktop_unique_visitors": 1083.92508,
+  "mobile_unique_visitors": 1024.41219
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 457690.518169,
+  "desktop_unique_visitors": 188616.893559,
+  "mobile_unique_visitors": 366860.9735069
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Sweden",
+  "country": "SE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 552062.202403,
+  "desktop_unique_visitors": 146143.981592,
+  "mobile_unique_visitors": 537454.580476
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Thailand",
+  "country": "TH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 123613.166,
+  "desktop_unique_visitors": 21420.6859,
+  "mobile_unique_visitors": 121940.907
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Tunisia",
+  "country": "TN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 6278.36058,
+  "mobile_unique_visitors": 36797.773
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Turkey",
+  "country": "TR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1850678.289927,
+  "desktop_unique_visitors": 606225.213955,
+  "mobile_unique_visitors": 1637072.53135499
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Uganda",
+  "country": "UG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 1158.47581,
+  "mobile_unique_visitors": 17106.9454
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Ukraine",
+  "country": "UA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 182480.2126,
+  "desktop_unique_visitors": 54935.1899599999,
+  "mobile_unique_visitors": 151050.52413
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "United Arab Emirates",
+  "country": "AE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 529539.82912,
+  "desktop_unique_visitors": 121796.8565241,
+  "mobile_unique_visitors": 487555.96641
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 77365.03452,
+  "desktop_unique_visitors": 25939.469321,
+  "mobile_unique_visitors": 60155.561044
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 123916.293642,
+  "desktop_unique_visitors": 56031.99529,
+  "mobile_unique_visitors": 86796.215001
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Uruguay",
+  "country": "UY",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 21420.2928999999,
+  "mobile_unique_visitors": 28539.2650083
+ },
+ {
+  "parent_company": "Delivery Hero",
+  "country_name": "Viet Nam",
+  "country": "VN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6517.76563,
+  "desktop_unique_visitors": 1400.822715,
+  "mobile_unique_visitors": 6043.59411
+ },
+ {
+  "parent_company": "Despegar",
+  "country_name": "Argentina",
+  "country": "AR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1451.94296,
+  "desktop_unique_visitors": 313.831289,
+  "mobile_unique_visitors": 1282.11666
+ },
+ {
+  "parent_company": "Despegar",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6029099.85,
+  "desktop_unique_visitors": 2021018.88,
+  "mobile_unique_visitors": 5262461.56
+ },
+ {
+  "parent_company": "Despegar",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1845.11534,
+  "desktop_unique_visitors": 345.97139,
+  "mobile_unique_visitors": 1715.71965
+ },
+ {
+  "parent_company": "Despegar",
+  "country_name": "Colombia",
+  "country": "CO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1614.71959,
+  "desktop_unique_visitors": 1335.19619,
+  "mobile_unique_visitors": 517.328478
+ },
+ {
+  "parent_company": "Despegar",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 404492.09,
+  "desktop_unique_visitors": 157289.137,
+  "mobile_unique_visitors": 312730.494
+ },
+ {
+  "parent_company": "Despegar",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2966.96742,
+  "desktop_unique_visitors": 878.301125,
+  "mobile_unique_visitors": 2522.73402
+ },
+ {
+  "parent_company": "Despegar",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 30178.12341,
+  "desktop_unique_visitors": 19335.60074,
+  "mobile_unique_visitors": 15187.03236
+ },
+ {
+  "parent_company": "Despegar AR",
+  "country_name": "Argentina",
+  "country": "AR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2651721.61,
+  "desktop_unique_visitors": 1051251.27,
+  "mobile_unique_visitors": 2226104.65
+ },
+ {
+  "parent_company": "Despegar AR",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 16134.8723,
+  "desktop_unique_visitors": 2225.70346,
+  "mobile_unique_visitors": 15953.0844
+ },
+ {
+  "parent_company": "Despegar AR",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 9954.14359,
+  "desktop_unique_visitors": 3236.61387,
+  "mobile_unique_visitors": 8162.16414
+ },
+ {
+  "parent_company": "Despegar AR",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 10657.6051,
+  "desktop_unique_visitors": 6000.35907,
+  "mobile_unique_visitors": 6630.24776
+ },
+ {
+  "parent_company": "Despegar CL",
+  "country_name": "Argentina",
+  "country": "AR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 8005.09574,
+  "desktop_unique_visitors": 1978.79564,
+  "mobile_unique_visitors": 7325.05232
+ },
+ {
+  "parent_company": "Despegar CL",
+  "country_name": "Chile",
+  "country": "CL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 986335.767,
+  "desktop_unique_visitors": 300783.854,
+  "mobile_unique_visitors": 858483.774
+ },
+ {
+  "parent_company": "Despegar CL",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4561.31297,
+  "desktop_unique_visitors": 1485.03428,
+  "mobile_unique_visitors": 3919.10423
+ },
+ {
+  "parent_company": "Despegar CO",
+  "country_name": "Colombia",
+  "country": "CO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1344623.26,
+  "desktop_unique_visitors": 360591.714,
+  "mobile_unique_visitors": 1176343.45
+ },
+ {
+  "parent_company": "Despegar CO",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5013.75103,
+  "desktop_unique_visitors": 1681.50089,
+  "mobile_unique_visitors": 4209.8158
+ },
+ {
+  "parent_company": "Despegar CO",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 13291.4066,
+  "desktop_unique_visitors": 6795.96371,
+  "mobile_unique_visitors": 8643.02221
+ },
+ {
+  "parent_company": "Despegar MX",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1059945.49,
+  "desktop_unique_visitors": 317216.385,
+  "mobile_unique_visitors": 910233.256
+ },
+ {
+  "parent_company": "Despegar MX",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 24260.2879,
+  "desktop_unique_visitors": 5406.51912,
+  "mobile_unique_visitors": 21915.72
+ },
+ {
+  "parent_company": "Despegar PE",
+  "country_name": "Argentina",
+  "country": "AR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2385.5116,
+  "desktop_unique_visitors": 1512.65395,
+  "mobile_unique_visitors": 1216.30377
+ },
+ {
+  "parent_company": "Despegar PE",
+  "country_name": "Colombia",
+  "country": "CO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1300.42058,
+  "desktop_unique_visitors": 865.968673,
+  "mobile_unique_visitors": 671.624354
+ },
+ {
+  "parent_company": "Despegar PE",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 262.030304,
+  "desktop_unique_visitors": 189.318794,
+  "mobile_unique_visitors": 111.756626
+ },
+ {
+  "parent_company": "Despegar PE",
+  "country_name": "Peru",
+  "country": "PE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 475985.402,
+  "desktop_unique_visitors": 175849.208,
+  "mobile_unique_visitors": 374822.223
+ },
+ {
+  "parent_company": "Despegar PE",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4055.36147,
+  "desktop_unique_visitors": 1450.55642,
+  "mobile_unique_visitors": 3157.65292
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Argentina",
+  "country": "AR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 7269.023,
+  "desktop_unique_visitors": 116.539475,
+  "mobile_unique_visitors": 7152.48352
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Australia",
+  "country": "AU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1410.20305,
+  "desktop_unique_visitors": 323.844769,
+  "mobile_unique_visitors": 1323.22648
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1827.61508,
+  "desktop_unique_visitors": 149.168889,
+  "mobile_unique_visitors": 1808.04296
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Egypt",
+  "country": "EG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1455.45491,
+  "desktop_unique_visitors": 4.12117584,
+  "mobile_unique_visitors": 1451.33373
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3778.63563,
+  "desktop_unique_visitors": 304.100298,
+  "mobile_unique_visitors": 3693.04804
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 7224.91428,
+  "desktop_unique_visitors": 2047.90956,
+  "mobile_unique_visitors": 6155.6248
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1759.70101,
+  "desktop_unique_visitors": 1031.71605,
+  "mobile_unique_visitors": 979.772864
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4336.17664,
+  "desktop_unique_visitors": 1476.17653,
+  "mobile_unique_visitors": 3444.83169
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 282.051208,
+  "desktop_unique_visitors": 211.287912,
+  "mobile_unique_visitors": 120.415628
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5578.44844,
+  "desktop_unique_visitors": 1377.28499,
+  "mobile_unique_visitors": 4944.63241
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Nigeria",
+  "country": "NG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 166.749455,
+  "mobile_unique_visitors": 227.708416
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Pakistan",
+  "country": "PK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 275.519235,
+  "mobile_unique_visitors": 11651.2846
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Peru",
+  "country": "PE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 52.9969225,
+  "desktop_unique_visitors": 36.7456839,
+  "mobile_unique_visitors": 25.0841998
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Philippines",
+  "country": "PH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1459.0355,
+  "desktop_unique_visitors": 464.892429,
+  "mobile_unique_visitors": 1229.09791
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Saudi Arabia",
+  "country": "SA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 16547.9471,
+  "desktop_unique_visitors": 183.515552,
+  "mobile_unique_visitors": 16364.4315
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Singapore",
+  "country": "SG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 267.299609,
+  "desktop_unique_visitors": 140.029595,
+  "mobile_unique_visitors": 169.586295
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "Sweden",
+  "country": "SE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1995.94678,
+  "desktop_unique_visitors": 316.690007,
+  "mobile_unique_visitors": 1880.30902
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 11066.8136,
+  "desktop_unique_visitors": 2448.53494,
+  "mobile_unique_visitors": 10041.7591
+ },
+ {
+  "parent_company": "Edume",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 62636.1048,
+  "desktop_unique_visitors": 4432.6762,
+  "mobile_unique_visitors": 61972.0574
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Australia",
+  "country": "AU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2127.39375,
+  "desktop_unique_visitors": 1114.22472,
+  "mobile_unique_visitors": 1596.17255
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3983.79061,
+  "desktop_unique_visitors": 1680.49002,
+  "mobile_unique_visitors": 2993.16031
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6132.89414,
+  "desktop_unique_visitors": 3897.18359,
+  "mobile_unique_visitors": 3663.15905
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Colombia",
+  "country": "CO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5712.89436,
+  "desktop_unique_visitors": 2532.28501,
+  "mobile_unique_visitors": 3993.76392
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4118.83502,
+  "desktop_unique_visitors": 2356.23988,
+  "mobile_unique_visitors": 2592.34813
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 132855.14,
+  "desktop_unique_visitors": 57172.7899,
+  "mobile_unique_visitors": 101177.222
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Indonesia",
+  "country": "ID",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2255.24341,
+  "desktop_unique_visitors": 1045.4895,
+  "mobile_unique_visitors": 1615.55776
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Malaysia",
+  "country": "MY",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5899.5848,
+  "desktop_unique_visitors": 2741.03542,
+  "mobile_unique_visitors": 4329.97334
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 7664.73027,
+  "desktop_unique_visitors": 3827.15258,
+  "mobile_unique_visitors": 5084.35629
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Nepal",
+  "country": "NP",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 453.24806,
+  "mobile_unique_visitors": 4592.03531
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Nigeria",
+  "country": "NG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 285.62252,
+  "mobile_unique_visitors": 3427.96556
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Philippines",
+  "country": "PH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 17760.6631,
+  "desktop_unique_visitors": 11602.2731,
+  "mobile_unique_visitors": 9153.76611
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Saudi Arabia",
+  "country": "SA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5770.68504,
+  "desktop_unique_visitors": 1889.4324,
+  "mobile_unique_visitors": 4657.52522
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Singapore",
+  "country": "SG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 23565.2934,
+  "desktop_unique_visitors": 11611.4797,
+  "mobile_unique_visitors": 16529.6025
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2703.30671,
+  "desktop_unique_visitors": 2168.88736,
+  "mobile_unique_visitors": 1005.26056
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "Thailand",
+  "country": "TH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2456.47667,
+  "desktop_unique_visitors": 858.773151,
+  "mobile_unique_visitors": 2075.21889
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "United Arab Emirates",
+  "country": "AE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6570.79165,
+  "desktop_unique_visitors": 3650.42807,
+  "mobile_unique_visitors": 4432.4194
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 12687.9157,
+  "desktop_unique_visitors": 8657.18426,
+  "mobile_unique_visitors": 6294.54093
+ },
+ {
+  "parent_company": "Emeritus",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 49426.9765,
+  "desktop_unique_visitors": 37307.3139,
+  "mobile_unique_visitors": 21283.5007
+ },
+ {
+  "parent_company": "Eruditus",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2852.24846,
+  "desktop_unique_visitors": 779.397857,
+  "mobile_unique_visitors": 2418.95297
+ },
+ {
+  "parent_company": "Flink",
+  "country_name": "Belgium",
+  "country": "BE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 807.930351,
+  "desktop_unique_visitors": 506.208051,
+  "mobile_unique_visitors": 438.372377
+ },
+ {
+  "parent_company": "Flink",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1419.77192,
+  "desktop_unique_visitors": 1231.21353,
+  "mobile_unique_visitors": 366.256054
+ },
+ {
+  "parent_company": "Flink",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 149507.386,
+  "desktop_unique_visitors": 54940.5416,
+  "mobile_unique_visitors": 121718.998
+ },
+ {
+  "parent_company": "Flink",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2330.16323,
+  "desktop_unique_visitors": 831.690197,
+  "mobile_unique_visitors": 1750.67927
+ },
+ {
+  "parent_company": "Flink",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 327.152568,
+  "desktop_unique_visitors": 271.742253,
+  "mobile_unique_visitors": 103.452035
+ },
+ {
+  "parent_company": "Flink",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 127060.938,
+  "desktop_unique_visitors": 28320.5651,
+  "mobile_unique_visitors": 117324.637
+ },
+ {
+  "parent_company": "Flink",
+  "country_name": "Portugal",
+  "country": "PT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1189.26641,
+  "desktop_unique_visitors": 106.92665,
+  "mobile_unique_visitors": 1167.2706
+ },
+ {
+  "parent_company": "Flink",
+  "country_name": "Romania",
+  "country": "RO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 0,
+  "mobile_unique_visitors": 5735.7731
+ },
+ {
+  "parent_company": "Flink",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2319.45293,
+  "desktop_unique_visitors": 1439.32522,
+  "mobile_unique_visitors": 1181.13887
+ },
+ {
+  "parent_company": "Flink",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1316.87082,
+  "desktop_unique_visitors": 771.996248,
+  "mobile_unique_visitors": 736.258067
+ },
+ {
+  "parent_company": "Foodics",
+  "country_name": "Bahrain",
+  "country": "BH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 0,
+  "mobile_unique_visitors": 86.4904176
+ },
+ {
+  "parent_company": "Foodics",
+  "country_name": "Egypt",
+  "country": "EG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 15963.8977,
+  "desktop_unique_visitors": 5567.59629,
+  "mobile_unique_visitors": 13927.7009
+ },
+ {
+  "parent_company": "Foodics",
+  "country_name": "Jordan",
+  "country": "JO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 125.86543,
+  "mobile_unique_visitors": 10777.1518
+ },
+ {
+  "parent_company": "Foodics",
+  "country_name": "Kuwait",
+  "country": "KW",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 2504.29757,
+  "mobile_unique_visitors": 4306.14115
+ },
+ {
+  "parent_company": "Foodics",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2931.6751,
+  "desktop_unique_visitors": 112.382628,
+  "mobile_unique_visitors": 2901.53592
+ },
+ {
+  "parent_company": "Foodics",
+  "country_name": "Oman",
+  "country": "OM",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 376.324513,
+  "mobile_unique_visitors": 256.160741
+ },
+ {
+  "parent_company": "Foodics",
+  "country_name": "Qatar",
+  "country": "QA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 105.385849,
+  "mobile_unique_visitors": 70.1137873
+ },
+ {
+  "parent_company": "Foodics",
+  "country_name": "Saudi Arabia",
+  "country": "SA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 78087.9564,
+  "desktop_unique_visitors": 29313.5125,
+  "mobile_unique_visitors": 74468.7829
+ },
+ {
+  "parent_company": "Foodics",
+  "country_name": "United Arab Emirates",
+  "country": "AE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 8975.56354,
+  "desktop_unique_visitors": 5621.16095,
+  "mobile_unique_visitors": 5422.89431
+ },
+ {
+  "parent_company": "Foodics",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2365.68854,
+  "desktop_unique_visitors": 485.075571,
+  "mobile_unique_visitors": 2202.28679
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Argentina",
+  "country": "AR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3621.71138,
+  "desktop_unique_visitors": 2317.91693,
+  "mobile_unique_visitors": 1929.0395
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Austria",
+  "country": "AT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 16437.6334,
+  "desktop_unique_visitors": 7913.36811,
+  "mobile_unique_visitors": 12865.8687
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Belgium",
+  "country": "BE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 12817.1026,
+  "desktop_unique_visitors": 2021.6457,
+  "mobile_unique_visitors": 11949.9649
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 858.483855,
+  "desktop_unique_visitors": 420.722849,
+  "mobile_unique_visitors": 568.372132
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Colombia",
+  "country": "CO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2945.90001,
+  "desktop_unique_visitors": 805.315854,
+  "mobile_unique_visitors": 2570.1639
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 17439.91,
+  "desktop_unique_visitors": 11207.3762,
+  "mobile_unique_visitors": 9920.35501
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 50101.3437,
+  "desktop_unique_visitors": 21086.5806,
+  "mobile_unique_visitors": 38234.9939
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2058.30427,
+  "desktop_unique_visitors": 1134.35116,
+  "mobile_unique_visitors": 1223.41298
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 36949.6652,
+  "desktop_unique_visitors": 16508.6648,
+  "mobile_unique_visitors": 29570.9377
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 7475.60327,
+  "desktop_unique_visitors": 4171.13641,
+  "mobile_unique_visitors": 4481.59423
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4553.05269,
+  "desktop_unique_visitors": 2094.90584,
+  "mobile_unique_visitors": 3456.88433
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Peru",
+  "country": "PE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1520.67229,
+  "desktop_unique_visitors": 1107.17287,
+  "mobile_unique_visitors": 668.240767
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Poland",
+  "country": "PL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4292.81116,
+  "desktop_unique_visitors": 4241.43331,
+  "mobile_unique_visitors": 896.35207
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Republic of Korea",
+  "country": "KR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 743.231026,
+  "desktop_unique_visitors": 575.142604,
+  "mobile_unique_visitors": 317.996563
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Saudi Arabia",
+  "country": "SA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3148.67873,
+  "desktop_unique_visitors": 620.558085,
+  "mobile_unique_visitors": 2961.19924
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 13307.2858,
+  "desktop_unique_visitors": 11488.318,
+  "mobile_unique_visitors": 5826.32497
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Switzerland",
+  "country": "CH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4119.10339,
+  "desktop_unique_visitors": 1628.58928,
+  "mobile_unique_visitors": 3079.3057
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "Turkey",
+  "country": "TR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6065.10908,
+  "desktop_unique_visitors": 2778.32409,
+  "mobile_unique_visitors": 4415.87181
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 14402.7352,
+  "desktop_unique_visitors": 12285.3898,
+  "mobile_unique_visitors": 5357.4705
+ },
+ {
+  "parent_company": "GoStudent",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3861.72554,
+  "desktop_unique_visitors": 1549.61801,
+  "mobile_unique_visitors": 2899.10077
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Austria",
+  "country": "AT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 423.524475,
+  "desktop_unique_visitors": 366.635659,
+  "mobile_unique_visitors": 116.16323
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Belgium",
+  "country": "BE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2410.40808,
+  "desktop_unique_visitors": 1359.69964,
+  "mobile_unique_visitors": 1473.82455
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 275.314892,
+  "desktop_unique_visitors": 247.951422,
+  "mobile_unique_visitors": 81.0823543
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Chile",
+  "country": "CL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 105.835404,
+  "desktop_unique_visitors": 88.6421147,
+  "mobile_unique_visitors": 33.9109129
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Colombia",
+  "country": "CO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1026.38969,
+  "desktop_unique_visitors": 1015.85857,
+  "mobile_unique_visitors": 37.2537301
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Ecuador",
+  "country": "EC",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 655.216994,
+  "desktop_unique_visitors": 648.630016,
+  "mobile_unique_visitors": 10.0676992
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 651.571789,
+  "desktop_unique_visitors": 522.949916,
+  "mobile_unique_visitors": 217.732809
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 920.786161,
+  "desktop_unique_visitors": 754.764931,
+  "mobile_unique_visitors": 295.141446
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2109.79502,
+  "desktop_unique_visitors": 1453.91142,
+  "mobile_unique_visitors": 968.178158
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 889.080552,
+  "desktop_unique_visitors": 879.603781,
+  "mobile_unique_visitors": 68.0732535
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 27711.9251,
+  "desktop_unique_visitors": 24305.369,
+  "mobile_unique_visitors": 7593.82589
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Peru",
+  "country": "PE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 207.509417,
+  "desktop_unique_visitors": 178.310163,
+  "mobile_unique_visitors": 61.8675353
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Poland",
+  "country": "PL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3024.54137,
+  "desktop_unique_visitors": 656.037492,
+  "mobile_unique_visitors": 2744.35366
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Portugal",
+  "country": "PT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1172.31147,
+  "desktop_unique_visitors": 1080.08899,
+  "mobile_unique_visitors": 241.600411
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6791.22719,
+  "desktop_unique_visitors": 4143.1136,
+  "mobile_unique_visitors": 3823.22859
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Sweden",
+  "country": "SE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 893.414644,
+  "desktop_unique_visitors": 311.140672,
+  "mobile_unique_visitors": 713.54514
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "Switzerland",
+  "country": "CH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 279.187009,
+  "desktop_unique_visitors": 216.436027,
+  "mobile_unique_visitors": 107.761696
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1146.90154,
+  "desktop_unique_visitors": 730.885841,
+  "mobile_unique_visitors": 566.12059
+ },
+ {
+  "parent_company": "GoodHabitz",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 782.91494,
+  "desktop_unique_visitors": 293.775638,
+  "mobile_unique_visitors": 621.487144
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Australia",
+  "country": "AU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 805054.5229784,
+  "desktop_unique_visitors": 228895.2136432,
+  "mobile_unique_visitors": 698872.550682
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Austria",
+  "country": "AT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 567306.9971998,
+  "desktop_unique_visitors": 131974.1383432,
+  "mobile_unique_visitors": 521639.926495599
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Belgium",
+  "country": "BE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1825491.654158,
+  "desktop_unique_visitors": 529255.6790794,
+  "mobile_unique_visitors": 1541400.61894278
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Bulgaria",
+  "country": "BG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 575399.940052,
+  "desktop_unique_visitors": 157092.75867059,
+  "mobile_unique_visitors": 537913.51702153
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1052442.80937,
+  "desktop_unique_visitors": 348971.986516,
+  "mobile_unique_visitors": 966393.694257
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Croatia",
+  "country": "HR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1137.51111148,
+  "desktop_unique_visitors": 352.9745696,
+  "mobile_unique_visitors": 1526.04487385
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Czechia",
+  "country": "CZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 7073.217983,
+  "desktop_unique_visitors": 3865.24561,
+  "mobile_unique_visitors": 4779.3476561
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Denmark",
+  "country": "DK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 159745.495467,
+  "desktop_unique_visitors": 79506.345625,
+  "mobile_unique_visitors": 118976.058031
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 111770.8242245,
+  "desktop_unique_visitors": 23239.5269113,
+  "mobile_unique_visitors": 99796.8577917
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4214178.293702,
+  "desktop_unique_visitors": 1057047.924718,
+  "mobile_unique_visitors": 3985278.6516786
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Indonesia",
+  "country": "ID",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 24299.0887703999,
+  "desktop_unique_visitors": 2375.3884487,
+  "mobile_unique_visitors": 22570.4786422999
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Ireland",
+  "country": "IE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 299937.0936798,
+  "desktop_unique_visitors": 61116.5224816999,
+  "mobile_unique_visitors": 282330.7555473
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Israel",
+  "country": "IL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 138360.67173957,
+  "desktop_unique_visitors": 47469.91805418,
+  "mobile_unique_visitors": 127624.182026479
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 918970.023034,
+  "desktop_unique_visitors": 221226.237886,
+  "mobile_unique_visitors": 830420.99379498
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Luxembourg",
+  "country": "LU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 7775.852706,
+  "mobile_unique_visitors": 15479.618153
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2171757.581633,
+  "desktop_unique_visitors": 572330.04408268,
+  "mobile_unique_visitors": 1936312.2377068
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Norway",
+  "country": "NO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 32017.3910684,
+  "desktop_unique_visitors": 3021.9664432,
+  "mobile_unique_visitors": 30333.745807
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Poland",
+  "country": "PL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1577179.871811,
+  "desktop_unique_visitors": 439848.909909,
+  "mobile_unique_visitors": 1391149.1681169
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Slovakia",
+  "country": "SK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 177177.5353385,
+  "desktop_unique_visitors": 48072.7075651,
+  "mobile_unique_visitors": 160289.06477204
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 817536.889952,
+  "desktop_unique_visitors": 204340.279206999,
+  "mobile_unique_visitors": 724328.5967826
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Sweden",
+  "country": "SE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 30249.249062,
+  "desktop_unique_visitors": 4448.3662886,
+  "mobile_unique_visitors": 28646.406838
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Switzerland",
+  "country": "CH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 73065.421048,
+  "desktop_unique_visitors": 13933.8073919999,
+  "mobile_unique_visitors": 65003.293461
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "Ukraine",
+  "country": "UA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 11400.26460742,
+  "desktop_unique_visitors": 2188.40151331,
+  "mobile_unique_visitors": 10125.405043
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4990493.66078,
+  "desktop_unique_visitors": 916780.753388,
+  "mobile_unique_visitors": 4617457.725486
+ },
+ {
+  "parent_company": "JE Takeaway",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2039458.184079,
+  "desktop_unique_visitors": 501360.017149,
+  "mobile_unique_visitors": 1867691.791043
+ },
+ {
+  "parent_company": "Media24",
+  "country_name": "Australia",
+  "country": "AU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 75484.1274,
+  "desktop_unique_visitors": 12832.8793,
+  "mobile_unique_visitors": 71792.0057
+ },
+ {
+  "parent_company": "Media24",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 13039.2661,
+  "desktop_unique_visitors": 5674.12011,
+  "mobile_unique_visitors": 10247.5125
+ },
+ {
+  "parent_company": "Media24",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 54488.7017,
+  "desktop_unique_visitors": 3861.06623,
+  "mobile_unique_visitors": 53321.1949
+ },
+ {
+  "parent_company": "Media24",
+  "country_name": "Indonesia",
+  "country": "ID",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 14325.7296,
+  "desktop_unique_visitors": 685.638845,
+  "mobile_unique_visitors": 14177.1022
+ },
+ {
+  "parent_company": "Media24",
+  "country_name": "South Africa",
+  "country": "ZA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5779286.07,
+  "desktop_unique_visitors": 1387329.56,
+  "mobile_unique_visitors": 5588581.76
+ },
+ {
+  "parent_company": "Media24",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 148025.957,
+  "desktop_unique_visitors": 55381.4539,
+  "mobile_unique_visitors": 119631.1521
+ },
+ {
+  "parent_company": "Media24",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 256807.3246,
+  "desktop_unique_visitors": 78156.3509,
+  "mobile_unique_visitors": 214672.1786
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Angola",
+  "country": "AO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 278.117344,
+  "mobile_unique_visitors": 373.993879
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Austria",
+  "country": "AT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 130566.7742,
+  "desktop_unique_visitors": 48493.9214099999,
+  "mobile_unique_visitors": 112093.6288
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Belgium",
+  "country": "BE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 109624.1008,
+  "desktop_unique_visitors": 8411.15088,
+  "mobile_unique_visitors": 105388.2604
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 20019031.114,
+  "desktop_unique_visitors": 5783206.54421,
+  "mobile_unique_visitors": 19697310.9899
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Bulgaria",
+  "country": "BG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1894070.17,
+  "desktop_unique_visitors": 465699.922,
+  "mobile_unique_visitors": 1870706.11
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 165492.907959999,
+  "desktop_unique_visitors": 36315.98475,
+  "mobile_unique_visitors": 156557.13882
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1006119.1664,
+  "desktop_unique_visitors": 338293.26974,
+  "mobile_unique_visitors": 873981.3717
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Hungary",
+  "country": "HU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1399104.83,
+  "desktop_unique_visitors": 715150.399,
+  "mobile_unique_visitors": 1199602.7
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Indonesia",
+  "country": "ID",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3389034.35,
+  "desktop_unique_visitors": 746095.745,
+  "mobile_unique_visitors": 3348092.47
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 385753.7196,
+  "desktop_unique_visitors": 32961.3842,
+  "mobile_unique_visitors": 371920.584
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Kazakhstan",
+  "country": "KZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 309465.829,
+  "mobile_unique_visitors": 1828202.24
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Kyrgyzstan",
+  "country": "KG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 2677.52554,
+  "mobile_unique_visitors": 16760.5025
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Malaysia",
+  "country": "MY",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 11463.7504,
+  "desktop_unique_visitors": 1367.60203,
+  "mobile_unique_visitors": 11061.0691
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 215178.96225,
+  "desktop_unique_visitors": 79760.18312,
+  "mobile_unique_visitors": 182344.13384
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Poland",
+  "country": "PL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 9042036.193,
+  "desktop_unique_visitors": 4799204.3017,
+  "mobile_unique_visitors": 8007472.409
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Portugal",
+  "country": "PT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2542888.33,
+  "desktop_unique_visitors": 1151187.223,
+  "mobile_unique_visitors": 2204373.022
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Republic of Moldova",
+  "country": "MD",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 40628.5068,
+  "mobile_unique_visitors": 133560.4524
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Romania",
+  "country": "RO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 13242745.5199,
+  "desktop_unique_visitors": 4141426.21588999,
+  "mobile_unique_visitors": 12348440.8195
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Russian Federation",
+  "country": "RU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 99166.4192,
+  "desktop_unique_visitors": 45992.803982,
+  "mobile_unique_visitors": 68080.56869
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Slovakia",
+  "country": "SK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 9028.80776,
+  "desktop_unique_visitors": 1960.63307,
+  "mobile_unique_visitors": 8920.00141
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "South Africa",
+  "country": "ZA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2835691.81,
+  "desktop_unique_visitors": 560785.405,
+  "mobile_unique_visitors": 2768894.89
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 169509.8378,
+  "desktop_unique_visitors": 39044.89174,
+  "mobile_unique_visitors": 151041.06668
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Switzerland",
+  "country": "CH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 39892.9109,
+  "desktop_unique_visitors": 9745.21568,
+  "mobile_unique_visitors": 34765.2537
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Turkey",
+  "country": "TR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 8068.6373,
+  "desktop_unique_visitors": 794.953416,
+  "mobile_unique_visitors": 7980.87898
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Ukraine",
+  "country": "UA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 8226540.20539999,
+  "desktop_unique_visitors": 2217606.86778,
+  "mobile_unique_visitors": 7049819.1607
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 364259.6919,
+  "desktop_unique_visitors": 123449.74781,
+  "mobile_unique_visitors": 309111.2133
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 176463.3143,
+  "desktop_unique_visitors": 98965.1489599999,
+  "mobile_unique_visitors": 119062.77133
+ },
+ {
+  "parent_company": "OLX",
+  "country_name": "Uzbekistan",
+  "country": "UZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 2076.2962,
+  "mobile_unique_visitors": 25560.6454
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Austria",
+  "country": "AT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5223.49714,
+  "desktop_unique_visitors": 1614.58223,
+  "mobile_unique_visitors": 4304.07464
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6745.85302,
+  "desktop_unique_visitors": 647.183753,
+  "mobile_unique_visitors": 6672.65463
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Bulgaria",
+  "country": "BG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 54612.6815,
+  "desktop_unique_visitors": 737.764837,
+  "mobile_unique_visitors": 54064.6573
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Czechia",
+  "country": "CZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4790.81588,
+  "desktop_unique_visitors": 790.57433,
+  "mobile_unique_visitors": 4671.58988
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Egypt",
+  "country": "EG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3356.14337,
+  "desktop_unique_visitors": 399.772961,
+  "mobile_unique_visitors": 3240.79206
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 21017.89891,
+  "desktop_unique_visitors": 3247.12269,
+  "mobile_unique_visitors": 20242.316
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 46369.2231999999,
+  "desktop_unique_visitors": 13853.6932999999,
+  "mobile_unique_visitors": 40965.4845
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 28393.7792,
+  "desktop_unique_visitors": 2880.65339,
+  "mobile_unique_visitors": 27567.1971
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Indonesia",
+  "country": "ID",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 34196.9332,
+  "desktop_unique_visitors": 863.728087,
+  "mobile_unique_visitors": 33849.798
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 7873.00049,
+  "desktop_unique_visitors": 1541.0669,
+  "mobile_unique_visitors": 7161.57957
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Kazakhstan",
+  "country": "KZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 663.5875391,
+  "mobile_unique_visitors": 44137.2357799999
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 24125.4133799999,
+  "desktop_unique_visitors": 6942.50736,
+  "mobile_unique_visitors": 20503.57997
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Pakistan",
+  "country": "PK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 713.045153,
+  "mobile_unique_visitors": 12270.296
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Poland",
+  "country": "PL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 362920.82,
+  "desktop_unique_visitors": 213210.757,
+  "mobile_unique_visitors": 222403.124
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Portugal",
+  "country": "PT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 26677.9863,
+  "desktop_unique_visitors": 16543.2873,
+  "mobile_unique_visitors": 14186.2314
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Republic of Moldova",
+  "country": "MD",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 4977.60623,
+  "mobile_unique_visitors": 9378.35983
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Romania",
+  "country": "RO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1558537.14099999,
+  "desktop_unique_visitors": 379058.0434,
+  "mobile_unique_visitors": 1458899.048
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Slovakia",
+  "country": "SK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 148.095177,
+  "desktop_unique_visitors": 146.115111,
+  "mobile_unique_visitors": 17.0954087
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 10121.5847,
+  "desktop_unique_visitors": 2258.38762,
+  "mobile_unique_visitors": 9016.3895
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Turkey",
+  "country": "TR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3880.40191,
+  "desktop_unique_visitors": 1082.268299,
+  "mobile_unique_visitors": 3350.26855999999
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Ukraine",
+  "country": "UA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 140799.687,
+  "desktop_unique_visitors": 37233.9682,
+  "mobile_unique_visitors": 136601.5
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 25136.36393,
+  "desktop_unique_visitors": 6972.85391,
+  "mobile_unique_visitors": 21747.21295
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 22690.67093,
+  "desktop_unique_visitors": 13226.65699,
+  "mobile_unique_visitors": 12955.88016
+ },
+ {
+  "parent_company": "OLX ",
+  "country_name": "Uzbekistan",
+  "country": "UZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 1112.76157,
+  "mobile_unique_visitors": 23567.5647
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "Austria",
+  "country": "AT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 9597.68521,
+  "desktop_unique_visitors": 2653.30142,
+  "mobile_unique_visitors": 8143.6692
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "Belgium",
+  "country": "BE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4047.25784,
+  "desktop_unique_visitors": 1212.90055,
+  "mobile_unique_visitors": 3618.69108
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 7179.10081,
+  "desktop_unique_visitors": 1146.14401,
+  "mobile_unique_visitors": 6913.93822
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5651.68448,
+  "desktop_unique_visitors": 2163.62837,
+  "mobile_unique_visitors": 4587.59369
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 42309.2356,
+  "desktop_unique_visitors": 10402.5472,
+  "mobile_unique_visitors": 36800.8129
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 16215.6692,
+  "desktop_unique_visitors": 1316.68089,
+  "mobile_unique_visitors": 15645.282
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 11141.4489,
+  "desktop_unique_visitors": 4393.49911,
+  "mobile_unique_visitors": 8489.47614
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "Republic of Moldova",
+  "country": "MD",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 1754.42511,
+  "mobile_unique_visitors": 3625.87751
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "Romania",
+  "country": "RO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 855023.989,
+  "desktop_unique_visitors": 274225.799,
+  "mobile_unique_visitors": 776592.475
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 9207.63194,
+  "desktop_unique_visitors": 1287.61912,
+  "mobile_unique_visitors": 8658.22365
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "Switzerland",
+  "country": "CH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5724.31579,
+  "desktop_unique_visitors": 2583.99548,
+  "mobile_unique_visitors": 4026.37869
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 25514.322,
+  "desktop_unique_visitors": 8836.95291,
+  "mobile_unique_visitors": 19940.0584
+ },
+ {
+  "parent_company": "OLX Real Estate",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 12647.3197,
+  "desktop_unique_visitors": 4787.42222,
+  "mobile_unique_visitors": 9958.76104
+ },
+ {
+  "parent_company": "Oda",
+  "country_name": "Denmark",
+  "country": "DK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3019.19135,
+  "desktop_unique_visitors": 496.407419,
+  "mobile_unique_visitors": 2978.85819
+ },
+ {
+  "parent_company": "Oda",
+  "country_name": "Norway",
+  "country": "NO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 450154.443,
+  "desktop_unique_visitors": 138860.345,
+  "mobile_unique_visitors": 376094.1
+ },
+ {
+  "parent_company": "Oda",
+  "country_name": "Sweden",
+  "country": "SE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2766.21506,
+  "desktop_unique_visitors": 876.813882,
+  "mobile_unique_visitors": 2416.02279
+ },
+ {
+  "parent_company": "Otodom (OLX)",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 73332.142,
+  "desktop_unique_visitors": 24472.9625,
+  "mobile_unique_visitors": 67848.0564
+ },
+ {
+  "parent_company": "Otodom (OLX)",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 18603.7633,
+  "desktop_unique_visitors": 1761.77477,
+  "mobile_unique_visitors": 17897.6486
+ },
+ {
+  "parent_company": "Otodom (OLX)",
+  "country_name": "Poland",
+  "country": "PL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3382881.2,
+  "desktop_unique_visitors": 1435732,
+  "mobile_unique_visitors": 3098263.31
+ },
+ {
+  "parent_company": "Otodom (OLX)",
+  "country_name": "Ukraine",
+  "country": "UA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 30691.1651,
+  "desktop_unique_visitors": 6078.83196,
+  "mobile_unique_visitors": 27576.6602
+ },
+ {
+  "parent_company": "Otodom (OLX)",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 43937.0014,
+  "desktop_unique_visitors": 19268.0106,
+  "mobile_unique_visitors": 35119.5931
+ },
+ {
+  "parent_company": "Otodom (OLX)",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 24780.4823,
+  "desktop_unique_visitors": 17746.328,
+  "mobile_unique_visitors": 10974.6953
+ },
+ {
+  "parent_company": "Otomoto (OLX)",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 138804.892,
+  "desktop_unique_visitors": 44038.1968,
+  "mobile_unique_visitors": 124740.963
+ },
+ {
+  "parent_company": "Otomoto (OLX)",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 51568.9528,
+  "desktop_unique_visitors": 14426.0822,
+  "mobile_unique_visitors": 45137.2288
+ },
+ {
+  "parent_company": "Otomoto (OLX)",
+  "country_name": "Poland",
+  "country": "PL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5830687.44,
+  "desktop_unique_visitors": 2467017.79,
+  "mobile_unique_visitors": 5627568.8
+ },
+ {
+  "parent_company": "Otomoto (OLX)",
+  "country_name": "Ukraine",
+  "country": "UA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 50708.2549,
+  "desktop_unique_visitors": 17813.34,
+  "mobile_unique_visitors": 44443.6503
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Argentina",
+  "country": "AR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 47158.2809,
+  "desktop_unique_visitors": 35708.0999,
+  "mobile_unique_visitors": 22951.3046
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Bolivia (Plurinational State of)",
+  "country": "BO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 7019.51845,
+  "mobile_unique_visitors": 4087.11147
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3297.38616,
+  "desktop_unique_visitors": 1048.94078,
+  "mobile_unique_visitors": 2888.39933
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 8610.95427,
+  "desktop_unique_visitors": 1523.05764,
+  "mobile_unique_visitors": 8319.1371
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Chile",
+  "country": "CL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 23977.9437,
+  "desktop_unique_visitors": 15501.1528,
+  "mobile_unique_visitors": 13334.1887
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Colombia",
+  "country": "CO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 307782.456,
+  "desktop_unique_visitors": 190881.305,
+  "mobile_unique_visitors": 184991.236
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Costa Rica",
+  "country": "CR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 4350.26056,
+  "mobile_unique_visitors": 2785.41099
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Dominican Republic",
+  "country": "DO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4468.94684,
+  "desktop_unique_visitors": 4418.39815,
+  "mobile_unique_visitors": 636.470082
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Ecuador",
+  "country": "EC",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 18198.1382,
+  "desktop_unique_visitors": 13375.5628,
+  "mobile_unique_visitors": 7980.49125
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "El Salvador",
+  "country": "SV",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 4076.52638,
+  "mobile_unique_visitors": 2124.11035
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Guatemala",
+  "country": "GT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 9769.83523,
+  "mobile_unique_visitors": 7179.02499
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 204025.604,
+  "desktop_unique_visitors": 100732.695,
+  "mobile_unique_visitors": 150879.626
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Nicaragua",
+  "country": "NI",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 3499.20491,
+  "mobile_unique_visitors": 921.996502
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Panama",
+  "country": "PA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 6305.98984,
+  "mobile_unique_visitors": 4976.27103
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Paraguay",
+  "country": "PY",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 8661.11537,
+  "desktop_unique_visitors": 7105.23744,
+  "mobile_unique_visitors": 2665.93779
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Peru",
+  "country": "PE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 77922.486,
+  "desktop_unique_visitors": 35362.8565,
+  "mobile_unique_visitors": 58232.9018
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 53147.1884,
+  "desktop_unique_visitors": 43631.0928,
+  "mobile_unique_visitors": 18098.1488
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 26489.3436,
+  "desktop_unique_visitors": 20678.17,
+  "mobile_unique_visitors": 10165.4592
+ },
+ {
+  "parent_company": "Platzi",
+  "country_name": "Venezuela (Bolivarian Republic of)",
+  "country": "VE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 13393.4131,
+  "mobile_unique_visitors": 4876.4674
+ },
+ {
+  "parent_company": "Sharebite",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 316.777672,
+  "desktop_unique_visitors": 101.481783,
+  "mobile_unique_visitors": 266.537794
+ },
+ {
+  "parent_company": "Sharebite",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 236.935046,
+  "desktop_unique_visitors": 189.784421,
+  "mobile_unique_visitors": 80.6681752
+ },
+ {
+  "parent_company": "Sharebite",
+  "country_name": "Philippines",
+  "country": "PH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 142.252483,
+  "desktop_unique_visitors": 125.972601,
+  "mobile_unique_visitors": 37.2519005
+ },
+ {
+  "parent_company": "Sharebite",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1635.12819,
+  "desktop_unique_visitors": 295.457855,
+  "mobile_unique_visitors": 1515.24715
+ },
+ {
+  "parent_company": "Sharebite",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 18574.1809,
+  "desktop_unique_visitors": 16744.5854,
+  "mobile_unique_visitors": 6912.20642
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Argentina",
+  "country": "AR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 337.645857,
+  "desktop_unique_visitors": 270.862123,
+  "mobile_unique_visitors": 114.274616
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Australia",
+  "country": "AU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 15163.5647099999,
+  "desktop_unique_visitors": 12768.41857,
+  "mobile_unique_visitors": 5963.90589
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6000.50194,
+  "desktop_unique_visitors": 4091.08751,
+  "mobile_unique_visitors": 2907.46546
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 22674.055962,
+  "desktop_unique_visitors": 18979.8580725,
+  "mobile_unique_visitors": 8150.804968
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Chile",
+  "country": "CL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2042.20284,
+  "desktop_unique_visitors": 992.872559,
+  "mobile_unique_visitors": 1338.80821
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "China",
+  "country": "CN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 8246.94661,
+  "mobile_unique_visitors": 0
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Colombia",
+  "country": "CO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1929.440437,
+  "desktop_unique_visitors": 1660.828106,
+  "mobile_unique_visitors": 511.4840228
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Costa Rica",
+  "country": "CR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 313.855383,
+  "mobile_unique_visitors": 173.619912
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Dominican Republic",
+  "country": "DO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 251.162883,
+  "desktop_unique_visitors": 215.923879,
+  "mobile_unique_visitors": 72.1290092
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Ecuador",
+  "country": "EC",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 402.788702,
+  "desktop_unique_visitors": 366.603566,
+  "mobile_unique_visitors": 73.4288899
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Egypt",
+  "country": "EG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3407.05616,
+  "desktop_unique_visitors": 478.386164,
+  "mobile_unique_visitors": 3248.32457
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "El Salvador",
+  "country": "SV",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 240.776011,
+  "mobile_unique_visitors": 96.4041481
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 11962.21687,
+  "desktop_unique_visitors": 7034.37173,
+  "mobile_unique_visitors": 7343.59188
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 13078.45546,
+  "desktop_unique_visitors": 12369.13918,
+  "mobile_unique_visitors": 1547.46277999999
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Guatemala",
+  "country": "GT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 784.4604,
+  "mobile_unique_visitors": 97.945294
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Honduras",
+  "country": "HN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 91.3093189,
+  "mobile_unique_visitors": 39.336507
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 72812.99999,
+  "desktop_unique_visitors": 46391.5726895,
+  "mobile_unique_visitors": 42032.6867066
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Indonesia",
+  "country": "ID",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 18746.53208,
+  "desktop_unique_visitors": 949.679504,
+  "mobile_unique_visitors": 18445.24445
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Japan",
+  "country": "JP",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3038.17643,
+  "desktop_unique_visitors": 1719.264733,
+  "mobile_unique_visitors": 1666.6297644
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Kenya",
+  "country": "KE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4260.94344,
+  "desktop_unique_visitors": 2816.67516,
+  "mobile_unique_visitors": 2160.6116
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Malaysia",
+  "country": "MY",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 38760.8377,
+  "desktop_unique_visitors": 36214.4153,
+  "mobile_unique_visitors": 6717.69827
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 10265.27437,
+  "desktop_unique_visitors": 7267.15998,
+  "mobile_unique_visitors": 4771.770049
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6300.45421,
+  "desktop_unique_visitors": 4288.80271,
+  "mobile_unique_visitors": 3021.59463
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "New Zealand",
+  "country": "NZ",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3544.02046,
+  "desktop_unique_visitors": 2988.52444,
+  "mobile_unique_visitors": 1184.06605
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Nigeria",
+  "country": "NG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 26.1042473,
+  "mobile_unique_visitors": 48.5809992
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Panama",
+  "country": "PA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 215.158596,
+  "mobile_unique_visitors": 42.2054983
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Peru",
+  "country": "PE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1572.34833,
+  "desktop_unique_visitors": 1248.79052,
+  "mobile_unique_visitors": 528.939923
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Philippines",
+  "country": "PH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 9727.556471,
+  "desktop_unique_visitors": 4358.248445,
+  "mobile_unique_visitors": 7173.9272746
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Saudi Arabia",
+  "country": "SA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3962.57819,
+  "desktop_unique_visitors": 2072.73231,
+  "mobile_unique_visitors": 2907.22452
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Singapore",
+  "country": "SG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1368.57921,
+  "desktop_unique_visitors": 764.215207,
+  "mobile_unique_visitors": 796.999313
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "South Africa",
+  "country": "ZA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1465.00765,
+  "desktop_unique_visitors": 1316.10595,
+  "mobile_unique_visitors": 374.371385
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 9040.317132,
+  "desktop_unique_visitors": 7141.86930299999,
+  "mobile_unique_visitors": 2899.0856862
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Tunisia",
+  "country": "TN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 120.323428,
+  "mobile_unique_visitors": 1168.74872
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Turkey",
+  "country": "TR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1827.15613,
+  "desktop_unique_visitors": 759.976415,
+  "mobile_unique_visitors": 1332.1009
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Ukraine",
+  "country": "UA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 148.861222,
+  "desktop_unique_visitors": 132.995184,
+  "mobile_unique_visitors": 42.1001221
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 24252.777029,
+  "desktop_unique_visitors": 18721.8763096,
+  "mobile_unique_visitors": 9692.520224
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 259514.000737,
+  "desktop_unique_visitors": 236676.86091,
+  "mobile_unique_visitors": 49439.7558449999
+ },
+ {
+  "parent_company": "SkillSoft",
+  "country_name": "Venezuela (Bolivarian Republic of)",
+  "country": "VE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 210.799901,
+  "mobile_unique_visitors": 28.8651868
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 12084.3764,
+  "desktop_unique_visitors": 8910.9951,
+  "mobile_unique_visitors": 5197.80639
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "China",
+  "country": "CN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6388.12332,
+  "desktop_unique_visitors": 1393.60048,
+  "mobile_unique_visitors": 5614.31109
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 9989.3673,
+  "desktop_unique_visitors": 7014.72857,
+  "mobile_unique_visitors": 4305.46033
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 12700.6387,
+  "desktop_unique_visitors": 10962.0086,
+  "mobile_unique_visitors": 3466.30911
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Ghana",
+  "country": "GH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 503.737753,
+  "mobile_unique_visitors": 7395.43186
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 68441.2026,
+  "desktop_unique_visitors": 47355.8017,
+  "mobile_unique_visitors": 30974.9244
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Indonesia",
+  "country": "ID",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 17469.5614,
+  "desktop_unique_visitors": 4855.69113,
+  "mobile_unique_visitors": 15724.8629
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Morocco",
+  "country": "MA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 1448.7485,
+  "mobile_unique_visitors": 5333.67871
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 11512.6713,
+  "desktop_unique_visitors": 5863.04568,
+  "mobile_unique_visitors": 6747.17741
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Nigeria",
+  "country": "NG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 761.098278,
+  "mobile_unique_visitors": 3925.12678
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Pakistan",
+  "country": "PK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 5198.77242,
+  "mobile_unique_visitors": 7453.20157
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Philippines",
+  "country": "PH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 8278.25059,
+  "desktop_unique_visitors": 5228.47253,
+  "mobile_unique_visitors": 4520.45041
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Poland",
+  "country": "PL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4718.19806,
+  "desktop_unique_visitors": 3310.2819,
+  "mobile_unique_visitors": 2125.98814
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Russian Federation",
+  "country": "RU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 17844.1309,
+  "desktop_unique_visitors": 8844.06857,
+  "mobile_unique_visitors": 12846.4888
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "South Africa",
+  "country": "ZA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 7827.71865,
+  "desktop_unique_visitors": 3683.62127,
+  "mobile_unique_visitors": 5583.18155
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Sweden",
+  "country": "SE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6257.45197,
+  "desktop_unique_visitors": 4697.30379,
+  "mobile_unique_visitors": 2631.77643
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Turkey",
+  "country": "TR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6552.56496,
+  "desktop_unique_visitors": 2982.9806,
+  "mobile_unique_visitors": 4771.94141
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 13548.8485,
+  "desktop_unique_visitors": 11598.2334,
+  "mobile_unique_visitors": 3454.46306
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 45148.5514,
+  "desktop_unique_visitors": 39891.9303,
+  "mobile_unique_visitors": 12513.1278
+ },
+ {
+  "parent_company": "SoloLearn",
+  "country_name": "Zambia",
+  "country": "ZM",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 434.363171,
+  "mobile_unique_visitors": 380.055268
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Australia",
+  "country": "AU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 409669.96,
+  "desktop_unique_visitors": 373437.406,
+  "mobile_unique_visitors": 140151.259
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 584754.319,
+  "desktop_unique_visitors": 547720.761,
+  "mobile_unique_visitors": 113139.241
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 744751.733,
+  "desktop_unique_visitors": 713844.758,
+  "mobile_unique_visitors": 200949.994
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "China",
+  "country": "CN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 731718.309,
+  "desktop_unique_visitors": 724134.642,
+  "mobile_unique_visitors": 34232.0994
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 611144.336,
+  "desktop_unique_visitors": 561898.166,
+  "mobile_unique_visitors": 122084.949
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 894193.657,
+  "desktop_unique_visitors": 883492.091,
+  "mobile_unique_visitors": 186664.555
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 3197940.83,
+  "desktop_unique_visitors": 2507287.79,
+  "mobile_unique_visitors": 1592245.07
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Indonesia",
+  "country": "ID",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 324429.13,
+  "desktop_unique_visitors": 242150.1,
+  "mobile_unique_visitors": 177653.321
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 320145.185,
+  "desktop_unique_visitors": 299475.147,
+  "mobile_unique_visitors": 53364.5557
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Japan",
+  "country": "JP",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 316877.697,
+  "desktop_unique_visitors": 303713.609,
+  "mobile_unique_visitors": 76892.4276
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 409651.393,
+  "desktop_unique_visitors": 371099.788,
+  "mobile_unique_visitors": 91300.7832
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Republic of Korea",
+  "country": "KR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 322895.06,
+  "desktop_unique_visitors": 319031.858,
+  "mobile_unique_visitors": 67288.3815
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Russian Federation",
+  "country": "RU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 904322.563,
+  "desktop_unique_visitors": 754897.429,
+  "mobile_unique_visitors": 409766.08
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Singapore",
+  "country": "SG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 335929.702,
+  "desktop_unique_visitors": 290834.629,
+  "mobile_unique_visitors": 127270.562
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 384291.65,
+  "desktop_unique_visitors": 364943.293,
+  "mobile_unique_visitors": 53697.4461
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1056543.1,
+  "desktop_unique_visitors": 1043276.97,
+  "mobile_unique_visitors": 283335.925
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5708261.07,
+  "desktop_unique_visitors": 5275590.77,
+  "mobile_unique_visitors": 1561766.29
+ },
+ {
+  "parent_company": "Stack Overflow",
+  "country_name": "Viet Nam",
+  "country": "VN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 233437.835,
+  "desktop_unique_visitors": 221156.008,
+  "mobile_unique_visitors": 69355.329
+ },
+ {
+  "parent_company": "Standvirtual",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 29928.7597,
+  "desktop_unique_visitors": 10506.9129,
+  "mobile_unique_visitors": 24778.313
+ },
+ {
+  "parent_company": "Standvirtual",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6602.89245,
+  "desktop_unique_visitors": 2320.03451,
+  "mobile_unique_visitors": 5194.31351
+ },
+ {
+  "parent_company": "Standvirtual",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 7431.51152,
+  "desktop_unique_visitors": 2343.44946,
+  "mobile_unique_visitors": 6225.76751
+ },
+ {
+  "parent_company": "Standvirtual",
+  "country_name": "Portugal",
+  "country": "PT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 869878.9,
+  "desktop_unique_visitors": 395491.572,
+  "mobile_unique_visitors": 774034.944
+ },
+ {
+  "parent_company": "Standvirtual",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 11014.9923,
+  "desktop_unique_visitors": 3592.33066,
+  "mobile_unique_visitors": 9355.25897
+ },
+ {
+  "parent_company": "Standvirtual",
+  "country_name": "Switzerland",
+  "country": "CH",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 9827.25249,
+  "desktop_unique_visitors": 2955.46173,
+  "mobile_unique_visitors": 8146.19025
+ },
+ {
+  "parent_company": "Standvirtual",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 8422.54342,
+  "desktop_unique_visitors": 3201.44619,
+  "mobile_unique_visitors": 6714.84117
+ },
+ {
+  "parent_company": "Swiggy",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 7564407.7,
+  "desktop_unique_visitors": 1339775.09,
+  "mobile_unique_visitors": 6848947.83
+ },
+ {
+  "parent_company": "Swiggy",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 34691.9142,
+  "desktop_unique_visitors": 16239.5542,
+  "mobile_unique_visitors": 23524.1793
+ },
+ {
+  "parent_company": "TakeAlot Group",
+  "country_name": "South Africa",
+  "country": "ZA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4570375.55,
+  "desktop_unique_visitors": 1512446.57,
+  "mobile_unique_visitors": 4452759.1
+ },
+ {
+  "parent_company": "TakeAlot Group",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 44725.5956,
+  "desktop_unique_visitors": 27860.2069,
+  "mobile_unique_visitors": 24565.4231
+ },
+ {
+  "parent_company": "TakeAlot Group",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 41874.0872,
+  "desktop_unique_visitors": 26592.1431,
+  "mobile_unique_visitors": 23207.7539
+ },
+ {
+  "parent_company": "Takealot",
+  "country_name": "South Africa",
+  "country": "ZA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 37324.4773,
+  "desktop_unique_visitors": 8157.99254,
+  "mobile_unique_visitors": 36714.1234
+ },
+ {
+  "parent_company": "Takealot",
+  "country_name": "United Arab Emirates",
+  "country": "AE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 75.0640535,
+  "desktop_unique_visitors": 74.2132364,
+  "mobile_unique_visitors": 10.8684723
+ },
+ {
+  "parent_company": "Takealot",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 479.666793,
+  "desktop_unique_visitors": 63.6587449,
+  "mobile_unique_visitors": 474.287332
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Australia",
+  "country": "AU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 199375.716,
+  "desktop_unique_visitors": 175274.795,
+  "mobile_unique_visitors": 73378.1443
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2043936.51,
+  "desktop_unique_visitors": 1024530.81,
+  "mobile_unique_visitors": 1573337.92
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Canada",
+  "country": "CA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 442812.629,
+  "desktop_unique_visitors": 367542.125,
+  "mobile_unique_visitors": 203844.934
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Colombia",
+  "country": "CO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 271488.255,
+  "desktop_unique_visitors": 231093.189,
+  "mobile_unique_visitors": 104171.822
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Egypt",
+  "country": "EG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 251071.071,
+  "desktop_unique_visitors": 138338.108,
+  "mobile_unique_visitors": 181548.737
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 223523.822,
+  "desktop_unique_visitors": 183484.804,
+  "mobile_unique_visitors": 88781.4272
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 351836.031,
+  "desktop_unique_visitors": 309719.911,
+  "mobile_unique_visitors": 123706.624
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "India",
+  "country": "IN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 4005454.5,
+  "desktop_unique_visitors": 2202299.69,
+  "mobile_unique_visitors": 2944574.72
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Indonesia",
+  "country": "ID",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 271671.647,
+  "desktop_unique_visitors": 169406.889,
+  "mobile_unique_visitors": 177263.207
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 171392.225,
+  "desktop_unique_visitors": 155790.257,
+  "mobile_unique_visitors": 55900.6183
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Japan",
+  "country": "JP",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 951500.064,
+  "desktop_unique_visitors": 839334.407999999,
+  "mobile_unique_visitors": 288550.0896
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Mexico",
+  "country": "MX",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 406630.007,
+  "desktop_unique_visitors": 358887.001,
+  "mobile_unique_visitors": 172008.055
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Pakistan",
+  "country": "PK",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 170329.307,
+  "mobile_unique_visitors": 117679.632
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Poland",
+  "country": "PL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 155296.753,
+  "desktop_unique_visitors": 145835.303,
+  "mobile_unique_visitors": 48820.8534
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "South Africa",
+  "country": "ZA",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 231798.267,
+  "desktop_unique_visitors": 151901.801,
+  "mobile_unique_visitors": 135393.943
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 271726.444,
+  "desktop_unique_visitors": 239153.495,
+  "mobile_unique_visitors": 96735.1821
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Turkey",
+  "country": "TR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 485179.007,
+  "desktop_unique_visitors": 387881.245,
+  "mobile_unique_visitors": 210560.081
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 582957.701,
+  "desktop_unique_visitors": 426503.156,
+  "mobile_unique_visitors": 322664.818
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2491675.537347,
+  "desktop_unique_visitors": 2222391.44661599,
+  "mobile_unique_visitors": 917907.2039969
+ },
+ {
+  "parent_company": "Udemy",
+  "country_name": "Viet Nam",
+  "country": "VN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 141952.576,
+  "desktop_unique_visitors": 135916.139,
+  "mobile_unique_visitors": 37705.6285
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Austria",
+  "country": "AT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 50006.663084,
+  "desktop_unique_visitors": 31090.8017939999,
+  "mobile_unique_visitors": 31875.3569146
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Bulgaria",
+  "country": "BG",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1692354.266,
+  "desktop_unique_visitors": 507419.2822,
+  "mobile_unique_visitors": 1647409.319
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "China",
+  "country": "CN",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 169197.425,
+  "desktop_unique_visitors": 4635.28601,
+  "mobile_unique_visitors": 167476.309
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "France",
+  "country": "FR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 107.081414,
+  "desktop_unique_visitors": 92.9105994,
+  "mobile_unique_visitors": 28.5643422
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Germany",
+  "country": "DE",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 147522.540413,
+  "desktop_unique_visitors": 46041.392562,
+  "mobile_unique_visitors": 129383.6724801
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Greece",
+  "country": "GR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 123.293343,
+  "desktop_unique_visitors": 101.587107,
+  "mobile_unique_visitors": 44.6802857
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Hungary",
+  "country": "HU",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1915178.42901,
+  "desktop_unique_visitors": 916732.120206,
+  "mobile_unique_visitors": 1575230.99697
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Italy",
+  "country": "IT",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 47784.0910689999,
+  "desktop_unique_visitors": 8145.518524,
+  "mobile_unique_visitors": 46050.8846205999
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Netherlands",
+  "country": "NL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 2777.137991,
+  "desktop_unique_visitors": 935.407402999999,
+  "mobile_unique_visitors": 2319.394358
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Poland",
+  "country": "PL",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 68114.204895,
+  "desktop_unique_visitors": 41219.428956,
+  "mobile_unique_visitors": 45436.8600552
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Republic of Moldova",
+  "country": "MD",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 32523.97489,
+  "mobile_unique_visitors": 120983.60322
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Romania",
+  "country": "RO",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 6039281.04780099,
+  "desktop_unique_visitors": 1459479.65461633,
+  "mobile_unique_visitors": 5587323.87906499
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Serbia",
+  "country": "RS",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 0,
+  "desktop_unique_visitors": 102.336717,
+  "mobile_unique_visitors": 95.5606861
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Spain",
+  "country": "ES",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 1997.03683,
+  "desktop_unique_visitors": 827.703921999999,
+  "mobile_unique_visitors": 1528.0991846
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "Turkey",
+  "country": "TR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 133.320865,
+  "desktop_unique_visitors": 96.0874564,
+  "mobile_unique_visitors": 58.8519453
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "United Kingdom of Great Britain and Northern Ireland",
+  "country": "GB",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 55072.06142,
+  "desktop_unique_visitors": 24173.7506965,
+  "mobile_unique_visitors": 41187.163058
+ },
+ {
+  "parent_company": "eMAG",
+  "country_name": "United States of America",
+  "country": "US",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 51280.6593199999,
+  "desktop_unique_visitors": 28511.90381,
+  "mobile_unique_visitors": 34572.100221
+ },
+ {
+  "parent_company": "iFood",
+  "country_name": "Brazil",
+  "country": "BR",
+  "yearmonth": "01\/25\/2025",
+  "deduplicated_audience": 5923837.73,
+  "desktop_unique_visitors": 1955213.11,
+  "mobile_unique_visitors": 5557896.76
+ }
+]
+}
