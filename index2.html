@@ -382,12 +382,13 @@ function pointInSinglePolygon(lat, lng, polygon) {
 
 // Generate points that follow a country's shape - fixed coordinate handling
 // Generate points that follow a country's shape - fixed coordinate handling
+// Generate points that follow a country's shape - fixed coordinate handling
 function generateCountryPoints(countryFeature, centerLat, centerLng, magnitude) {
   var points = [];
   var coordinates = [];
   
-  // Normalize magnitude to have a maximum of 2
-  var normalizedMagnitude = Math.min(2, magnitude);
+  // Normalize magnitude to have a maximum of 1 (half of previous max of 2)
+  var normalizedMagnitude = Math.min(1.0, magnitude / 2);
   
   // Get all coordinates from the country geometry
   if (countryFeature.geometry.type === "Polygon") {
@@ -410,7 +411,7 @@ function generateCountryPoints(countryFeature, centerLat, centerLng, magnitude) 
   
   if (!coordinates || coordinates.length < 3) {
     // Fallback if we can't get country shape
-    points.push(centerLat, centerLng, Math.min(2, normalizedMagnitude));
+    points.push(centerLat, centerLng, normalizedMagnitude);
     return points;
   }
   
@@ -463,8 +464,8 @@ function generateCountryPoints(countryFeature, centerLat, centerLng, magnitude) 
         // Height decreases from center to edge, with a smoother falloff
         var heightFactor = 1 - Math.pow(normalizedDist, 0.5); // Adjust power for smoother falloff
         
-        // Calculate magnitude based on distance from center, capped at 2
-        var pointMagnitude = Math.min(2, normalizedMagnitude * heightFactor * 0.7);
+        // Calculate magnitude based on distance from center, capped at 1.0
+        var pointMagnitude = Math.min(1.0, normalizedMagnitude * heightFactor * 0.7);
         
         // Only add points with meaningful magnitude
         if (pointMagnitude > 0.01) {
@@ -475,13 +476,18 @@ function generateCountryPoints(countryFeature, centerLat, centerLng, magnitude) 
     }
   }
   
-  // Always include the center point with full magnitude, capped at 2
-  points.push(centerLat, centerLng, Math.min(2, normalizedMagnitude * 1.2));
+  // Always include the center point with full magnitude, capped at 1.0
+  points.push(centerLat, centerLng, Math.min(1.0, normalizedMagnitude * 1.2));
   
-  console.log(`Generated ${points.length/3} points for country ${countryFeature.properties.NAME || 'Unknown'}, max height: ${Math.min(2, normalizedMagnitude * 1.2)}`);
+  console.log(`Generated ${points.length/3} points for country ${countryFeature.properties.NAME || 'Unknown'}, max height: ${Math.min(1.0, normalizedMagnitude * 1.2)}`);
   
   return points;
 }
+
+
+
+
+
             }
           }
         }
