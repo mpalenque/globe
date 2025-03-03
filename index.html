@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>WebGL Globe - Audience Data</title>
+
     
     <meta charset="utf-8">
     <style type="text/css">
@@ -140,9 +141,7 @@
 
   <div id="container"></div>
 
-  <div id="info">
-    <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by the Google Data Arts Team <span class="bull">&bull;</span> Adapted for audience data visualization
-  </div>
+ 
 
   <div id="currentInfo">
     <span id="year1990" class="year">2023</span>
@@ -252,125 +251,253 @@
       
       xhr = new XMLHttpRequest();
       xhr.open('GET', 'audience_geo_data_compact.json', true);
-      // ...existing code...
       xhr.onreadystatechange = function(e) {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText);
             
-            // Transform data to create country-shaped distributions
-            var transformedData = data.map(function(companyEntry) {
-              var companyName = companyEntry[0];
-              var originalValues = [...companyEntry[1]]; // Original data points
-              var newValues = []; // Will hold the expanded set of points
-              
-              // Find max magnitude value for normalization of height only
-              var maxMagnitude = 0;
-              for (var i = 0; i < originalValues.length; i += 3) {
-                maxMagnitude = Math.max(maxMagnitude, originalValues[i + 2]);
+            // First load country boundaries data
+            var countriesData;
+            var countriesXhr = new XMLHttpRequest();
+            countriesXhr.open('GET', 'countries.geo.json', true);
+            countriesXhr.onreadystatechange = function() {
+              if (countriesXhr.readyState === 4 && countriesXhr.status === 200) {
+                countriesData = JSON.parse(countriesXhr.responseText);
+                processDataWithCountries(data, countriesData);
               }
-              
-              // Process each country data point (lat, lng, magnitude triplets)
-              for (var i = 0; i < originalValues.length; i += 3) {
-                var lat = originalValues[i];
-                var lng = originalValues[i + 1];
-                var magnitude = originalValues[i + 2];
-                
-                // Keep original magnitude for country size calculation
-                var originalMagnitudeNormalized = magnitude / maxMagnitude;
-                
-                // Normalize only height to a reasonable range (0.1 to 2.5)
-                var heightMagnitude = 0.1 + Math.min(2.4, originalMagnitudeNormalized * 1.4);
-                
-                // Calculate a country-specific size based on original magnitude
-                // This preserves the wider cones for larger values
-                var countrySize = Math.max(2, Math.min(6, (originalMagnitudeNormalized * 5) + 1));
-                
-                // Add the centroid point with full height (highest point)
-                newValues.push(lat, lng, heightMagnitude * 1.2); // Make center even higher
-                
-                // Simulate country shape using noise and distorted ellipses
-                // First, create several "growth axes" for the country
-                var numAxes = 3 + Math.floor(Math.random() * 3); // 3-5 axes
-                var axes = [];
-                
-                for (var a = 0; a < numAxes; a++) {
-                  // Random angle for axis direction
-                  var axisAngle = Math.random() * Math.PI * 2;
-                  // Random length (longer = more elongated country)
-                  var axisLength = 0.6 + Math.random() * 0.8; // 0.6-1.4
-                  axes.push({
-                    angle: axisAngle,
-                    length: axisLength
-                  });
-                }
-                
-                // Create densely packed points throughout the simulated country shape
-                // Use more points for countries with higher magnitude
-                var numPoints = Math.floor(50 + originalMagnitudeNormalized * 50);
-                
-                for (var p = 0; p < numPoints; p++) {
-                  // Random angle from center
-                  var angle = Math.random() * Math.PI * 2;
-                  
-                  // Find the "country border" in this direction using the axes
-                  var maxRadius = 0;
-                  for (var a = 0; a < axes.length; a++) {
-                    var axis = axes[a];
-                    var angleDiff = Math.abs(angle - axis.angle);
-                    angleDiff = Math.min(angleDiff, Math.PI * 2 - angleDiff);
-                    var influence = Math.pow(Math.cos(angleDiff), 2);
-                    
-                    maxRadius += axis.length * countrySize * influence;
-                  }
-                  
-                  maxRadius = maxRadius / axes.length;
-                  maxRadius = maxRadius * (0.8 + Math.random() * 0.4);
-                  
-                  var distance = maxRadius * Math.pow(Math.random(), 0.5);
-                  
-                  var latScale = 1.0;
-                  var lngScale = 1.0 / Math.cos(lat * Math.PI / 180 || 0.1);
-                  
-                  var dx = Math.cos(angle) * distance * lngScale;
-                  var dy = Math.sin(angle) * distance * latScale;
-                  
-                  var newLat = lat + dy;
-                  var newLng = lng + dx;
-                  
-                  var distanceRatio = distance / maxRadius;
-                  var heightFactor = 1 - Math.pow(distanceRatio, 0.8);
-                  
-                  // Apply normalized height magnitude
-                  var newMagnitude = heightMagnitude * heightFactor * (0.8 + Math.random() * 0.2);
-                  // Cap the maximum height to prevent extremely tall spikes
-                  newMagnitude = Math.min(newMagnitude, 2.5);
-                  
-                  newValues.push(newLat, newLng, newMagnitude);
-                }
-              }
-              
-              return [companyName, newValues];
-            });
+            };
+            countriesXhr.send(null);
             
-            window.data = transformedData;
-// ...existing code...
+            function processDataWithCountries(data, countriesData) {
+  // Transform data to create country-shaped distributions
+  var transformedData = data.map(function(companyEntry) {
+    var companyName = companyEntry[0];
+    var originalValues = [...companyEntry[1]]; // Original data points
+    var newValues = []; // Will hold the expanded set of points
+    
+    // Create a set of countries for this company
+    var companyCountries = new Set();
+    
+    // First pass: identify all countries this company is present in
+    for (var i = 0; i < originalValues.length; i += 3) {
+      var lat = originalValues[i];
+      var lng = originalValues[i + 1];
+      
+      // Find the country that contains this point
+      var countryFeature = findCountry(lat, lng, countriesData);
+      
+      if (countryFeature && countryFeature.properties) {
+        // Add country name/code to our set
+        companyCountries.add(countryFeature.properties.ISO_A3);
+      }
+    }
+    
+    console.log(companyName + " is present in: ", Array.from(companyCountries));
+    
+    // Second pass: generate points only for identified countries
+    for (var i = 0; i < originalValues.length; i += 3) {
+      var lat = originalValues[i];
+      var lng = originalValues[i + 1];
+      var magnitude = originalValues[i + 2];
+      
+      // Find the country that contains this point
+      var countryFeature = findCountry(lat, lng, countriesData);
+      
+      if (countryFeature && countryFeature.properties && 
+          companyCountries.has(countryFeature.properties.ISO_A3)) {
+        // We found a matching country that's part of this company's footprint
+        var countryPoints = generateCountryPoints(countryFeature, lat, lng, magnitude);
+        newValues.push(...countryPoints);
+      } else {
+        // Fallback: If we can't find a country, use the original point
+        newValues.push(lat, lng, magnitude);
+      }
+    }
+    
+    return [companyName, newValues];
+  });
+  
+  window.data = transformedData;
+  
+  // Only load the first company initially
+  globe.addData(transformedData[0][1], {format: 'magnitude', name: transformedData[0][0], animated: true});
+  
+  globe.createPoints();
+  
+  // Set the first company as active
+  setcompany(globe,0)();
+  
+  globe.animate();
+  document.body.style.backgroundImage = 'none'; // remove loading
+}
             
-            // Only load the first company initially
-            globe.addData(transformedData[0][1], {format: 'magnitude', name: transformedData[0][0], animated: true});
-            
-            globe.createPoints();
-            
-            // Set the first company as active
-            setcompany(globe,0)();
-            
-            globe.animate();
-            document.body.style.backgroundImage = 'none'; // remove loading
+           // Function to find which country a point belongs to
+function findCountry(lat, lng, countriesData) {
+  // Make sure coordinates are in the right order for comparison
+  for (var i = 0; i < countriesData.features.length; i++) {
+    var feature = countriesData.features[i];
+    if (pointInPolygon(lat, lng, feature)) {
+      return feature;
+    }
+  }
+  return null;
+}
+
+// Check if point is in polygon (country)
+function pointInPolygon(lat, lng, feature) {
+  if (!feature.geometry || !feature.geometry.coordinates) {
+    return false;
+  }
+  
+  // Handle different geometry types
+  if (feature.geometry.type === "Polygon") {
+    return pointInSinglePolygon(lat, lng, feature.geometry.coordinates[0]);
+  } else if (feature.geometry.type === "MultiPolygon") {
+    for (var i = 0; i < feature.geometry.coordinates.length; i++) {
+      if (pointInSinglePolygon(lat, lng, feature.geometry.coordinates[i][0])) {
+        return true;
+      }
+    }
+  }
+  
+  return false;
+}
+
+// Ray casting algorithm for point in polygon - fixed coordinate order
+function pointInSinglePolygon(lat, lng, polygon) {
+  // IMPORTANT: GeoJSON format uses [longitude, latitude]
+  var inside = false;
+  for (var i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+    var xi = polygon[i][0], yi = polygon[i][1]; // Correct GeoJSON coordinate order [lng, lat]
+    var xj = polygon[j][0], yj = polygon[j][1]; // Correct GeoJSON coordinate order [lng, lat]
+    
+    var intersect = ((yi > lat) !== (yj > lat)) &&
+        (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi);
+    if (intersect) inside = !inside;
+  }
+  return inside;
+}
+
+// Generate points that follow a country's shape - fixed coordinate handling
+// Generate points that follow a country's shape - fixed coordinate handling
+// Generate points that follow a country's shape - fixed coordinate handling
+function generateCountryPoints(countryFeature, centerLat, centerLng, magnitude) {
+  var points = [];
+  var coordinates = [];
+  
+  // Normalize magnitude but ensure a minimum value for visibility
+  // This ensures even small magnitude countries still appear on the globe
+  var minMagnitude = 0.05; // Minimum magnitude to ensure visibility
+  var normalizedMagnitude = Math.max(minMagnitude, Math.min(1.0, magnitude / 2));
+  
+  // Get all coordinates from the country geometry
+  if (countryFeature.geometry.type === "Polygon") {
+    coordinates = countryFeature.geometry.coordinates[0];
+  } else if (countryFeature.geometry.type === "MultiPolygon") {
+    // For MultiPolygon, use the first/largest polygon
+    var maxPoints = 0;
+    var mainPolygon = null;
+    
+    for (var i = 0; i < countryFeature.geometry.coordinates.length; i++) {
+      var poly = countryFeature.geometry.coordinates[i][0];
+      if (poly.length > maxPoints) {
+        maxPoints = poly.length;
+        mainPolygon = poly;
+      }
+    }
+    
+    coordinates = mainPolygon || countryFeature.geometry.coordinates[0][0];
+  }
+  
+  if (!coordinates || coordinates.length < 3) {
+    // Fallback if we can't get country shape
+    points.push(centerLat, centerLng, normalizedMagnitude);
+    return points;
+  }
+  
+  // Calculate bounding box of the country
+  var minLat = Infinity, maxLat = -Infinity;
+  var minLng = Infinity, maxLng = -Infinity;
+  
+  coordinates.forEach(function(coord) {
+    // NOTE: GeoJSON uses [longitude, latitude] order
+    minLng = Math.min(minLng, coord[0]); // longitude is first
+    maxLng = Math.max(maxLng, coord[0]);
+    minLat = Math.min(minLat, coord[1]); // latitude is second
+    maxLat = Math.max(maxLat, coord[1]);
+  });
+  
+  // Calculate country width and height
+  var countryWidth = maxLng - minLng;
+  var countryHeight = maxLat - minLat;
+  
+  // Calculate grid size based on country area
+  var countryArea = countryWidth * countryHeight;
+  // Adjust density based on country size (smaller countries need more density)
+  var densityFactor = 400;
+  if (countryArea < 1) densityFactor = 800; // Increase density for tiny countries
+  var gridSize = Math.sqrt(countryArea / densityFactor);
+  
+  // Ensure reasonable grid size bounds
+  gridSize = Math.min(Math.max(gridSize, 0.1), 5);
+  
+  // Generate a grid of points to fill the country
+  for (var lat = minLat; lat <= maxLat; lat += gridSize) {
+    for (var lng = minLng; lng <= maxLng; lng += gridSize) {
+      // Add some randomness to avoid perfect grid pattern
+      var jitterLat = (Math.random() - 0.5) * gridSize * 0.5;
+      var jitterLng = (Math.random() - 0.5) * gridSize * 0.5;
+      
+      var testLat = lat + jitterLat;
+      var testLng = lng + jitterLng;
+      
+      // Only add points that are inside the country boundary
+      if (pointInSinglePolygon(testLat, testLng, coordinates)) {
+        // Calculate distance from the center data point
+        var dx = testLng - centerLng;
+        var dy = testLat - centerLat;
+        var distance = Math.sqrt(dx*dx + dy*dy);
+        
+        // Calculate maximum possible distance in the country from the center
+        var maxDist = Math.sqrt(
+          Math.pow(maxLat - minLat, 2) + 
+          Math.pow(maxLng - minLng, 2)
+        ) / 2;
+        
+        // Normalize distance (0-1)
+        var normalizedDist = Math.min(1, distance / maxDist);
+        
+        // Height decreases from center to edge, with a smoother falloff
+        var heightFactor = 1 - Math.pow(normalizedDist, 0.5); // Adjust power for smoother falloff
+        
+        // Calculate magnitude based on distance from center, ensuring a minimum value
+        // This ensures even countries with minimal magnitude are still visible
+        var minPointMagnitude = 0.02; // Minimum magnitude for any point
+        var pointMagnitude = Math.max(minPointMagnitude, 
+                                   Math.min(1.0, normalizedMagnitude * heightFactor * 0.7));
+        
+        // Add all points regardless of magnitude (we've ensured a minimum)
+        points.push(testLat, testLng, pointMagnitude);
+      }
+    }
+  }
+  
+  // Always include the center point with enhanced magnitude for emphasis
+  points.push(centerLat, centerLng, Math.min(1.0, Math.max(0.1, normalizedMagnitude * 1.2)));
+  
+  console.log(`Generated ${points.length/3} points for country ${countryFeature.properties.NAME || 'Unknown'}, max height: ${Math.min(1.0, normalizedMagnitude * 1.2)}`);
+  
+  return points;
+}
+
+
+
+            }
           }
         }
       };
       xhr.send(null);
-    }
+    
   </script>
   </body>
 </html>
