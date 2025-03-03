@@ -385,8 +385,10 @@ function generateCountryPoints(countryFeature, centerLat, centerLng, magnitude) 
   var points = [];
   var coordinates = [];
   
-  // Normalize magnitude to have a maximum of 1 (half of previous max of 2)
-  var normalizedMagnitude = Math.min(1.0, magnitude / 2);
+  // Normalize magnitude but ensure a minimum value for visibility
+  // This ensures even small magnitude countries still appear on the globe
+  var minMagnitude = 0.05; // Minimum magnitude to ensure visibility
+  var normalizedMagnitude = Math.max(minMagnitude, Math.min(1.0, magnitude / 2));
   
   // Get all coordinates from the country geometry
   if (countryFeature.geometry.type === "Polygon") {
@@ -431,7 +433,13 @@ function generateCountryPoints(countryFeature, centerLat, centerLng, magnitude) 
   
   // Calculate grid size based on country area
   var countryArea = countryWidth * countryHeight;
-  var gridSize = Math.sqrt(countryArea / 400); // Increase density for better coverage
+  // Adjust density based on country size (smaller countries need more density)
+  var densityFactor = 400;
+  if (countryArea < 1) densityFactor = 800; // Increase density for tiny countries
+  var gridSize = Math.sqrt(countryArea / densityFactor);
+  
+  // Ensure reasonable grid size bounds
+  gridSize = Math.min(Math.max(gridSize, 0.1), 5);
   
   // Generate a grid of points to fill the country
   for (var lat = minLat; lat <= maxLat; lat += gridSize) {
@@ -462,27 +470,25 @@ function generateCountryPoints(countryFeature, centerLat, centerLng, magnitude) 
         // Height decreases from center to edge, with a smoother falloff
         var heightFactor = 1 - Math.pow(normalizedDist, 0.5); // Adjust power for smoother falloff
         
-        // Calculate magnitude based on distance from center, capped at 1.0
-        var pointMagnitude = Math.min(1.0, normalizedMagnitude * heightFactor * 0.7);
+        // Calculate magnitude based on distance from center, ensuring a minimum value
+        // This ensures even countries with minimal magnitude are still visible
+        var minPointMagnitude = 0.02; // Minimum magnitude for any point
+        var pointMagnitude = Math.max(minPointMagnitude, 
+                                   Math.min(1.0, normalizedMagnitude * heightFactor * 0.7));
         
-        // Only add points with meaningful magnitude
-        if (pointMagnitude > 0.01) {
-          // Add the point (WebGL Globe expects latitude first, then longitude)
-          points.push(testLat, testLng, pointMagnitude);
-        }
+        // Add all points regardless of magnitude (we've ensured a minimum)
+        points.push(testLat, testLng, pointMagnitude);
       }
     }
   }
   
-  // Always include the center point with full magnitude, capped at 1.0
-  points.push(centerLat, centerLng, Math.min(1.0, normalizedMagnitude * 1.2));
+  // Always include the center point with enhanced magnitude for emphasis
+  points.push(centerLat, centerLng, Math.min(1.0, Math.max(0.1, normalizedMagnitude * 1.2)));
   
   console.log(`Generated ${points.length/3} points for country ${countryFeature.properties.NAME || 'Unknown'}, max height: ${Math.min(1.0, normalizedMagnitude * 1.2)}`);
   
   return points;
 }
-
-
 
 
 
