@@ -14,14 +14,22 @@
 
 var DAT = DAT || {};
 
+
 DAT.Globe = function(container, opts) {
   opts = opts || {};
   
   var colorFn = opts.colorFn || function(x) {
+    // Custom blue to green gradient (0 = blue, 1 = green/teal)
     var c = new THREE.Color();
-    // Ensure color is always visible by setting a minimum lightness value
-    // and using a broader hue range for better color differentiation
-    c.setHSL( ( 0.6 - ( x * 0.6 ) ), 0.8, 0.5 + (x * 0.2) );
+    
+    // Use HSL for easier control
+    // Hue: 0.6 = blue, 0.4 = green/teal
+    // Keep saturation high and lightness moderate for visibility
+    var hue = 0.6 - (x * 0.2); // Maps from 0.6 (blue) to 0.4 (green/teal)
+    var saturation = 0.8;
+    var lightness = 0.5 + (x * 0.2); // Slightly brighter for higher values
+    
+    c.setHSL(hue, saturation, lightness);
     return c;
   };
   var imgDir = opts.imgDir || '/globe/';
