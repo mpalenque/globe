@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>WebGL Globe - Audience Data</title>
+    
     <meta charset="utf-8">
     <style type="text/css">
       html {
@@ -251,6 +252,7 @@
       
       xhr = new XMLHttpRequest();
       xhr.open('GET', 'audience_geo_data_compact.json', true);
+      // ...existing code...
       xhr.onreadystatechange = function(e) {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
@@ -262,18 +264,30 @@
               var originalValues = [...companyEntry[1]]; // Original data points
               var newValues = []; // Will hold the expanded set of points
               
+              // Find max magnitude value for normalization of height only
+              var maxMagnitude = 0;
+              for (var i = 0; i < originalValues.length; i += 3) {
+                maxMagnitude = Math.max(maxMagnitude, originalValues[i + 2]);
+              }
+              
               // Process each country data point (lat, lng, magnitude triplets)
               for (var i = 0; i < originalValues.length; i += 3) {
                 var lat = originalValues[i];
                 var lng = originalValues[i + 1];
                 var magnitude = originalValues[i + 2];
                 
-                // Calculate a country-specific size based on magnitude
-                // Larger magnitudes create larger coverage areas
-                var countrySize = Math.max(2, Math.min(8, magnitude / 3));
+                // Keep original magnitude for country size calculation
+                var originalMagnitudeNormalized = magnitude / maxMagnitude;
                 
-                // Add the centroid point with full magnitude (highest point)
-                newValues.push(lat, lng, magnitude * 1.2); // Make center even higher
+                // Normalize only height to a reasonable range (0.1 to 2.5)
+                var heightMagnitude = 0.1 + Math.min(2.4, originalMagnitudeNormalized * 1.4);
+                
+                // Calculate a country-specific size based on original magnitude
+                // This preserves the wider cones for larger values
+                var countrySize = Math.max(2, Math.min(6, (originalMagnitudeNormalized * 5) + 1));
+                
+                // Add the centroid point with full height (highest point)
+                newValues.push(lat, lng, heightMagnitude * 1.2); // Make center even higher
                 
                 // Simulate country shape using noise and distorted ellipses
                 // First, create several "growth axes" for the country
@@ -293,7 +307,7 @@
                 
                 // Create densely packed points throughout the simulated country shape
                 // Use more points for countries with higher magnitude
-                var numPoints = Math.floor(100 + magnitude * 20);
+                var numPoints = Math.floor(50 + originalMagnitudeNormalized * 50);
                 
                 for (var p = 0; p < numPoints; p++) {
                   // Random angle from center
@@ -303,25 +317,18 @@
                   var maxRadius = 0;
                   for (var a = 0; a < axes.length; a++) {
                     var axis = axes[a];
-                    // Calculate influence of this axis on the current angle
-                    // Higher when angle is closer to axis angle
                     var angleDiff = Math.abs(angle - axis.angle);
                     angleDiff = Math.min(angleDiff, Math.PI * 2 - angleDiff);
                     var influence = Math.pow(Math.cos(angleDiff), 2);
                     
-                    // Add to max radius based on influence
                     maxRadius += axis.length * countrySize * influence;
                   }
                   
-                  // Normalize and add some noise to the radius
                   maxRadius = maxRadius / axes.length;
                   maxRadius = maxRadius * (0.8 + Math.random() * 0.4);
                   
-                  // Random distance from center, biased toward border
-                  // Use sqrt to distribute points more evenly across area
                   var distance = maxRadius * Math.pow(Math.random(), 0.5);
                   
-                  // Account for map projection (longitude gets compressed near poles)
                   var latScale = 1.0;
                   var lngScale = 1.0 / Math.cos(lat * Math.PI / 180 || 0.1);
                   
@@ -331,12 +338,13 @@
                   var newLat = lat + dy;
                   var newLng = lng + dx;
                   
-                  // Magnitude decreases from center to edge (cone effect)
                   var distanceRatio = distance / maxRadius;
-                  var heightFactor = 1 - Math.pow(distanceRatio, 0.8); // Less steep falloff
+                  var heightFactor = 1 - Math.pow(distanceRatio, 0.8);
                   
-                  // Add small random variation to heights
-                  var newMagnitude = magnitude * heightFactor * (0.9 + Math.random() * 0.2);
+                  // Apply normalized height magnitude
+                  var newMagnitude = heightMagnitude * heightFactor * (0.8 + Math.random() * 0.2);
+                  // Cap the maximum height to prevent extremely tall spikes
+                  newMagnitude = Math.min(newMagnitude, 2.5);
                   
                   newValues.push(newLat, newLng, newMagnitude);
                 }
@@ -346,6 +354,7 @@
             });
             
             window.data = transformedData;
+// ...existing code...
             
             // Only load the first company initially
             globe.addData(transformedData[0][1], {format: 'magnitude', name: transformedData[0][0], animated: true});

@@ -300,9 +300,10 @@ try {
   // Create a compact JSON array with no spaces or line breaks
   const finalJson = '[' + formattedJson + ']';
   
-  // Write the compact output to a file
-  fs.writeFileSync('./globe/audience_geo_data.json', finalJson);
-  console.log('Data transformation completed. Created audience_geo_data.json');
+    // Write the compact output to a file
+    fs.writeFileSync('./audience_geo_data.json', finalJson);
+    console.log('Data transformation completed. Created audience_geo_data.json');
+  
 } catch (error) {
   console.error("Error during transformation:", error);
 }
