@@ -556,6 +556,7 @@ function updateGlobeVisualization() {
   var selectedNames = Array.from(selectedCompanies)
     .map(index => companies[index])
     .join(', ');
+    
 
   document.getElementById('title').textContent = selectedNames.length > 30 ?
     selectedNames.substring(0, 30) + '...' : selectedNames;
