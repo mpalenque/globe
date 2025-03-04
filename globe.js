@@ -170,6 +170,18 @@ DAT.Globe = function(container, opts) {
     }, false);
   }
 
+
+
+
+
+
+
+
+
+  
+
+
+
   function addData(data, opts) {
     var lat, lng, size, color, i, step, colorFnWrapper;
 
@@ -263,6 +275,17 @@ DAT.Globe = function(container, opts) {
     this.companyColors = companyColors;
   }
 
+
+
+
+
+
+
+
+
+
+
+
   function createPoints() {
     if (this._baseGeometry !== undefined) {
       if (this.is_animated === false) {
@@ -290,6 +313,20 @@ DAT.Globe = function(container, opts) {
         }));
       }
       scene.add(this.points);
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
       
       // Ensure company colors are applied immediately after creating points
       if (this.pointToCompanyMap && this.pointToCompanyMap.length > 0 && 

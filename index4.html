@@ -286,89 +286,146 @@ a:hover {
             y.setAttribute('class', 'year active');
           };
         };
-    
+
+
+
+
+
+
+
+
         function updateGlobeVisualization() {
-          if (globe.points) {
-            globe.scene.remove(globe.points);
-            globe._baseGeometry = undefined;
-          }
+  // Properly clean up existing points and segments
+  if (globe.points) {
+    globe.scene.remove(globe.points);
+    globe._baseGeometry = undefined;
+  }
+
+  if (selectedCompanies.size === 0) {
+    document.getElementById('title').textContent = 'Audience Geo Data';
+    globe.createPoints();
+    return;
+  }
+
+  var combinedData = [];
+  var combinedColors = [];
+  var pointToCompanyMap = [];
+
+  // Create a map to track unique locations
+  const locationGroups = new Map();
+  
+  // First collect all magnitudes to find min/max for normalization
+  let minMagnitude = Infinity;
+  let maxMagnitude = 0;
+  
+  // First pass: Group companies by location and collect magnitude stats
+  selectedCompanies.forEach(function(index) {
+    var data = window.data[index][1];
+    var companyName = companies[index];
     
-          if (selectedCompanies.size === 0) {
-            document.getElementById('title').textContent = 'Audience Geo Data';
-            globe.createPoints();
-            return;
-          }
+    for (var i = 0; i < data.length; i += 3) {
+      const magnitude = data[i + 2];
+      minMagnitude = Math.min(minMagnitude, magnitude);
+      maxMagnitude = Math.max(maxMagnitude, magnitude);
+      
+      const lat = data[i];
+      const lng = data[i + 1];
+      const key = `${lat.toFixed(1)},${lng.toFixed(1)}`;
+      
+      if (!locationGroups.has(key)) {
+        locationGroups.set(key, {
+          companies: [],
+          lat: lat,
+          lng: lng
+        });
+      }
+      
+      locationGroups.get(key).companies.push({
+        index: index,
+        magnitude: magnitude,
+        companyName: companyName 
+      });
+    }
+  });
+  
+  // Calculate the magnitude range for normalization
+  const magnitudeRange = maxMagnitude - minMagnitude;
+  
+  function normalizeMagnitude(value) {
+    if (magnitudeRange === 0) return 0.5;
+    const normalizedValue = (value - minMagnitude) / magnitudeRange;
+    return 0.2 + (normalizedValue * 1.3);
+  }
+
+  // Second pass: Create separate bar segments for each company
+  locationGroups.forEach((locationData, key) => {
+    // Sort companies by index for consistent ordering
+    locationData.companies.sort((a, b) => a.index - b.index);
     
-          const offsetStep = 2.2; // Degree offset between bars
-          var combinedData = [];
-          var combinedColors = []; // Array to store colors for each bar
+    // Track current height position
+    let currentHeight = 0;
     
-          // Create a map to track unique locations
-          const locationGroups = new Map();
-    
-          // First pass: Group companies by location
-          selectedCompanies.forEach(function(index) {
-            var data = window.data[index][1];
-            var companyName = companies[index];
-            
-            for (var i = 0; i < data.length; i += 3) {
-              const lat = data[i];
-              const lng = data[i + 1];
-              const key = `${lat.toFixed(1)},${lng.toFixed(1)}`;
-              
-              if (!locationGroups.has(key)) {
-                locationGroups.set(key, []);
-              }
-              locationGroups.get(key).push({
-                index: index,
-                magnitude: data[i + 2],
-                lat: lat,
-                lng: lng,
-                companyName: companyName // Store company name for color lookup
-              });
-            }
-          });
-    
-          // Second pass: Process each location group
-          locationGroups.forEach((companiesAtLocation, location) => {
-            companiesAtLocation.forEach((company) => {
-              // Calculate fixed angle based on company's global index
-              const fixedAngle = (2 * Math.PI * company.index) / companies.length;
-              
-              // Always apply offset regardless of number of companies
-              const radius = offsetStep;
-              
-              // Calculate offset position using company's fixed angle
-              const offsetLat = company.lat + (radius * Math.cos(fixedAngle));
-              const offsetLng = company.lng + (radius * Math.sin(fixedAngle));
-              
-              combinedData.push(offsetLat, offsetLng, company.magnitude);
-              
-              // Get hex color from companyColors and convert to RGB values
-              const hexColor = companyColors[company.companyName] || '#FFFFFF';
-              // Extract RGB values from hex (remove # and parse)
-              const r = parseInt(hexColor.substring(1, 3), 16) / 255;
-              const g = parseInt(hexColor.substring(3, 5), 16) / 255;
-              const b = parseInt(hexColor.substring(5, 7), 16) / 255;
-              
-              // Add color information for this data point
-              combinedColors.push(r, g, b);
-            });
-          });
-    
-          // Update visualization with combined data and colors
-          globe.addData(combinedData, {format: 'magnitude', animated: true, colors: combinedColors});
-          globe.createPoints();
-    
-          // Update title
-          var selectedNames = Array.from(selectedCompanies)
-            .map(index => window.data[index][0])
-            .join(', ');
-          document.getElementById('title').textContent = 'Audience Data: ' + selectedNames;
-    
-          new TWEEN.Tween(globe).to({time: 0},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
-        }
-        
+    // Process each company at this location as a separate bar segment
+    locationData.companies.forEach((company) => {
+      // Get normalized magnitude for this company
+      const normalizedMagnitude = normalizeMagnitude(company.magnitude);
+      
+      // Small gap between bars - increased for better visibility
+      const gap = 0.05;
+      
+      // Set coordinates for this segment only
+      const lat = locationData.lat;
+      const lng = locationData.lng;
+      
+      // Get company color
+      const hexColor = companyColors[company.companyName] || '#FFFFFF';
+      const r = parseInt(hexColor.substring(1, 3), 16) / 255;
+      const g = parseInt(hexColor.substring(3, 5), 16) / 255;
+      const b = parseInt(hexColor.substring(5, 7), 16) / 255;
+      const a = 0.3; // Add 70% transparency (30% opacity)
+      
+      // Each bar segment gets its own pair of points with same company/color
+      // First point - start of this segment
+      combinedData.push(lat, lng, currentHeight);
+      pointToCompanyMap.push(company.companyName);
+      combinedColors.push(r, g, b, a); // Add alpha component
+      
+      // Second point - end of this segment
+      combinedData.push(lat, lng, currentHeight + normalizedMagnitude);
+      pointToCompanyMap.push(company.companyName);
+      combinedColors.push(r, g, b, a); // Add alpha component
+      
+      // Update height position for next company's segment
+      currentHeight += normalizedMagnitude + gap;
+    });
+  });
+
+  // Tell the globe renderer to treat each pair as a separate segment
+  globe.addData(combinedData, {
+    format: 'magnitude', 
+    animated: false, // Must be false for stacked bars
+    colors: combinedColors,
+    pointToCompanyMap: pointToCompanyMap,
+    companyColors: companyColors,
+    segmentPairs: true, // Signal that data is organized as pairs forming segments
+    transparent: true // Enable transparency in the renderer
+  });
+  
+  globe.createPoints();
+
+  // Update title
+  var selectedNames = Array.from(selectedCompanies)
+    .map(index => companies[index])
+    .join(', ');
+  document.getElementById('title').textContent = 'Audience Data: ' + selectedNames;
+
+  new TWEEN.Tween(globe).to({time: 0},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
+}
+
+
+
+
+
         var setcompany = function(globe, t) {
           return function() {
             var c = document.getElementById('company'+t);
