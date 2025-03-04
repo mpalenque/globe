@@ -2,502 +2,467 @@
 <html lang="en">
   <head>
     <title>WebGL Globe - Audience Data</title>
-
     
     <meta charset="utf-8">
     <style type="text/css">
-      html {
-        height: 100%;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        background: #000000 url(loading.gif) center center no-repeat;
-        color: #ffffff;
-        font-family: sans-serif;
-        font-size: 13px;
-        line-height: 20px;
-        height: 100%;
-      }
+     html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000 url(loading.gif) center center no-repeat;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  height: 100%;
+}
 
-      #info {
-        font-size: 11px;
-        position: absolute;
-        bottom: 5px;
-        background-color: rgba(0,0,0,0.8);
-        border-radius: 3px;
-        right: 10px;
-        padding: 10px;
-      }
+#info {
+  font-size: 11px;
+  position: absolute;
+  bottom: 5px;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 3px;
+  right: 10px;
+  padding: 10px;
+}
 
-      #currentInfo {
-        width: 270px;
-        position: absolute;
-        left: 20px;
-        top: 63px;
-        background-color: rgba(0,0,0,0.2);
-        border-top: 1px solid rgba(255,255,255,0.4);
-        padding: 10px;
-        display: none; /* Hide year selector */
-      }
+#currentInfo {
+  width: 270px;
+  position: absolute;
+  left: 20px;
+  top: 63px;
+  background-color: rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(255,255,255,0.4);
+  padding: 10px;
+  display: none; /* Hide year selector */
+}
 
-      /* Add new company list styles */
-      #companiesInfo {
-        width: 400px;
-        position: absolute;
-        left: 20px;
-        bottom: 100px;
-        background-color: rgba(0,0,0,0.2);
-        border-top: 1px solid rgba(255,255,255,0.4);
-        padding: 10px;
-        max-height: 40vh;
-        overflow-y: auto;
-      }
+/* Add new company list styles */
+#companiesInfo {
+  width: 400px;
+  position: absolute;
+  left: 20px;
+  bottom: 100px;
+  background-color: rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(255,255,255,0.4);
+  padding: 10px;
+  max-height: 40vh;
+  overflow-y: auto;
+}
 
-      .companies-container {
-        display: flex;
-        flex-wrap: wrap;
-      }
+.companies-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-      .company {
-        font: 12px Georgia;
-        line-height: 20px;
-        height: 24px;
-        text-align: left;
-        float: left;
-        width: 90px;
-        padding-left: 5px;
-        margin-right: 5px;
-        color: rgba(255, 255, 255, 0.4);
-        cursor: pointer;
-        -webkit-transition: all 0.1s ease-out;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
+.company {
+  font: 12px Georgia;
+  line-height: 20px;
+  height: 24px;
+  text-align: left;
+  float: left;
+  width: 90px;
+  padding-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-out;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 3px;
+}
 
-      .company:hover, .company.active {
-        font-size: 14px;
-        color: #fff;
-      }
+.company:hover {
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(0, 123, 255, 0.2); /* Light blue on hover */
+}
 
-      a {
-        color: #aaa;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
+.company.active {
+  font-size: 14px;
+  color: #fff;
+  /* Removed background-color to allow inline styles to work */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* Subtle glow effect */
+}
+a {
+  color: #aaa;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
-      .bull {
-        padding: 0 5px;
-        color: #555;
-      }
+.bull {
+  padding: 0 5px;
+  color: #555;
+}
 
-      #title {
-        position: absolute;
-        top: 20px;
-        width: 270px;
-        left: 20px;
-        background-color: rgba(0,0,0,0.2);
-        border-radius: 3px;
-        font: 20px Georgia;
-        padding: 10px;
-      }
+#title {
+  position: absolute;
+  top: 20px;
+  width: 270px;
+  left: 20px;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+  font: 20px Georgia;
+  padding: 10px;
+}
 
-      .year {
-        font: 16px Georgia;
-        line-height: 26px;
-        height: 30px;
-        text-align: center;
-        float: left;
-        width: 90px;
-        color: rgba(255, 255, 255, 0.4);
-        cursor: pointer;
-        -webkit-transition: all 0.1s ease-out;
-      }
+.year {
+  font: 16px Georgia;
+  line-height: 26px;
+  height: 30px;
+  text-align: center;
+  float: left;
+  width: 90px;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-out;
+}
 
-      .year:hover, .year.active {
-        font-size: 23px;
-        color: #fff;
-      }
+.year:hover, .year.active {
+  font-size: 23px;
+  color: #fff;
+}
 
-      #ce span {
-        display: none;
-      }
+#ce span {
+  display: none;
+}
 
-      #ce {
-        width: 107px;
-        height: 55px;
-        display: block;
-        position: absolute;
-        bottom: 15px;
-        left: 20px;
-        background: url(ce.png);
-      }
+#ce {
+  width: 107px;
+  height: 55px;
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  background: url(ce.png);
+}
+
+.control-buttons {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.control-button {
+  font: 12px Georgia;
+  padding: 5px 10px;
+  color: #fff;
+  background-color: rgba(0, 123, 255, 0.3);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+
+.control-button:hover {
+  background-color: rgba(0, 123, 255, 0.5);
+}
+
+
+
     </style>
   </head>
   <body>
-
-  <div id="container"></div>
-
- 
-
-  <div id="currentInfo">
-    <span id="year1990" class="year">2023</span>
-    <span id="year1995" class="year">2024</span>
-    <span id="year2000" class="year">2025</span>
-  </div>
-
-  <!-- Add new company list container -->
-  <div id="companiesInfo">
-    <div class="companies-container">
-      <!-- Company spans will be generated dynamically -->
+    <div id="container"></div>
+  
+    <div id="info">
+      <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by the Google Data Arts Team <span class="bull">&bull;</span> Adapted for audience data visualization
     </div>
-  </div>
+  
+    <div id="currentInfo">
+      <span id="year1990" class="year">2023</span>
+      <span id="year1995" class="year">2024</span>
+      <span id="year2000" class="year">2025</span>
+    </div>
+  
+    <!-- Modify the companies container div -->
+    <div id="companiesInfo">
+      <div class="control-buttons">
+        <button class="control-button" id="selectAll">Select All</button>
+        <button class="control-button" id="selectNone">Select None</button>
+      </div>
+      <div class="companies-container">
+        <!-- Company spans will be generated dynamically -->
+      </div>
+    </div>
+  
+    <div id="title">
+      Audience Geo Data
+    </div>
+  
+    <script type="text/javascript" src="third-party/Detector.js"></script>
+    <script type="text/javascript" src="third-party/three.min.js"></script>
+    <script type="text/javascript" src="third-party/Tween.js"></script>
+    <script type="text/javascript" src="globe.js"></script>
 
-  <div id="title">
-    Audience Geo Data
-  </div>
 
-  <script type="text/javascript" src="third-party/Detector.js"></script>
-  <script type="text/javascript" src="third-party/three.min.js"></script>
-  <script type="text/javascript" src="third-party/Tween.js"></script>
-  <script type="text/javascript" src="globe.js"></script>
-  <script type="text/javascript">
-
-    if(!Detector.webgl){
-      Detector.addGetWebGLMessage();
-    } else {
-
-      var years = ['1990','1995','2000'];
-      var container = document.getElementById('container');
-      var globe = new DAT.Globe(container);
-
-      // Add companies list
-      var companies = ['Brainly', 'Codecademy', 'Delivery Hero', 'Despegar', 'Despegar AR', 'Despegar CL', 'Despegar CO', 'Despegar MX', 'Despegar PE', 'Edume', 'Emeritus', 'Eruditus', 'Flink', 'Foodics', 'GoStudent', 'GoodHabitz', 'JE Takeaway', 'Media24', 'OLX', 'OLX ', 'OLX Real Estate', 'Oda', 'Otodom (OLX)', 'Otomoto (OLX)', 'Platzi', 'Sharebite', 'SkillSoft', 'SoloLearn', 'Stack Overflow', 'Standvirtual', 'Swiggy', 'TakeAlot Group', 'Takealot', 'Udemy', 'eMAG', 'iFood'];
-      var companiesContainer = document.querySelector('.companies-container');
-      
-      // Generate elements for each company
-      companies.forEach(function(company, index) {
-        var companyElem = document.createElement('span');
-        companyElem.id = 'company' + index;
-        companyElem.className = 'company';
-        companyElem.textContent = company;
-        companiesContainer.appendChild(companyElem);
-      });
-
-      console.log(globe);
-      var i, tweens = [];
-      
-      var settime = function(globe, t) {
-        return function() {
-          new TWEEN.Tween(globe).to({time: t/years.length},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
-          var y = document.getElementById('year'+years[t]);
-          if (y.getAttribute('class') === 'year active') {
-            return;
-          }
-          var yy = document.getElementsByClassName('year');
-          for(i=0; i<yy.length; i++) {
-            yy[i].setAttribute('class','year');
-          }
-          y.setAttribute('class', 'year active');
+    <script type="text/javascript">
+      if(!Detector.webgl){
+        Detector.addGetWebGLMessage();
+      } else {
+        var years = ['1990','1995','2000'];
+        var container = document.getElementById('container');
+        var globe = new DAT.Globe(container);
+    
+        // Add companies list
+        var companies = ['Brainly', 'Codecademy', 'Delivery Hero', 'Despegar', 'Despegar AR', 'Despegar CL', 'Despegar CO', 'Despegar MX', 'Despegar PE', 'Edume', 'Emeritus', 'Eruditus', 'Flink', 'Foodics', 'GoStudent', 'GoodHabitz', 'JE Takeaway', 'Media24', 'OLX', 'OLX ', 'OLX Real Estate', 'Oda', 'Otodom (OLX)', 'Otomoto (OLX)', 'Platzi', 'Sharebite', 'SkillSoft', 'SoloLearn', 'Stack Overflow', 'Standvirtual', 'Swiggy', 'TakeAlot Group', 'Takealot', 'Udemy', 'eMAG', 'iFood'];
+        
+        // Add company brand colors
+        var companyColors = {
+          'Brainly': '#00B37E',
+          'Codecademy': '#6A4CFF',
+          'Delivery Hero': '#F8A800',
+          'Despegar': '#00ADEF',
+          'Despegar AR': '#00ADEF',
+          'Despegar CL': '#00ADEF',
+          'Despegar CO': '#00ADEF',
+          'Despegar MX': '#00ADEF',
+          'Despegar PE': '#00ADEF',
+          'Edume': '#1E88E5',
+          'Emeritus': '#FF6F61',
+          'Eruditus': '#FF6F61',
+          'Flink': '#00C853',
+          'Foodics': '#F8A800',
+          'GoStudent': '#FF6F61',
+          'GoodHabitz': '#F9A825',
+          'JE Takeaway': '#FF6F61',
+          'Media24': '#00ADEF',
+          'OLX': '#FF7A00',
+          'OLX ': '#FF7A00',
+          'OLX Real Estate': '#FF7A00',
+          'Oda': '#FF6F61',
+          'Otodom (OLX)': '#FF7A00',
+          'Otomoto (OLX)': '#FF7A00',
+          'Platzi': '#00ADEF',
+          'Sharebite': '#00ADEF',
+          'SkillSoft': '#00ADEF',
+          'SoloLearn': '#FF6F61',
+          'Stack Overflow': '#F8A800',
+          'Standvirtual': '#00ADEF',
+          'Swiggy': '#FF6F61',
+          'TakeAlot Group': '#00ADEF',
+          'Takealot': '#00ADEF',
+          'Udemy': '#EC1C24',
+          'eMAG': '#FF6F61',
+          'iFood': '#F8A800'
         };
-      };
-      
-      // Add function to handle company clicks
-      var setcompany = function(globe, t) {
-        return function() {
-          // Clear existing points
+        
+        var companiesContainer = document.querySelector('.companies-container');
+        
+        // Store selected companies
+        var selectedCompanies = new Set();
+        
+        // Generate elements for each company
+        companies.forEach(function(company, index) {
+          var companyElem = document.createElement('span');
+          companyElem.id = 'company' + index;
+          companyElem.className = 'company';
+          companyElem.textContent = company;
+          companyElem.setAttribute('data-company', company);
+          companiesContainer.appendChild(companyElem);
+        });
+    
+        var i, tweens = [];
+        
+        var settime = function(globe, t) {
+          return function() {
+            new TWEEN.Tween(globe).to({time: t/years.length},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
+            var y = document.getElementById('year'+years[t]);
+            if (y.getAttribute('class') === 'year active') {
+              return;
+            }
+            var yy = document.getElementsByClassName('year');
+            for(i=0; i<yy.length; i++) {
+              yy[i].setAttribute('class','year');
+            }
+            y.setAttribute('class', 'year active');
+          };
+        };
+    
+        function updateGlobeVisualization() {
           if (globe.points) {
             globe.scene.remove(globe.points);
             globe._baseGeometry = undefined;
           }
-          
-          // Add the selected company's data
-          globe.addData(window.data[t][1], {format: 'magnitude', name: window.data[t][0], animated: true});
-          globe.createPoints();
-          
-          new TWEEN.Tween(globe).to({time: 0},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
-          
-          // Update the title to show selected company
-          document.getElementById('title').textContent = 'Audience Data: ' + window.data[t][0];
-          
-          var c = document.getElementById('company'+t);
-          if (c.getAttribute('class') === 'company active') {
+    
+          if (selectedCompanies.size === 0) {
+            document.getElementById('title').textContent = 'Audience Geo Data';
+            globe.createPoints();
             return;
           }
-          var cc = document.getElementsByClassName('company');
-          for(i=0; i<cc.length; i++) {
-            cc[i].setAttribute('class','company');
-          }
-          c.setAttribute('class', 'company active');
-        };
-      };
-      
-      for(var i = 0; i<years.length; i++) {
-        var y = document.getElementById('year'+years[i]);
-        y.addEventListener('mouseover', settime(globe,i), false);
-      }
-      
-      // Add event listeners for companies
-      for(var i = 0; i<companies.length; i++) {
-        var c = document.getElementById('company'+i);
-        c.addEventListener('mouseover', setcompany(globe,i), false);
-      }
-      
-      var xhr;
-      TWEEN.start();
-      
-      xhr = new XMLHttpRequest();
-      xhr.open('GET', 'audience_geo_data_compact.json', true);
-      xhr.onreadystatechange = function(e) {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            var data = JSON.parse(xhr.responseText);
+    
+          const offsetStep = 2.2; // Degree offset between bars
+          var combinedData = [];
+          var combinedColors = []; // Array to store colors for each bar
+    
+          // Create a map to track unique locations
+          const locationGroups = new Map();
+    
+          // First pass: Group companies by location
+          selectedCompanies.forEach(function(index) {
+            var data = window.data[index][1];
+            var companyName = companies[index];
             
-            // First load country boundaries data
-            var countriesData;
-            var countriesXhr = new XMLHttpRequest();
-            countriesXhr.open('GET', 'countries.geo.json', true);
-            countriesXhr.onreadystatechange = function() {
-              if (countriesXhr.readyState === 4 && countriesXhr.status === 200) {
-                countriesData = JSON.parse(countriesXhr.responseText);
-                processDataWithCountries(data, countriesData);
+            for (var i = 0; i < data.length; i += 3) {
+              const lat = data[i];
+              const lng = data[i + 1];
+              const key = `${lat.toFixed(1)},${lng.toFixed(1)}`;
+              
+              if (!locationGroups.has(key)) {
+                locationGroups.set(key, []);
               }
-            };
-            countriesXhr.send(null);
+              locationGroups.get(key).push({
+                index: index,
+                magnitude: data[i + 2],
+                lat: lat,
+                lng: lng,
+                companyName: companyName // Store company name for color lookup
+              });
+            }
+          });
+    
+          // Second pass: Process each location group
+          locationGroups.forEach((companiesAtLocation, location) => {
+            companiesAtLocation.forEach((company) => {
+              // Calculate fixed angle based on company's global index
+              const fixedAngle = (2 * Math.PI * company.index) / companies.length;
+              
+              // Always apply offset regardless of number of companies
+              const radius = offsetStep;
+              
+              // Calculate offset position using company's fixed angle
+              const offsetLat = company.lat + (radius * Math.cos(fixedAngle));
+              const offsetLng = company.lng + (radius * Math.sin(fixedAngle));
+              
+              combinedData.push(offsetLat, offsetLng, company.magnitude);
+              
+              // Get hex color from companyColors and convert to RGB values
+              const hexColor = companyColors[company.companyName] || '#FFFFFF';
+              // Extract RGB values from hex (remove # and parse)
+              const r = parseInt(hexColor.substring(1, 3), 16) / 255;
+              const g = parseInt(hexColor.substring(3, 5), 16) / 255;
+              const b = parseInt(hexColor.substring(5, 7), 16) / 255;
+              
+              // Add color information for this data point
+              combinedColors.push(r, g, b);
+            });
+          });
+    
+          // Update visualization with combined data and colors
+          globe.addData(combinedData, {format: 'magnitude', animated: true, colors: combinedColors});
+          globe.createPoints();
+    
+          // Update title
+          var selectedNames = Array.from(selectedCompanies)
+            .map(index => window.data[index][0])
+            .join(', ');
+          document.getElementById('title').textContent = 'Audience Data: ' + selectedNames;
+    
+          new TWEEN.Tween(globe).to({time: 0},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
+        }
+        
+        var setcompany = function(globe, t) {
+          return function() {
+            var c = document.getElementById('company'+t);
+            var companyName = c.getAttribute('data-company');
+            var brandColor = companyColors[companyName];
             
-            function processDataWithCountries(data, countriesData) {
-  // Transform data to create country-shaped distributions
-  var transformedData = data.map(function(companyEntry) {
-    var companyName = companyEntry[0];
-    var originalValues = [...companyEntry[1]]; // Original data points
-    var newValues = []; // Will hold the expanded set of points
+            if (c.getAttribute('class') === 'company active') {
+              c.setAttribute('class', 'company');
+              c.style.backgroundColor = ''; // Reset background color
+              selectedCompanies.delete(t);
+            } else {
+              c.setAttribute('class', 'company active');
+              c.style.backgroundColor = brandColor; // Use brand color
+              selectedCompanies.add(t);
+            }
     
-    // Create a set of countries for this company
-    var companyCountries = new Set();
-    
-    // First pass: identify all countries this company is present in
-    for (var i = 0; i < originalValues.length; i += 3) {
-      var lat = originalValues[i];
-      var lng = originalValues[i + 1];
-      
-      // Find the country that contains this point
-      var countryFeature = findCountry(lat, lng, countriesData);
-      
-      if (countryFeature && countryFeature.properties) {
-        // Add country name/code to our set
-        companyCountries.add(countryFeature.properties.ISO_A3);
-      }
-    }
-    
-    console.log(companyName + " is present in: ", Array.from(companyCountries));
-    
-    // Second pass: generate points only for identified countries
-    for (var i = 0; i < originalValues.length; i += 3) {
-      var lat = originalValues[i];
-      var lng = originalValues[i + 1];
-      var magnitude = originalValues[i + 2];
-      
-      // Find the country that contains this point
-      var countryFeature = findCountry(lat, lng, countriesData);
-      
-      if (countryFeature && countryFeature.properties && 
-          companyCountries.has(countryFeature.properties.ISO_A3)) {
-        // We found a matching country that's part of this company's footprint
-        var countryPoints = generateCountryPoints(countryFeature, lat, lng, magnitude);
-        newValues.push(...countryPoints);
-      } else {
-        // Fallback: If we can't find a country, use the original point
-        newValues.push(lat, lng, magnitude);
-      }
-    }
-    
-    return [companyName, newValues];
-  });
-  
-  window.data = transformedData;
-  
-  // Only load the first company initially
-  globe.addData(transformedData[0][1], {format: 'magnitude', name: transformedData[0][0], animated: true});
-  
-  globe.createPoints();
-  
-  // Set the first company as active
-  setcompany(globe,0)();
-  
-  globe.animate();
-  document.body.style.backgroundImage = 'none'; // remove loading
-}
-            
-           // Function to find which country a point belongs to
-function findCountry(lat, lng, countriesData) {
-  // Make sure coordinates are in the right order for comparison
-  for (var i = 0; i < countriesData.features.length; i++) {
-    var feature = countriesData.features[i];
-    if (pointInPolygon(lat, lng, feature)) {
-      return feature;
-    }
-  }
-  return null;
-}
-
-// Check if point is in polygon (country)
-function pointInPolygon(lat, lng, feature) {
-  if (!feature.geometry || !feature.geometry.coordinates) {
-    return false;
-  }
-  
-  // Handle different geometry types
-  if (feature.geometry.type === "Polygon") {
-    return pointInSinglePolygon(lat, lng, feature.geometry.coordinates[0]);
-  } else if (feature.geometry.type === "MultiPolygon") {
-    for (var i = 0; i < feature.geometry.coordinates.length; i++) {
-      if (pointInSinglePolygon(lat, lng, feature.geometry.coordinates[i][0])) {
-        return true;
-      }
-    }
-  }
-  
-  return false;
-}
-
-// Ray casting algorithm for point in polygon - fixed coordinate order
-function pointInSinglePolygon(lat, lng, polygon) {
-  // IMPORTANT: GeoJSON format uses [longitude, latitude]
-  var inside = false;
-  for (var i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
-    var xi = polygon[i][0], yi = polygon[i][1]; // Correct GeoJSON coordinate order [lng, lat]
-    var xj = polygon[j][0], yj = polygon[j][1]; // Correct GeoJSON coordinate order [lng, lat]
-    
-    var intersect = ((yi > lat) !== (yj > lat)) &&
-        (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi);
-    if (intersect) inside = !inside;
-  }
-  return inside;
-}
-
-// Generate points that follow a country's shape - fixed coordinate handling
-// Generate points that follow a country's shape - fixed coordinate handling
-// Generate points that follow a country's shape - fixed coordinate handling
-function generateCountryPoints(countryFeature, centerLat, centerLng, magnitude) {
-  var points = [];
-  var coordinates = [];
-  
-  // Normalize magnitude but ensure a minimum value for visibility
-  // This ensures even small magnitude countries still appear on the globe
-  var minMagnitude = 0.05; // Minimum magnitude to ensure visibility
-  var normalizedMagnitude = Math.max(minMagnitude, Math.min(1.0, magnitude / 2));
-  
-  // Get all coordinates from the country geometry
-  if (countryFeature.geometry.type === "Polygon") {
-    coordinates = countryFeature.geometry.coordinates[0];
-  } else if (countryFeature.geometry.type === "MultiPolygon") {
-    // For MultiPolygon, use the first/largest polygon
-    var maxPoints = 0;
-    var mainPolygon = null;
-    
-    for (var i = 0; i < countryFeature.geometry.coordinates.length; i++) {
-      var poly = countryFeature.geometry.coordinates[i][0];
-      if (poly.length > maxPoints) {
-        maxPoints = poly.length;
-        mainPolygon = poly;
-      }
-    }
-    
-    coordinates = mainPolygon || countryFeature.geometry.coordinates[0][0];
-  }
-  
-  if (!coordinates || coordinates.length < 3) {
-    // Fallback if we can't get country shape
-    points.push(centerLat, centerLng, normalizedMagnitude);
-    return points;
-  }
-  
-  // Calculate bounding box of the country
-  var minLat = Infinity, maxLat = -Infinity;
-  var minLng = Infinity, maxLng = -Infinity;
-  
-  coordinates.forEach(function(coord) {
-    // NOTE: GeoJSON uses [longitude, latitude] order
-    minLng = Math.min(minLng, coord[0]); // longitude is first
-    maxLng = Math.max(maxLng, coord[0]);
-    minLat = Math.min(minLat, coord[1]); // latitude is second
-    maxLat = Math.max(maxLat, coord[1]);
-  });
-  
-  // Calculate country width and height
-  var countryWidth = maxLng - minLng;
-  var countryHeight = maxLat - minLat;
-  
-  // Calculate grid size based on country area
-  var countryArea = countryWidth * countryHeight;
-  // Adjust density based on country size (smaller countries need more density)
-  var densityFactor = 400;
-  if (countryArea < 1) densityFactor = 800; // Increase density for tiny countries
-  var gridSize = Math.sqrt(countryArea / densityFactor);
-  
-  // Ensure reasonable grid size bounds
-  gridSize = Math.min(Math.max(gridSize, 0.1), 5);
-  
-  // Generate a grid of points to fill the country
-  for (var lat = minLat; lat <= maxLat; lat += gridSize) {
-    for (var lng = minLng; lng <= maxLng; lng += gridSize) {
-      // Add some randomness to avoid perfect grid pattern
-      var jitterLat = (Math.random() - 0.5) * gridSize * 0.5;
-      var jitterLng = (Math.random() - 0.5) * gridSize * 0.5;
-      
-      var testLat = lat + jitterLat;
-      var testLng = lng + jitterLng;
-      
-      // Only add points that are inside the country boundary
-      if (pointInSinglePolygon(testLat, testLng, coordinates)) {
-        // Calculate distance from the center data point
-        var dx = testLng - centerLng;
-        var dy = testLat - centerLat;
-        var distance = Math.sqrt(dx*dx + dy*dy);
+            updateGlobeVisualization();
+          };
+        };
         
-        // Calculate maximum possible distance in the country from the center
-        var maxDist = Math.sqrt(
-          Math.pow(maxLat - minLat, 2) + 
-          Math.pow(maxLng - minLng, 2)
-        ) / 2;
+        document.getElementById('selectAll').addEventListener('click', function() {
+          companies.forEach(function(company, index) {
+            var c = document.getElementById('company'+index);
+            c.setAttribute('class', 'company active');
+            c.style.backgroundColor = companyColors[company]; // Use brand color
+            selectedCompanies.add(index);
+          });
+          updateGlobeVisualization();
+        });
+    
+        document.getElementById('selectNone').addEventListener('click', function() {
+          companies.forEach(function(_, index) {
+            var c = document.getElementById('company'+index);
+            c.setAttribute('class', 'company');
+            c.style.backgroundColor = ''; // Reset background color
+          });
+          selectedCompanies.clear();
+          updateGlobeVisualization();
+        });
         
-        // Normalize distance (0-1)
-        var normalizedDist = Math.min(1, distance / maxDist);
+        for(var i = 0; i<years.length; i++) {
+          var y = document.getElementById('year'+years[i]);
+          y.addEventListener('mouseover', settime(globe,i), false);
+        }
         
-        // Height decreases from center to edge, with a smoother falloff
-        var heightFactor = 1 - Math.pow(normalizedDist, 0.5); // Adjust power for smoother falloff
+        for(var i = 0; i<companies.length; i++) {
+          var c = document.getElementById('company'+i);
+          c.addEventListener('click', setcompany(globe,i), false);
+        }
         
-        // Calculate magnitude based on distance from center, ensuring a minimum value
-        // This ensures even countries with minimal magnitude are still visible
-        var minPointMagnitude = 0.02; // Minimum magnitude for any point
-        var pointMagnitude = Math.max(minPointMagnitude, 
-                                   Math.min(1.0, normalizedMagnitude * heightFactor * 0.7));
+        var xhr;
+        TWEEN.start();
         
-        // Add all points regardless of magnitude (we've ensured a minimum)
-        points.push(testLat, testLng, pointMagnitude);
-      }
-    }
-  }
-  
-  // Always include the center point with enhanced magnitude for emphasis
-  points.push(centerLat, centerLng, Math.min(1.0, Math.max(0.1, normalizedMagnitude * 1.2)));
-  
-  console.log(`Generated ${points.length/3} points for country ${countryFeature.properties.NAME || 'Unknown'}, max height: ${Math.min(1.0, normalizedMagnitude * 1.2)}`);
-  
-  return points;
-}
-
-
-
+        xhr = new XMLHttpRequest();
+        xhr.open('GET', 'audience_geo_data_compact.json', true);
+    
+        xhr.onreadystatechange = function(e) {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              var data = JSON.parse(xhr.responseText);
+              
+              var transformedData = data.map(function(companyEntry) {
+                var companyName = companyEntry[0];
+                var originalValues = [...companyEntry[1]];
+                
+                var maxMagnitude = 0;
+                for (var i = 0; i < originalValues.length; i += 3) {
+                  maxMagnitude = Math.max(maxMagnitude, originalValues[i + 2]);
+                }
+                
+                var newValues = [];
+                for (var i = 0; i < originalValues.length; i += 3) {
+                  var lat = originalValues[i];
+                  var lng = originalValues[i + 1];
+                  var magnitude = originalValues[i + 2];
+                  
+                  var heightMagnitude = 0.1 + (magnitude / maxMagnitude) * 1.9;
+                  
+                  newValues.push(lat, lng, heightMagnitude);
+                }
+                
+                return [companyName, newValues];
+              });
+              
+              window.data = transformedData;
+              
+              globe.createPoints();
+              globe.animate();
+              document.body.style.backgroundImage = 'none';
             }
           }
-        }
-      };
-      xhr.send(null);
-    
-  </script>
+        };
+        xhr.send(null);
+      }
+    </script>
   </body>
 </html>

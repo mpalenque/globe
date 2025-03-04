@@ -13,7 +13,6 @@
 
 var DAT = DAT || {};
 
-
 DAT.Globe = function(container, opts) {
   opts = opts || {};
   
@@ -95,8 +94,11 @@ DAT.Globe = function(container, opts) {
   var padding = 40;
   var PI_HALF = Math.PI / 2;
 
-  function init() {
+  // Add new variables to track company data
+  var pointToCompanyMap = [];
+  var companyColors = {};
 
+  function init() {
     container.style.color = '#fff';
     container.style.font = '13px/20px Arial, sans-serif';
 
@@ -108,7 +110,6 @@ DAT.Globe = function(container, opts) {
     camera.position.z = distance;
 
     scene = new THREE.Scene();
-
     scene.background = new THREE.Color(opts.colorFondo || '#000000');
 
     var geometry = new THREE.SphereGeometry(200, 40, 30);
@@ -119,12 +120,10 @@ DAT.Globe = function(container, opts) {
     uniforms['texture'].value = THREE.ImageUtils.loadTexture('world.jpg');
 
     material = new THREE.ShaderMaterial({
-
-          uniforms: uniforms,
-          vertexShader: shader.vertexShader,
-          fragmentShader: shader.fragmentShader
-
-        });
+      uniforms: uniforms,
+      vertexShader: shader.vertexShader,
+      fragmentShader: shader.fragmentShader
+    });
 
     mesh = new THREE.Mesh(geometry, material);
     mesh.rotation.y = Math.PI;
@@ -134,15 +133,13 @@ DAT.Globe = function(container, opts) {
     uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
     material = new THREE.ShaderMaterial({
-
-          uniforms: uniforms,
-          vertexShader: shader.vertexShader,
-          fragmentShader: shader.fragmentShader,
-          side: THREE.BackSide,
-          blending: THREE.AdditiveBlending,
-          transparent: true
-
-        });
+      uniforms: uniforms,
+      vertexShader: shader.vertexShader,
+      fragmentShader: shader.fragmentShader,
+      side: THREE.BackSide,
+      blending: THREE.AdditiveBlending,
+      transparent: true
+    });
 
     mesh = new THREE.Mesh(geometry, material);
     mesh.scale.set( 1.1, 1.1, 1.1 );
@@ -162,17 +159,12 @@ DAT.Globe = function(container, opts) {
     container.appendChild(renderer.domElement);
 
     container.addEventListener('mousedown', onMouseDown, false);
-
     container.addEventListener('mousewheel', onMouseWheel, false);
-
     document.addEventListener('keydown', onDocumentKeyDown, false);
-
     window.addEventListener('resize', onWindowResize, false);
-
     container.addEventListener('mouseover', function() {
       overRenderer = true;
     }, false);
-
     container.addEventListener('mouseout', function() {
       overRenderer = false;
     }, false);
@@ -184,9 +176,23 @@ DAT.Globe = function(container, opts) {
     opts.animated = opts.animated || false;
     this.is_animated = opts.animated;
     opts.format = opts.format || 'magnitude'; // other option is 'legend'
+    
+    // Store colors array if provided - make sure to accept either 'color' or 'colors'
+    this.colors = opts.colors || opts.color || null;
+    
+    // Store company information if provided
+    this.companyData = opts.companyData || null;
+    pointToCompanyMap = opts.pointToCompanyMap || [];
+    companyColors = opts.companyColors || {};
+    
+    console.log("Company colors received:", Object.keys(companyColors).length);
+    console.log("Point-to-company mappings:", pointToCompanyMap.length);
+    
     if (opts.format === 'magnitude') {
       step = 3;
-      colorFnWrapper = function(data, i) { return colorFn(data[i+2]); }
+      colorFnWrapper = function(data, i) { 
+        return colorFn(data[i+2]);
+      }
     } else if (opts.format === 'legend') {
       step = 4;
       colorFnWrapper = function(data, i) { return colorFn(data[i+3]); }
@@ -200,7 +206,6 @@ DAT.Globe = function(container, opts) {
         for (i = 0; i < data.length; i += step) {
           lat = data[i];
           lng = data[i + 1];
-//        size = data[i + 2];
           color = colorFnWrapper(data,i);
           size = 0;
           addPoint(lat, lng, size, color, this._baseGeometry);
@@ -213,31 +218,60 @@ DAT.Globe = function(container, opts) {
       }
       opts.name = opts.name || 'morphTarget'+this._morphTargetId;
     }
+    
     var subgeo = new THREE.Geometry();
     for (i = 0; i < data.length; i += step) {
       lat = data[i];
       lng = data[i + 1];
-      color = colorFnWrapper(data,i);
+      
+      // Get company color if available
+      const pointIndex = Math.floor(i/step);
+      const companyName = pointToCompanyMap[pointIndex];
+      
+      // First priority: Use company-specific color if available
+      if (companyName && companyColors[companyName]) {
+        color = new THREE.Color(companyColors[companyName]);
+        console.log(`Using company color for ${companyName}: ${companyColors[companyName]}`);
+      } 
+      // Second priority: Use custom colors array if provided
+      else if (this.colors && (i/step) < (this.colors.length/3)) {
+        const colorIndex = Math.floor(i/step) * 3;
+        color = new THREE.Color(
+          this.colors[colorIndex],
+          this.colors[colorIndex + 1],
+          this.colors[colorIndex + 2]
+        );
+      } 
+      // Last resort: Use default color function
+      else {
+        color = colorFnWrapper(data, i);
+      }
+      
       size = data[i + 2];
       size = size*200;
       addPoint(lat, lng, size, color, subgeo);
     }
+    
     if (opts.animated) {
       this._baseGeometry.morphTargets.push({'name': opts.name, vertices: subgeo.vertices});
     } else {
       this._baseGeometry = subgeo;
     }
 
-  };
+    // Store the mapping of points to companies for later use
+    this.pointToCompanyMap = pointToCompanyMap;
+    this.companyColors = companyColors;
+  }
 
   function createPoints() {
     if (this._baseGeometry !== undefined) {
       if (this.is_animated === false) {
+        // Create material with vertexColors enabled
         this.points = new THREE.Mesh(this._baseGeometry, new THREE.MeshBasicMaterial({
-              color: 0xffffff,
-              vertexColors: THREE.FaceColors,
-              morphTargets: false
-            }));
+          color: 0xffffff,
+          vertexColors: THREE.FaceColors,
+          morphTargets: false
+        }));
       } else {
         if (this._baseGeometry.morphTargets.length < 8) {
           console.log('t l',this._baseGeometry.morphTargets.length);
@@ -248,35 +282,42 @@ DAT.Globe = function(container, opts) {
             this._baseGeometry.morphTargets.push({'name': 'morphPadding'+i, vertices: this._baseGeometry.vertices});
           }
         }
+        // Create material with vertexColors enabled
         this.points = new THREE.Mesh(this._baseGeometry, new THREE.MeshBasicMaterial({
-              color: 0xffffff,
-              vertexColors: THREE.FaceColors,
-              morphTargets: true
-            }));
+          color: 0xffffff,
+          vertexColors: THREE.FaceColors,
+          morphTargets: true
+        }));
       }
       scene.add(this.points);
+      
+      // Ensure company colors are applied immediately after creating points
+      if (this.pointToCompanyMap && this.pointToCompanyMap.length > 0 && 
+          this.companyColors && Object.keys(this.companyColors).length > 0) {
+        console.log("Applying company colors to points...");
+        this.applyColors(this.pointToCompanyMap, this.companyColors);
+      }
     }
   }
 
   function addPoint(lat, lng, size, color, subgeo) {
-
     var phi = (90 - lat) * Math.PI / 180;
     var theta = (180 - lng) * Math.PI / 180;
-
+  
     point.position.x = 200 * Math.sin(phi) * Math.cos(theta);
     point.position.y = 200 * Math.cos(phi);
     point.position.z = 200 * Math.sin(phi) * Math.sin(theta);
-
+  
     point.lookAt(mesh.position);
-
+  
     point.scale.z = Math.max( size, 0.1 ); // avoid non-invertible matrix
     point.updateMatrix();
-
+  
+    // Apply color to all faces of the point
     for (var i = 0; i < point.geometry.faces.length; i++) {
-
       point.geometry.faces[i].color = color;
-
     }
+    
     if(point.matrixAutoUpdate){
       point.updateMatrix();
     }
@@ -346,10 +387,10 @@ DAT.Globe = function(container, opts) {
     }
   }
 
-  function onWindowResize( event ) {
+  function onWindowResize(event) {
     camera.aspect = container.offsetWidth / container.offsetHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize( container.offsetWidth, container.offsetHeight );
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
   }
 
   function zoom(delta) {
@@ -381,7 +422,6 @@ DAT.Globe = function(container, opts) {
 
   init();
   this.animate = animate;
-
 
   this.__defineGetter__('time', function() {
     return this._time || 0;
@@ -415,6 +455,51 @@ DAT.Globe = function(container, opts) {
   this.createPoints = createPoints;
   this.renderer = renderer;
   this.scene = scene;
+
+
+  this.applyColors = function(pointToCompanyMap, companyColors) {
+    if (!this.points || !this.points.geometry || !this.points.geometry.faces) {
+      console.log("Cannot apply colors - points not ready");
+      return false;
+    }
+
+    const geometry = this.points.geometry;
+    const facesPerPoint = 12; // Each point has 12 faces (box geometry)
+    
+    let coloredPoints = 0;
+    // Apply colors to each point based on company mapping
+    pointToCompanyMap.forEach((companyName, pointIdx) => {
+      if (!companyName) return;
+      
+      const hexColor = companyColors[companyName];
+      if (hexColor) {
+        const color = new THREE.Color(hexColor);
+        
+        const startFace = pointIdx * facesPerPoint;
+        for (let j = 0; j < facesPerPoint; j++) {
+          if (startFace + j < geometry.faces.length) {
+            geometry.faces[startFace + j].color = color;
+          }
+        }
+        coloredPoints++;
+      }
+    });
+    
+    geometry.colorsNeedUpdate = true;
+    console.log(`Successfully applied company colors to ${coloredPoints} points`);
+    return true;
+  };
+
+  // Add a new method to update colors after initialization
+  this.updateCompanyColors = function(newCompanyColors) {
+    if (!newCompanyColors) return false;
+    
+    // Update stored colors
+    Object.assign(companyColors, newCompanyColors);
+    
+    // Apply the updated colors
+    return this.applyColors(pointToCompanyMap, companyColors);
+  };
 
   return this;
 };
