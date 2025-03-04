@@ -145,11 +145,12 @@ DAT.Globe = function(container, opts) {
     mesh.scale.set( 1.1, 1.1, 1.1 );
     scene.add(mesh);
 
-    geometry = new THREE.BoxGeometry(0.75, 0.75, 1);
+    // Change box geometry dimensions - make bars 3x thicker
+    geometry = new THREE.BoxGeometry(2.25, 2.25, 1); // Changed from 0.75, 0.75, 1
     geometry.applyMatrix(new THREE.Matrix4().makeTranslation(0,0,-0.5));
 
     point = new THREE.Mesh(geometry);
-
+    
     renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setSize(w, h);
     renderer.setClearColor(new THREE.Color(opts.colorFondo || '#000000'), 1);
