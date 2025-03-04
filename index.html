@@ -300,8 +300,8 @@ a:hover {
     // Helper method to stack a single bar with an offset
    // Helper method to stack a single bar with an offset
 function stackBarWithOffset(lat, lng, magnitude, selectionOffset, color, combinedData, combinedColors, pointToCompanyMap, companyName) {
-  const BASE_HEIGHT = 0.1; // Base height from globe surface
-  const BAR_SPACING = 0.5; // Space between bars
+  const BASE_HEIGHT = 0; // Base height from globe surface
+  const BAR_SPACING = 0; // Space between bars
 
   // Start point - begins at BASE_HEIGHT plus the selection offset
   combinedData.push(lat, lng, BASE_HEIGHT + (selectionOffset * BAR_SPACING));
@@ -392,8 +392,8 @@ function updateGlobeVisualization() {
     const dirZ = z / 200;
     
     // Start with a small offset from globe surface to prevent z-fighting
-    let currentHeight = 3; // Pequeño espacio inicial entre el globo y la primera barra
-    const BAR_SPACING = 0.5;
+    let currentHeight = 0; // Pequeño espacio inicial entre el globo y la primera barra
+    const BAR_SPACING = 0;
     
     // Create bars for each company at this location
     locationData.companies.forEach(company => {
@@ -550,7 +550,7 @@ function updateGlobeVisualization() {
   var barMaterial = new THREE.MeshBasicMaterial({
     vertexColors: THREE.FaceColors,
     transparent: true,
-    opacity: 1
+    opacity: 0.8
   });
   
   globe.points = new THREE.Mesh(customGeometry, barMaterial);
