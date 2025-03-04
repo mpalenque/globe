@@ -387,7 +387,8 @@ function updateGlobeVisualization() {
     const dirY = y / 200;
     const dirZ = z / 200;
     
-    let currentHeight = 0;
+    // Start with a small offset from globe surface to prevent z-fighting
+    let currentHeight = 3; // Pequeño espacio inicial entre el globo y la primera barra
     const BAR_SPACING = 0.5;
     
     // Create bars for each company at this location
@@ -403,8 +404,8 @@ function updateGlobeVisualization() {
       const startY = y + dirY * currentHeight;
       const startZ = z + dirZ * currentHeight;
       
-      // Stack the new bar directly on top
-      const endHeight = currentHeight + company.magnitude * 30; // Scale for visibility
+      // Stack the new bar directly on top - AUMENTADO 30%
+      const endHeight = currentHeight + company.magnitude * 39; // Aumentado de 30 a 39 (30% más alto)
       const endX = x + dirX * endHeight;
       const endY = y + dirY * endHeight;
       const endZ = z + dirZ * endHeight;
@@ -416,32 +417,33 @@ function updateGlobeVisualization() {
       // Base (start)
       const boxSize = 2; // Box width/height
       
-      // Calculate perpendicular vectors to create a box
+      // Mejorado: Cálculo más preciso de vectores perpendiculares para evitar deformación
       let perpX1 = 0, perpY1 = 0, perpZ1 = 0;
       let perpX2 = 0, perpY2 = 0, perpZ2 = 0;
       
-      if (Math.abs(dirY) < 0.99) { // Not near poles
-        // First perpendicular: cross product with up vector
-        const length1 = Math.sqrt(dirX*dirX + dirZ*dirZ);
-        perpX1 = -dirZ / length1;
-        perpZ1 = dirX / length1;
-        
-        // Second perpendicular: cross product of dir and perp1
-        perpX2 = dirY * perpZ1;
-        perpY2 = dirX * perpZ1 - dirZ * perpX1;
-        perpZ2 = -dirX * perpY1;
-      } else {
-        // Near poles, use different approach
-        perpX1 = 1;
-        perpZ2 = 1;
+      // Creación de vectores perpendiculares mejorada
+      const upVector = new THREE.Vector3(0, 1, 0);
+      const dirVector = new THREE.Vector3(dirX, dirY, dirZ);
+      
+      // Primer vector perpendicular: producto cruz con vector "up"
+      const perp1 = new THREE.Vector3().crossVectors(dirVector, upVector).normalize();
+      
+      // Si estamos cerca de los polos, usar un vector diferente
+      if (perp1.lengthSq() < 0.01) {
+        perp1.set(1, 0, 0);
       }
       
-      // Normalize perpendicular vectors
-      const length1 = Math.sqrt(perpX1*perpX1 + perpY1*perpY1 + perpZ1*perpZ1);
-      const length2 = Math.sqrt(perpX2*perpX2 + perpY2*perpY2 + perpZ2*perpZ2);
+      // Segundo vector perpendicular: producto cruz entre dirVector y perp1
+      const perp2 = new THREE.Vector3().crossVectors(dirVector, perp1).normalize();
       
-      perpX1 /= length1; perpY1 /= length1; perpZ1 /= length1;
-      perpX2 /= length2; perpY2 /= length2; perpZ2 /= length2;
+      // Extraer componentes
+      perpX1 = perp1.x;
+      perpY1 = perp1.y;
+      perpZ1 = perp1.z;
+      
+      perpX2 = perp2.x;
+      perpY2 = perp2.y;
+      perpZ2 = perp2.z;
       
       // Create box vertices
       // Bottom face
@@ -536,8 +538,10 @@ function updateGlobeVisualization() {
     });
   });
 
+  // Compute normals to improve lighting/rendering
+  customGeometry.computeFaceNormals();
+  customGeometry.computeVertexNormals();
 
-  
   // Create mesh from custom geometry
   var barMaterial = new THREE.MeshBasicMaterial({
     vertexColors: THREE.FaceColors,
