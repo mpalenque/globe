@@ -4,6 +4,8 @@
     <title>WebGL Globe - Audience Data</title>
     
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Added viewport meta tag for better mobile experience -->
     <style type="text/css">
      html {
   height: 100%;
@@ -200,6 +202,8 @@ a:hover {
     <script type="text/javascript" src="third-party/three.min.js"></script>
     <script type="text/javascript" src="third-party/Tween.js"></script>
     <script type="text/javascript" src="globe.js"></script>
+    <script type="text/javascript" src="touch-controls.js"></script>
+    <!-- Added the touch-controls.js script -->
 
 
    <script type="text/javascript">
@@ -533,7 +537,7 @@ function updateGlobeVisualization() {
         customGeometry.faces[i].color = new THREE.Color(r, g, b);
       }
       
-      // Update current height for next bar
+      // Update current heitouch'ght for next bar
       currentHeight = endHeight + BAR_SPACING;
     });
   });
@@ -546,7 +550,7 @@ function updateGlobeVisualization() {
   var barMaterial = new THREE.MeshBasicMaterial({
     vertexColors: THREE.FaceColors,
     transparent: true,
-    opacity: 0.8
+    opacity: 1
   });
   
   globe.points = new THREE.Mesh(customGeometry, barMaterial);
