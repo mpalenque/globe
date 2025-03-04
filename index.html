@@ -417,7 +417,7 @@ a:hover {
   var selectedNames = Array.from(selectedCompanies)
     .map(index => companies[index])
     .join(', ');
-  document.getElementById('title').textContent = 'Audience Data: ' + selectedNames;
+ 
 
   new TWEEN.Tween(globe).to({time: 0},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
 }
