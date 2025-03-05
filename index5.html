@@ -1,0 +1,680 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>WebGL Globe - Audience Data</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Added viewport meta tag for better mobile experience -->
+    <style type="text/css">
+     html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000 url(loading.gif) center center no-repeat;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  height: 100%;
+}
+
+#info {
+  font-size: 11px;
+  position: absolute;
+  bottom: 5px;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 3px;
+  right: 10px;
+  padding: 10px;
+}
+
+#currentInfo {
+  width: 270px;
+  position: absolute;
+  left: 20px;
+  top: 63px;
+  background-color: rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(255,255,255,0.4);
+  padding: 10px;
+  display: none; /* Hide year selector */
+}
+
+/* Add new company list styles */
+#companiesInfo {
+  width: 400px;
+  position: absolute;
+  left: 20px;
+  bottom: 100px;
+  background-color: rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(255,255,255,0.4);
+  padding: 10px;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.companies-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.company {
+  font: 12px Georgia;
+  line-height: 20px;
+  height: 24px;
+  text-align: left;
+  float: left;
+  width: 90px;
+  padding-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-out;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 3px;
+}
+
+.company:hover {
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(0, 123, 255, 0.2); /* Light blue on hover */
+}
+
+.company.active {
+  font-size: 14px;
+  color: #fff;
+  /* Removed background-color to allow inline styles to work */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* Subtle glow effect */
+}
+a {
+  color: #aaa;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.bull {
+  padding: 0 5px;
+  color: #555;
+}
+
+#title {
+  position: absolute;
+  top: 20px;
+  width: 270px;
+  left: 20px;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+  font: 20px Georgia;
+  padding: 10px;
+}
+
+.year {
+  font: 16px Georgia;
+  line-height: 26px;
+  height: 30px;
+  text-align: center;
+  float: left;
+  width: 90px;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-out;
+}
+
+.year:hover, .year.active {
+  font-size: 23px;
+  color: #fff;
+}
+
+#ce span {
+  display: none;
+}
+
+#ce {
+  width: 107px;
+  height: 55px;
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  background: url(ce.png);
+}
+
+.control-buttons {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.control-button {
+  font: 12px Georgia;
+  padding: 5px 10px;
+  color: #fff;
+  background-color: rgba(0, 123, 255, 0.3);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+
+.control-button:hover {
+  background-color: rgba(0, 123, 255, 0.5);
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+  
+   
+  
+    <div id="currentInfo">
+      <span id="year1990" class="year">2023</span>
+      <span id="year1995" class="year">2024</span>
+      <span id="year2000" class="year">2025</span>
+    </div>
+  
+    <!-- Modify the companies container div -->
+    <div id="companiesInfo">
+      <div class="control-buttons">
+        <button class="control-button" id="selectAll">Select All</button>
+        <button class="control-button" id="selectNone">Select None</button>
+      </div>
+      <div class="companies-container">
+        <!-- Company spans will be generated dynamically -->
+      </div>
+    </div>
+  
+    <div id="title">
+      Audience Geo Data
+    </div>
+  
+    <script type="text/javascript" src="third-party/Detector.js"></script>
+    <script type="text/javascript" src="third-party/three.min.js"></script>
+    <script type="text/javascript" src="third-party/Tween.js"></script>
+    <script type="text/javascript" src="globe.js"></script>
+    <script type="text/javascript" src="touch-controls.js"></script>
+    <!-- Added the touch-controls.js script -->
+
+
+   <script type="text/javascript">
+  if(!Detector.webgl){
+    Detector.addGetWebGLMessage();
+  } else {
+    var years = ['1990','1995','2000'];
+    var container = document.getElementById('container');
+    var globe = new DAT.Globe(container);
+    
+
+    window.globe = globe;
+
+
+    // Add companies list
+    var companies = [
+      'Brainly', 'Codecademy', 'Delivery Hero', 'Despegar', 'Despegar AR',
+      'Despegar CL', 'Despegar CO', 'Despegar MX', 'Despegar PE', 'Edume',
+      'Emeritus', 'Eruditus', 'Flink', 'Foodics', 'GoStudent', 'GoodHabitz',
+      'JE Takeaway', 'Media24', 'OLX', 'OLX ', 'OLX Real Estate', 'Oda',
+      'Otodom (OLX)', 'Otomoto (OLX)', 'Platzi', 'Sharebite', 'SkillSoft',
+      'SoloLearn', 'Stack Overflow', 'Standvirtual', 'Swiggy', 'TakeAlot Group',
+      'Takealot', 'Udemy', 'eMAG', 'iFood'
+    ];
+    
+    // Add company brand colors
+    var companyColors = {
+  'Brainly': '#00B37E',       // Verde esmeralda
+  'Codecademy': '#6A4CFF',    // Morado intenso
+  'Delivery Hero': '#F8A800', // Naranja
+  'Despegar': '#00ADEF',      // Azul claro
+  'Despegar AR': '#0095DA',   // Azul despegar variante 1
+  'Despegar CL': '#007AB8',   // Azul despegar variante 2
+  'Despegar CO': '#005B96',   // Azul despegar variante 3
+  'Despegar MX': '#004D7A',   // Azul despegar variante 4
+  'Despegar PE': '#003B5C',   // Azul despegar variante 5
+  'Edume': '#1E88E5',         // Azul google
+  'Emeritus': '#FF6F61',      // Coral
+  'Eruditus': '#D84315',      // Naranja quemado
+  'Flink': '#00C853',         // Verde brillante
+  'Foodics': '#FFB300',       // Amarillo ámbar
+  'GoStudent': '#FF4081',     // Rosa intenso
+  'GoodHabitz': '#F9A825',    // Amarillo dorado
+  'JE Takeaway': '#E53935',   // Rojo cereza
+  'Media24': '#29B6F6',       // Azul cielo
+  'OLX': '#FF7A00',           // Naranja brillante
+  'OLX ': '#FF5722',          // Naranja profundo
+  'OLX Real Estate': '#FF9800', // Naranja medio
+  'Oda': '#E91E63',           // Rosa
+  'Otodom (OLX)': '#FF4500',  // Naranja rojizo
+  'Otomoto (OLX)': '#FFA000', // Ámbar
+  'Platzi': '#98C379',        // Verde menta
+  'Sharebite': '#039BE5',     // Azul cerúleo
+  'SkillSoft': '#3949AB',     // Azul índigo
+  'SoloLearn': '#9C27B0',     // Púrpura
+  'Stack Overflow': '#F57C00', // Naranja oscuro
+  'Standvirtual': '#00BCD4',  // Cian
+  'Swiggy': '#7B1FA2',        // Púrpura oscuro
+  'TakeAlot Group': '#0277BD', // Azul marino
+  'Takealot': '#01579B',      // Azul profundo
+  'Udemy': '#EC1C24',         // Rojo brillante
+  'eMAG': '#8E24AA',          // Violeta
+  'iFood': '#D81B60'          // Fucsia
+};
+    
+    var companiesContainer = document.querySelector('.companies-container');
+    
+    // Store selected companies
+    var selectedCompanies = new Set();
+    
+    // Generate elements for each company
+    companies.forEach(function(company, index) {
+      var companyElem = document.createElement('span');
+      companyElem.id = 'company' + index;
+      companyElem.className = 'company';
+      companyElem.textContent = company;
+      companyElem.setAttribute('data-company', company);
+      companiesContainer.appendChild(companyElem);
+    });
+
+    var i, tweens = [];
+    
+    var settime = function(globe, t) {
+      return function() {
+        new TWEEN.Tween(globe).to({time: t/years.length},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
+        var y = document.getElementById('year'+years[t]);
+        if (y.getAttribute('class') === 'year active') {
+          return;
+        }
+        var yy = document.getElementsByClassName('year');
+        for(i=0; i<yy.length; i++) {
+          yy[i].setAttribute('class','year');
+        }
+        y.setAttribute('class', 'year active');
+      };
+    };
+
+    // Helper method to stack a single bar with an offset
+   // Helper method to stack a single bar with an offset
+function stackBarWithOffset(lat, lng, magnitude, selectionOffset, color, combinedData, combinedColors, pointToCompanyMap, companyName) {
+  const BASE_HEIGHT = 0; // Base height from globe surface
+  const BAR_SPACING = 0; // Space between bars
+
+  // Start point - begins at BASE_HEIGHT plus the selection offset
+  combinedData.push(lat, lng, BASE_HEIGHT + (selectionOffset * BAR_SPACING));
+  pointToCompanyMap.push(companyName);
+  combinedColors.push(color.r, color.g, color.b, color.a);
+
+  // End point - adds the magnitude to the starting point
+  combinedData.push(lat, lng, BASE_HEIGHT + (selectionOffset * BAR_SPACING) + magnitude);
+  pointToCompanyMap.push(companyName);
+  combinedColors.push(color.r, color.g, color.b, color.a);
+}
+
+
+
+
+
+
+
+
+
+
+function updateGlobeVisualization() {
+  // Properly clean up existing points and segments
+  if (globe.points) {
+    globe.scene.remove(globe.points);
+    globe._baseGeometry = undefined;
+  }
+
+  if (selectedCompanies.size === 0) {
+    document.getElementById('title').textContent = 'Audience Geo Data';
+    globe.createPoints();
+    return;
+  }
+
+  // Create custom geometry for bars
+  var customGeometry = new THREE.Geometry();
+  var customColorArray = [];
+  var pointToCompanyMap = [];
+
+  // Group locations
+  const locationGroups = new Map();
+  const selectedCompaniesArray = Array.from(selectedCompanies);
+
+  // First: collect all locations and create groups
+  selectedCompaniesArray.forEach(function(companyIndex) {
+    const data = window.data[companyIndex][1];
+    const companyName = companies[companyIndex];
+    
+    for (let i = 0; i < data.length; i += 3) {
+      const lat = data[i];
+      const lng = data[i + 1];
+      const locationKey = `${lat.toFixed(8)},${lng.toFixed(8)}`;
+      
+      if (!locationGroups.has(locationKey)) {
+        locationGroups.set(locationKey, {
+          lat: lat,
+          lng: lng,
+          companies: []
+        });
+      }
+      
+      // Find magnitude for this company at this location
+      const magnitude = data[i + 2];
+      locationGroups.get(locationKey).companies.push({
+        index: companyIndex,
+        name: companyName,
+        magnitude: magnitude
+      });
+    }
+  });
+
+  // For each location, build truly stacked bars
+  locationGroups.forEach((locationData) => {
+    const lat = locationData.lat;
+    const lng = locationData.lng;
+    
+    // Calculate coordinates on the globe surface
+    const phi = (90 - lat) * Math.PI / 180;
+    const theta = (180 - lng) * Math.PI / 180;
+    
+    const x = 200 * Math.sin(phi) * Math.cos(theta);
+    const y = 200 * Math.cos(phi);
+    const z = 200 * Math.sin(phi) * Math.sin(theta);
+    
+    // Direction vector from center to surface point (normalized)
+    const dirX = x / 200;
+    const dirY = y / 200;
+    const dirZ = z / 200;
+    
+    // Start with a small offset from globe surface to prevent z-fighting
+    let currentHeight = 0; // Pequeño espacio inicial entre el globo y la primera barra
+    const BAR_SPACING = 0;
+    
+    // Create bars for each company at this location
+    locationData.companies.forEach(company => {
+      const hexColor = companyColors[company.name] || '#FFFFFF';
+      const r = parseInt(hexColor.substring(1, 3), 16) / 255;
+      const g = parseInt(hexColor.substring(3, 5), 16) / 255;
+      const b = parseInt(hexColor.substring(5, 7), 16) / 255;
+      const a = 0.8;
+      
+      // Starting point (where previous bar ended + small gap)
+      const startX = x + dirX * currentHeight;
+      const startY = y + dirY * currentHeight;
+      const startZ = z + dirZ * currentHeight;
+      
+      // Stack the new bar directly on top - AUMENTADO 30%
+      const endHeight = currentHeight + company.magnitude * 39; // Aumentado de 30 a 39 (30% más alto)
+      const endX = x + dirX * endHeight;
+      const endY = y + dirY * endHeight;
+      const endZ = z + dirZ * endHeight;
+      
+      // Create a custom box geometry for this bar segment
+      const vertexIndex = customGeometry.vertices.length;
+      
+      // Create box vertices: 8 points forming a 3D box along the radial direction
+      // Base (start)
+      const boxSize = 2; // Box width/height
+      
+      // Mejorado: Cálculo más preciso de vectores perpendiculares para evitar deformación
+      let perpX1 = 0, perpY1 = 0, perpZ1 = 0;
+      let perpX2 = 0, perpY2 = 0, perpZ2 = 0;
+      
+      // Creación de vectores perpendiculares mejorada
+      const upVector = new THREE.Vector3(0, 1, 0);
+      const dirVector = new THREE.Vector3(dirX, dirY, dirZ);
+      
+      // Primer vector perpendicular: producto cruz con vector "up"
+      const perp1 = new THREE.Vector3().crossVectors(dirVector, upVector).normalize();
+      
+      // Si estamos cerca de los polos, usar un vector diferente
+      if (perp1.lengthSq() < 0.01) {
+        perp1.set(1, 0, 0);
+      }
+      
+      // Segundo vector perpendicular: producto cruz entre dirVector y perp1
+      const perp2 = new THREE.Vector3().crossVectors(dirVector, perp1).normalize();
+      
+      // Extraer componentes
+      perpX1 = perp1.x;
+      perpY1 = perp1.y;
+      perpZ1 = perp1.z;
+      
+      perpX2 = perp2.x;
+      perpY2 = perp2.y;
+      perpZ2 = perp2.z;
+      
+      // Create box vertices
+      // Bottom face
+      customGeometry.vertices.push(
+        new THREE.Vector3(
+          startX + boxSize * perpX1 + boxSize * perpX2,
+          startY + boxSize * perpY1 + boxSize * perpY2,
+          startZ + boxSize * perpZ1 + boxSize * perpZ2
+        )
+      );
+      customGeometry.vertices.push(
+        new THREE.Vector3(
+          startX + boxSize * perpX1 - boxSize * perpX2,
+          startY + boxSize * perpY1 - boxSize * perpY2,
+          startZ + boxSize * perpZ1 - boxSize * perpZ2
+        )
+      );
+      customGeometry.vertices.push(
+        new THREE.Vector3(
+          startX - boxSize * perpX1 - boxSize * perpX2,
+          startY - boxSize * perpY1 - boxSize * perpY2,
+          startZ - boxSize * perpZ1 - boxSize * perpZ2
+        )
+      );
+      customGeometry.vertices.push(
+        new THREE.Vector3(
+          startX - boxSize * perpX1 + boxSize * perpX2,
+          startY - boxSize * perpY1 + boxSize * perpY2,
+          startZ - boxSize * perpZ1 + boxSize * perpZ2
+        )
+      );
+      
+      // Top face
+      customGeometry.vertices.push(
+        new THREE.Vector3(
+          endX + boxSize * perpX1 + boxSize * perpX2,
+          endY + boxSize * perpY1 + boxSize * perpY2,
+          endZ + boxSize * perpZ1 + boxSize * perpZ2
+        )
+      );
+      customGeometry.vertices.push(
+        new THREE.Vector3(
+          endX + boxSize * perpX1 - boxSize * perpX2,
+          endY + boxSize * perpY1 - boxSize * perpY2,
+          endZ + boxSize * perpZ1 - boxSize * perpZ2
+        )
+      );
+      customGeometry.vertices.push(
+        new THREE.Vector3(
+          endX - boxSize * perpX1 - boxSize * perpX2,
+          endY - boxSize * perpY1 - boxSize * perpY2,
+          endZ - boxSize * perpZ1 - boxSize * perpZ2
+        )
+      );
+      customGeometry.vertices.push(
+        new THREE.Vector3(
+          endX - boxSize * perpX1 + boxSize * perpX2,
+          endY - boxSize * perpY1 + boxSize * perpY2,
+          endZ - boxSize * perpZ1 + boxSize * perpZ2
+        )
+      );
+      
+      // Create faces for the box (6 faces, 2 triangles each)
+      // Bottom face
+      customGeometry.faces.push(new THREE.Face3(vertexIndex, vertexIndex+1, vertexIndex+2));
+      customGeometry.faces.push(new THREE.Face3(vertexIndex, vertexIndex+2, vertexIndex+3));
+      
+      // Top face
+      customGeometry.faces.push(new THREE.Face3(vertexIndex+4, vertexIndex+6, vertexIndex+5));
+      customGeometry.faces.push(new THREE.Face3(vertexIndex+4, vertexIndex+7, vertexIndex+6));
+      
+      // Side faces
+      customGeometry.faces.push(new THREE.Face3(vertexIndex, vertexIndex+4, vertexIndex+1));
+      customGeometry.faces.push(new THREE.Face3(vertexIndex+1, vertexIndex+4, vertexIndex+5));
+      
+      customGeometry.faces.push(new THREE.Face3(vertexIndex+1, vertexIndex+5, vertexIndex+2));
+      customGeometry.faces.push(new THREE.Face3(vertexIndex+2, vertexIndex+5, vertexIndex+6));
+      
+      customGeometry.faces.push(new THREE.Face3(vertexIndex+2, vertexIndex+6, vertexIndex+3));
+      customGeometry.faces.push(new THREE.Face3(vertexIndex+3, vertexIndex+6, vertexIndex+7));
+      
+      customGeometry.faces.push(new THREE.Face3(vertexIndex+3, vertexIndex+7, vertexIndex));
+      customGeometry.faces.push(new THREE.Face3(vertexIndex, vertexIndex+7, vertexIndex+4));
+      
+      // Apply color to all faces
+      for (let i = customGeometry.faces.length-12; i < customGeometry.faces.length; i++) {
+        customGeometry.faces[i].color = new THREE.Color(r, g, b);
+      }
+      
+      // Update current heitouch'ght for next bar
+      currentHeight = endHeight + BAR_SPACING;
+    });
+  });
+
+  // Compute normals to improve lighting/rendering
+  customGeometry.computeFaceNormals();
+  customGeometry.computeVertexNormals();
+
+  // Create mesh from custom geometry
+  var barMaterial = new THREE.MeshBasicMaterial({
+    vertexColors: THREE.FaceColors,
+    transparent: true,
+    opacity: 0.8
+  });
+  
+  globe.points = new THREE.Mesh(customGeometry, barMaterial);
+  globe.scene.add(globe.points);
+
+  // Update UI title
+  var selectedNames = Array.from(selectedCompanies)
+    .map(index => companies[index])
+    .join(', ');
+    
+
+  document.getElementById('title').textContent = selectedNames.length > 30 ?
+    selectedNames.substring(0, 30) + '...' : selectedNames;
+
+  new TWEEN.Tween(globe).to({ time: 0 }, 500).easing(TWEEN.Easing.Cubic.EaseOut).start();
+}
+
+
+
+
+
+
+
+
+
+    // Set company selection
+    var setcompany = function(globe, t) {
+      return function() {
+        var c = document.getElementById('company'+t);
+        var companyName = c.getAttribute('data-company');
+        var brandColor = companyColors[companyName];
+        
+        if (c.getAttribute('class') === 'company active') {
+          c.setAttribute('class', 'company');
+          c.style.backgroundColor = '';
+          selectedCompanies.delete(t);
+        } else {
+          c.setAttribute('class', 'company active');
+          c.style.backgroundColor = brandColor;
+          selectedCompanies.add(t);
+        }
+    
+        updateGlobeVisualization();
+      };
+    };
+
+    document.getElementById('selectAll').addEventListener('click', function() {
+      companies.forEach(function(company, index) {
+        var c = document.getElementById('company'+index);
+        c.setAttribute('class', 'company active');
+        c.style.backgroundColor = companyColors[company];
+        selectedCompanies.add(index);
+      });
+      updateGlobeVisualization();
+    });
+
+    document.getElementById('selectNone').addEventListener('click', function() {
+      companies.forEach(function(_, index) {
+        var c = document.getElementById('company'+index);
+        c.setAttribute('class', 'company');
+        c.style.backgroundColor = '';
+      });
+      selectedCompanies.clear();
+      updateGlobeVisualization();
+    });
+
+    for(var i = 0; i<years.length; i++) {
+      var y = document.getElementById('year'+years[i]);
+      y.addEventListener('mouseover', settime(globe,i), false);
+    }
+    
+    for(var i = 0; i<companies.length; i++) {
+      var c = document.getElementById('company'+i);
+      c.addEventListener('click', setcompany(globe,i), false);
+    }
+    
+    var xhr;
+    TWEEN.start();
+    
+    xhr = new XMLHttpRequest();
+    xhr.open('GET', 'audience_geo_data_compact.json', true);
+
+    xhr.onreadystatechange = function(e) {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          var data = JSON.parse(xhr.responseText);
+          
+          var transformedData = data.map(function(companyEntry) {
+            var companyName = companyEntry[0];
+            var originalValues = [...companyEntry[1]];
+            
+            var maxMagnitude = 0;
+            for (var i = 0; i < originalValues.length; i += 3) {
+              maxMagnitude = Math.max(maxMagnitude, originalValues[i + 2]);
+            }
+            
+            var newValues = [];
+            for (var i = 0; i < originalValues.length; i += 3) {
+              var lat = originalValues[i];
+              var lng = originalValues[i + 1];
+              var magnitude = originalValues[i + 2];
+              
+              // Scale magnitude for height
+              var heightMagnitude = 0.1 + (magnitude / maxMagnitude) * 0.4;
+              newValues.push(lat, lng, heightMagnitude);
+            }
+            
+            return [companyName, newValues];
+          });
+          
+          window.data = transformedData;
+          
+          globe.createPoints();
+          globe.animate();
+          document.body.style.backgroundImage = 'none';
+        }
+      }
+    };
+    xhr.send(null);
+  }
+</script>
+  </body>
+</html>

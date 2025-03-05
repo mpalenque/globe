@@ -1,111 +1,161 @@
-(function() {
-  // This script adds touch support to the DAT.Globe implementation
+// Touch Controls for WebGL Globe
+(() => {
+  // Check if the device supports touch events
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
   
-  // Wait until the globe is initialized
-  window.addEventListener('load', function() {
-    // Get the container element
+  // Only apply touch controls if it's a touch device
+  if (!isTouchDevice) return;
+  
+  // Wait for globe to be initialized
+  window.addEventListener('load', () => {
     const container = document.getElementById('container');
-    if (!container) return;
+    const globe = window.globe; // Access the globe object from the main script
     
-    let isDragging = false;
-    let previousTouchX = 0;
-    let previousTouchY = 0;
-    let startDistance = 0;
+    if (!globe || !container) return;
     
-    // Store original globe mouse handlers to chain them
-    const globeInstance = window.globe;
-    if (!globeInstance || !globeInstance._onMouseDown || !globeInstance._onMouseMove || !globeInstance._onMouseUp) {
-      console.warn('Globe instance or mouse handlers not found');
-      return;
-    }
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchMoved = false;
+    let lastDistance = 0;
+    let rotationSpeed = 0.3;
     
-    // Touch event handlers
-    function handleTouchStart(event) {
+    // Initialize touch variables for rotation
+    let lon = 0;
+    let lat = 0;
+    let phi = 0;
+    let theta = 0;
+    
+    // Touch start event
+    container.addEventListener('touchstart', (event) => {
       event.preventDefault();
+      
+      touchMoved = false;
       
       if (event.touches.length === 1) {
-        // Single touch - start rotation
-        isDragging = true;
-        previousTouchX = event.touches[0].clientX;
-        previousTouchY = event.touches[0].clientY;
+        // Single touch - for rotation
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
         
-        // Simulate mouse event for the original handler
-        const mouseEvent = new MouseEvent('mousedown', {
-          clientX: previousTouchX,
-          clientY: previousTouchY,
-          button: 0
-        });
-        container.dispatchEvent(mouseEvent);
-      } else if (event.touches.length === 2) {
-        // Two touches - start zoom
-        isDragging = false;
-        
-        // Calculate distance between two points for pinch zoom
+        // Store current rotation
+        if (globe.rotation) {
+          lon = globe.rotation.lon || 0;
+          lat = globe.rotation.lat || 0;
+        }
+      } 
+      else if (event.touches.length === 2) {
+        // Two finger touch - for zoom
         const dx = event.touches[0].clientX - event.touches[1].clientX;
         const dy = event.touches[0].clientY - event.touches[1].clientY;
-        startDistance = Math.sqrt(dx * dx + dy * dy);
+        lastDistance = Math.sqrt(dx * dx + dy * dy);
       }
-    }
+    }, { passive: false });
     
-    function handleTouchMove(event) {
+    // Touch move event
+    container.addEventListener('touchmove', (event) => {
       event.preventDefault();
+      touchMoved = true;
       
-      if (!globeInstance) return;
-      
-      if (event.touches.length === 1 && isDragging) {
-        // Single touch move - rotate the globe
-        const touchX = event.touches[0].clientX;
-        const touchY = event.touches[0].clientY;
+      if (event.touches.length === 1) {
+        // Single touch - handle rotation
+        const touchCurrentX = event.touches[0].clientX;
+        const touchCurrentY = event.touches[0].clientY;
         
-        // Simulate mouse event for the original handler
-        const mouseEvent = new MouseEvent('mousemove', {
-          clientX: touchX,
-          clientY: touchY
-        });
-        container.dispatchEvent(mouseEvent);
+        // Calculate movement delta
+        const deltaX = touchCurrentX - touchStartX;
+        const deltaY = touchCurrentY - touchStartY;
         
-        previousTouchX = touchX;
-        previousTouchY = touchY;
-      } else if (event.touches.length === 2) {
-        // Two touch move - pinch zoom
+        // Update rotation based on finger movement
+        lon = (lon - deltaX * rotationSpeed) % 360;
+        lat = Math.max(-85, Math.min(85, lat + deltaY * rotationSpeed));
+        
+        // Convert lat/lon to 3D rotation
+        phi = THREE.MathUtils.degToRad(90 - lat);
+        theta = THREE.MathUtils.degToRad(lon);
+        
+        // Update camera target position
+        const radius = globe.camera.position.length();
+        globe.camera.position.x = radius * Math.sin(phi) * Math.cos(theta);
+        globe.camera.position.y = radius * Math.cos(phi);
+        globe.camera.position.z = radius * Math.sin(phi) * Math.sin(theta);
+        globe.camera.lookAt(globe.scene.position);
+        
+        // Store current position for next move
+        touchStartX = touchCurrentX;
+        touchStartY = touchCurrentY;
+        
+        // Store rotation for reference
+        if (!globe.rotation) globe.rotation = {};
+        globe.rotation.lon = lon;
+        globe.rotation.lat = lat;
+      } 
+      else if (event.touches.length === 2) {
+        // Handle pinch zoom
         const dx = event.touches[0].clientX - event.touches[1].clientX;
         const dy = event.touches[0].clientY - event.touches[1].clientY;
         const distance = Math.sqrt(dx * dx + dy * dy);
         
-        // Calculate zoom direction based on pinch gesture
-        const delta = distance - startDistance;
-        startDistance = distance;
+        // Calculate zoom factor based on pinch difference
+        const zoomFactor = distance / lastDistance;
         
-        // Simulate wheel event for zoom
-        const wheelEvent = new WheelEvent('wheel', {
-          deltaY: -delta * 0.5  // Negative for zoom in, positive for zoom out
+        // Apply zoom by adjusting camera position
+        const currentDistance = globe.camera.position.length();
+        const newDistance = Math.max(250, Math.min(600, currentDistance / zoomFactor));
+        
+        // Update camera position while maintaining direction
+        const direction = globe.camera.position.clone().normalize();
+        globe.camera.position.copy(direction.multiplyScalar(newDistance));
+        
+        // Update for next movement
+        lastDistance = distance;
+      }
+    }, { passive: false });
+    
+    // Touch end event
+    container.addEventListener('touchend', (event) => {
+      if (!touchMoved && event.changedTouches.length === 1) {
+        // Handle tap as click for selecting UI elements
+        const touchX = event.changedTouches[0].clientX;
+        const touchY = event.changedTouches[0].clientY;
+        
+        // Check if tap is on a company element
+        const companies = document.querySelectorAll('.company');
+        companies.forEach((company) => {
+          const rect = company.getBoundingClientRect();
+          if (touchX >= rect.left && touchX <= rect.right && 
+              touchY >= rect.top && touchY <= rect.bottom) {
+            company.click(); // Trigger the click event
+          }
         });
-        container.dispatchEvent(wheelEvent);
-      }
-    }
-    
-    function handleTouchEnd(event) {
-      // End rotation or zoom
-      if (event.touches.length === 0) {
-        isDragging = false;
         
-        // Simulate mouse up event for the original handler
-        const mouseEvent = new MouseEvent('mouseup');
-        container.dispatchEvent(mouseEvent);
-      } else if (event.touches.length === 1) {
-        // If we were pinch zooming and now have 1 finger, reset for rotation
-        previousTouchX = event.touches[0].clientX;
-        previousTouchY = event.touches[0].clientY;
-        isDragging = true;
+        // Check if tap is on a year element
+        const years = document.querySelectorAll('.year');
+        years.forEach((year) => {
+          const rect = year.getBoundingClientRect();
+          if (touchX >= rect.left && touchX <= rect.right && 
+              touchY >= rect.top && touchY <= rect.bottom) {
+            year.click(); // Trigger the click event
+          }
+        });
+        
+        // Check control buttons
+        const controlButtons = document.querySelectorAll('.control-button');
+        controlButtons.forEach((button) => {
+          const rect = button.getBoundingClientRect();
+          if (touchX >= rect.left && touchX <= rect.right && 
+              touchY >= rect.top && touchY <= rect.bottom) {
+            button.click(); // Trigger the click event
+          }
+        });
       }
-    }
+    }, { passive: false });
     
-    // Add touch event listeners
-    container.addEventListener('touchstart', handleTouchStart, { passive: false });
-    container.addEventListener('touchmove', handleTouchMove, { passive: false });
-    container.addEventListener('touchend', handleTouchEnd);
-    container.addEventListener('touchcancel', handleTouchEnd);
+    // Prevent default touch behavior to avoid page scrolling while interacting with the globe
+    document.addEventListener('touchmove', (event) => {
+      if (event.target.closest('#container')) {
+        event.preventDefault();
+      }
+    }, { passive: false });
     
-    console.log('Touch controls initialized for globe');
+    console.log('Touch controls enabled for globe visualization');
   });
 })();
